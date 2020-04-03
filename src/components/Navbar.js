@@ -24,52 +24,53 @@ export default class Navbar extends Component {
       </button>
       <div className={"collapse navbar-collapse " + show}>
       <div className="navbar-nav">
-        <ul className="nav-list nav navbar-nav">
+        <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
 
-            <li className="nav-item">
-              <Link to="/aeons" className="nav-link">
+            <li className="liss">
+              <Link to="/aeons" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Aeons
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+
+            <li className="liss">
+              <Link to="/carrefours" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Carrefours Transmart
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+            <li className="liss">
+              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Farmers Market
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+            <li className="liss">
+              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Foodhall
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+            <li className="liss">
+              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               GrandLucky
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+            <li className="liss">
+              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Hero
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+            <li className="liss">
+              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Primo
               </Link>
             </li>
 
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
+            <li className="liss">
+              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Ranch Market
               </Link>
             </li>

@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "./components/Navbar";
 import AeonsList from "./components/AeonsList";
+import CarrefoursList from "./components/CarrefoursList";
 
 
 class App extends React.Component {
@@ -13,6 +14,7 @@ class App extends React.Component {
 					<Navbar />
 					<br />
 					<Route path="/aeons" exact component={AeonsList} />
+					<Route path="/carrefours" exact component={CarrefoursList} />
 				</div>
 			</Router>
 

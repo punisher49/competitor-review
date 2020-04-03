@@ -1,8 +1,6 @@
   import React, { Component } from 'react';
-  import { Link } from 'react-router-dom';
   import axios from 'axios';
-  import NumberFormat from 'react-number-format';
-  import "./AeonList.css"
+  import "./Styles.css"
   const Aeon = props => (
     <tr>
       <td>{props.aeon.productName}</td>
@@ -94,9 +92,8 @@
     render() {
       return (
         <div className="render">
-
           <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-          <i class="fas fa-search" aria-hidden="true"></i>
+          <i className="fas fa-search" aria-hidden="true"></i>
             <input
                 className="form-control form-control-lrg ml-3 w-50"
                 name="query"
@@ -118,8 +115,8 @@
                 <th scope="row">Product Category</th>
                 <th scope="row">Weight</th>
                 <th scope="row">Unit</th>
-                <th scope="row">Product Price (IDR)</th>
-                <th scope="row">Product Price (AUD)</th>
+                <th scope="row">Price (IDR)</th>
+                <th scope="row">Price (AUD)</th>
                 <th scope="row">Country of Manufacture</th>
                 <th scope="row">Product Claims</th>
                 <th scope="row">Type of Packaging</th>
@@ -131,11 +128,11 @@
             <tbody>
               { this.aeonList() }
             </tbody>
-            <button title='Back to top' className='scroll'
-             onClick={ () => { this.scrollToTop(); }}>
-              <i class="fa fa-arrow-up" ></i>
-            </button>
           </table>
+          <button title='Back to top' className='scroll'
+           onClick={ () => { this.scrollToTop(); }}>
+            <i className="fa fa-arrow-up" ></i>
+          </button>
 
         </div>
       )
