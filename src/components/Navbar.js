@@ -26,22 +26,23 @@ export default class Navbar extends Component {
       <div className={"collapse navbar-collapse " + show}>
       <div className="navbar-nav">
         <ul className="nav-list nav navbar-nav">
-          <li className="nav-item">
-            <Search/>
-          </li>
+
             <li className="nav-item">
-              <Link to="/" className="nav-link">
+              <Link to="/aeons" className="nav-link">
               Aeons
               </Link>
               </li>
             <li className="nav-item">
-              <Link to="/create" className="nav-link">
-              Create Aeon Log
+              <Link to="/carrefours" className="nav-link">
+              Carrefours
               </Link>
+              
             </li>
 
           </ul>
+
         </div>
+
         </div>
       </nav>
     );

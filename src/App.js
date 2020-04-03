@@ -16,9 +16,9 @@ class App extends React.Component {
 				<div className="">
 					<Navbar />
 					<br />
-					<Route path="/" exact component={AeonsList} />
+					<Route path="/aeons" exact component={AeonsList} />
 					<Route path="/edit/:id" exact component={EditAeon} />
-					<Route path="/create" exact component={CreateAeon} />
+					<Route path="/carrefours" exact component={CreateAeon} />
 				</div>
 			</Router>
 

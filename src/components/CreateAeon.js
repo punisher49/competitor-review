@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from "./Search";
 
 class CreateAeon extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ class CreateAeon extends Component {
   render(){
     return(
       <div>
-        <p>You are on Create Aeons component</p>
+          <Search/>
       </div>
     )
   }

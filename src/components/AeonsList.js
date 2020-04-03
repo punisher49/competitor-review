@@ -1,9 +1,8 @@
-
-
   import React, { Component } from 'react';
   import { Link } from 'react-router-dom';
   import axios from 'axios';
   import NumberFormat from 'react-number-format';
+  import Search from "./Search";
   const Aeon = props => (
     <tr>
       <td>{props.aeon.productName}</td>
@@ -20,34 +19,80 @@
       <td>{props.aeon.importer}</td>
     </tr>
   )
-
   class AeonsList extends Component {
-
     constructor(props) {
       super(props);
-      this.state = {aeons: []};
+      this.state = {
+        aeons: [],
+        query: '',
+      };
     }
-
     componentDidMount() {
       axios.get('http://localhost:5000/aeons/')
         .then(response => {
-          this.setState({ aeons: response.data })
+          this.setState({
+            aeons: response.data
+           })
         })
         .catch((error) => {
           console.log(error);
         })
     }
+    handleInputChange = (event) => {
+      event.preventDefault();
+      const value = event.target.value;
+      console.log('Value', value)
+      setTimeout(() => {
+        this.setState({
+          query: value
+        });
+      }, 3000);
+    };
 
   aeonList() {
       return this.state.aeons.map(currentaeon => {
+        if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.weight.toString().match(this.state.query)){
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.unit.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.productPriceIdr.toString().match(this.state.query)){
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.productPriceAud.toString().match(this.state.query)){
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+        }
       })
-    }
+  }
 
     render() {
       return (
         <div>
-          <h3>Aeons</h3>
+        <form className="form-inline my-2 my-lg-0">
+          <input
+              className="form-control mr-sm-2"
+              name="query"
+              id="search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              onChange={this.handleInputChange}
+              />
+        </form>
           <table className="table table-striped">
             <thead className="thead-dark">
               <tr>
