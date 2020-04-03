@@ -40,20 +40,20 @@ export default class Navbar extends Component {
             </li>
 
             <li className="liss">
-              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              <Link to="/farmers" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Farmers Market
               </Link>
             </li>
 
             <li className="liss">
-              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              <Link to="/foodhalls" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Foodhall
               </Link>
             </li>
 
             <li className="liss">
               <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-              GrandLucky
+              Grand Lucky
               </Link>
             </li>
 
