@@ -2,7 +2,7 @@
   import { Link } from 'react-router-dom';
   import axios from 'axios';
   import NumberFormat from 'react-number-format';
-  import Search from "./Search";
+  import "./AeonList.css"
   const Aeon = props => (
     <tr>
       <td>{props.aeon.productName}</td>
@@ -25,6 +25,7 @@
       this.state = {
         aeons: [],
         query: '',
+        intervalId: 0
       };
     }
     componentDidMount() {
@@ -48,6 +49,17 @@
         });
       }, 3000);
     };
+    scrollStep() {
+      if (window.pageYOffset === 0) {
+          clearInterval(this.state.intervalId);
+      }
+      window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+    }
+
+    scrollToTop() {
+      let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
+      this.setState({ intervalId: intervalId });
+    }
 
   aeonList() {
       return this.state.aeons.map(currentaeon => {
@@ -81,18 +93,24 @@
 
     render() {
       return (
-        <div>
-        <form className="form-inline my-2 my-lg-0">
-          <input
-              className="form-control mr-sm-2"
-              name="query"
-              id="search-input"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              onChange={this.handleInputChange}
-              />
-        </form>
+        <div className="render">
+
+          <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+          <i class="fas fa-search" aria-hidden="true"></i>
+            <input
+                className="form-control form-control-lrg ml-3 w-50"
+                name="query"
+                id="search-input"
+                type="search"
+                placeholder="Search for a Product"
+                aria-label="Search"
+                onChange={this.handleInputChange}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+                />
+          </form>
+          <br />
+
+
           <table className="table table-striped">
             <thead className="thead-dark">
               <tr>
@@ -113,7 +131,12 @@
             <tbody>
               { this.aeonList() }
             </tbody>
+            <button title='Back to top' className='scroll'
+             onClick={ () => { this.scrollToTop(); }}>
+              <i class="fa fa-arrow-up" ></i>
+            </button>
           </table>
+
         </div>
       )
     }

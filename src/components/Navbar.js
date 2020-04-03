@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Search from "./Search";
 export default class Navbar extends Component {
 
   constructor(props) {
@@ -31,14 +30,49 @@ export default class Navbar extends Component {
               <Link to="/aeons" className="nav-link">
               Aeons
               </Link>
-              </li>
-            <li className="nav-item">
-              <Link to="/carrefours" className="nav-link">
-              Carrefours
-              </Link>
-              
             </li>
 
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              Carrefours Transmart
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              Farmers Market
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              Foodhall
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              GrandLucky
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              Hero
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              Primo
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/carrefours" className="nav-link">
+              Ranch Market
+              </Link>
+            </li>
           </ul>
 
         </div>
