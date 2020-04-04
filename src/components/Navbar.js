@@ -52,25 +52,25 @@ export default class Navbar extends Component {
             </li>
 
             <li className="liss">
-              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              <Link to="/grands" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Grand Lucky
               </Link>
             </li>
 
             <li className="liss">
-              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              <Link to="/heros" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Hero
               </Link>
             </li>
 
             <li className="liss">
-              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              <Link to="/primos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Primo
               </Link>
             </li>
 
             <li className="liss">
-              <Link to="/" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              <Link to="/ranchos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Ranch Market
               </Link>
             </li>
