@@ -26,16 +26,10 @@ export default class Navbar extends Component {
       <div className="navbar-nav">
         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
 
-            <li className="liss">
-              <Link to="/aeons" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-              Aeons
-              </Link>
-            </li>
-
 
             <li className="liss">
               <Link to="/carrefours" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-              Carrefours Transmart
+                Carrefours Transmart
               </Link>
             </li>
 
@@ -46,10 +40,11 @@ export default class Navbar extends Component {
             </li>
 
             <li className="liss">
-              <Link to="/foodhalls" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-              Foodhall
+              <Link to="/ranchos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              Ranch Market
               </Link>
             </li>
+
 
             <li className="liss">
               <Link to="/grands" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
@@ -57,23 +52,34 @@ export default class Navbar extends Component {
               </Link>
             </li>
 
+
+            <li className="liss">
+              <Link to="/foodhalls" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+              Foodhall
+              </Link>
+            </li>
+
+            <li className="liss">
+              <Link to="/primos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+                Primo
+              </Link>
+            </li>
+            
+            <li className="liss">
+              <Link to="/aeons" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+                Aeon
+              </Link>
+            </li>
+
+
             <li className="liss">
               <Link to="/heros" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
               Hero
               </Link>
             </li>
 
-            <li className="liss">
-              <Link to="/primos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-              Primo
-              </Link>
-            </li>
 
-            <li className="liss">
-              <Link to="/ranchos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-              Ranch Market
-              </Link>
-            </li>
+
           </ul>
 
         </div>

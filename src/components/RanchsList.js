@@ -43,11 +43,11 @@ class RanchosList extends Component {
     event.preventDefault();
     const value = event.target.value;
     console.log('Value', value)
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setState({
         query: value
       });
-    }, 3000);
+    // }, 3000);
   };
   scrollStep() {
     if (window.pageYOffset === 0) {
