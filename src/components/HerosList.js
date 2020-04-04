@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Styles.css"
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const Hero = props => (
-  <tr>
-    <td>{props.hero.productName}</td>
-    <td>{props.hero.productCategory}</td>
-    <td>{props.hero.weight}</td>
-    <td>{props.hero.unit}</td>
-    <td>{props.hero.productPriceIdr}</td>
-    <td>{props.hero.productPriceAud}</td>
-    <td>{props.hero.countryOfManufacture}</td>
-    <td>{props.hero.productClaims}</td>
-    <td>{props.hero.typeOfPackaging}</td>
-    <td>{props.hero.positioningInStore}</td>
-    <td>{props.hero.promotion}</td>
-    <td>{props.hero.importer}</td>
-  </tr>
+  <Tr>
+    <Td>{props.hero.productName}</Td>
+    <Td>{props.hero.productCategory}</Td>
+    <Td>{props.hero.weight}</Td>
+    <Td>{props.hero.unit}</Td>
+    <Td>{props.hero.productPriceIdr}</Td>
+    <Td>{props.hero.productPriceAud}</Td>
+    <Td>{props.hero.countryOfManufacture}</Td>
+    <Td>{props.hero.productClaims}</Td>
+    <Td>{props.hero.typeOfPackaging}</Td>
+    <Td>{props.hero.positioningInStore}</Td>
+    <Td>{props.hero.promotion}</Td>
+    <Td>{props.hero.importer}</Td>
+  </Tr>
 )
 class HerosList extends Component {
   constructor(props) {
@@ -108,32 +110,33 @@ heroList() {
         <br />
 
 
-        <table className="table table-striped">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="row">Product Name</th>
-              <th scope="row">Product Category</th>
-              <th scope="row">Weight</th>
-              <th scope="row">Unit</th>
-              <th scope="row">Price (IDR)</th>
-              <th scope="row">Price (AUD)</th>
-              <th scope="row">Country of Manufacture</th>
-              <th scope="row">Product Claims</th>
-              <th scope="row">Type of Packaging</th>
-              <th scope="row">Position in Store</th>
-              <th scope="row">Promotion</th>
-              <th scope="row">Importer</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.heroList() }
-          </tbody>
-        </table>
+          <Table>
+              <Thead>
+              <Tr>
+                  <Th scope="row">Product Name</Th>
+                  <Th scope="row">Product Category</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+                  <Th scope="row">Type of Packaging</Th>
+                  <Th scope="row">Position in Store</Th>
+                  <Th scope="row">Promotion</Th>
+                  <Th scope="row">Importer</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+                { this.heroList() }
+            </Tbody>
+          </Table>
         <button title='Back to top' className='scroll'
          onClick={ () => { this.scrollToTop(); }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
-
+        <br/>
+        <br/>
       </div>
     )
   }

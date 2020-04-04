@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Styles.css"
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const Farmer = props => (
-  <tr>
-    <td>{props.farmer.productName}</td>
-    <td>{props.farmer.productCategory}</td>
-    <td>{props.farmer.weight}</td>
-    <td>{props.farmer.unit}</td>
-    <td>{props.farmer.productPriceIdr}</td>
-    <td>{props.farmer.productPriceAud}</td>
-    <td>{props.farmer.countryOfManufacture}</td>
-    <td>{props.farmer.productClaims}</td>
-    <td>{props.farmer.typeOfPackaging}</td>
-    <td>{props.farmer.positioningInStore}</td>
-    <td>{props.farmer.promotion}</td>
-    <td>{props.farmer.importer}</td>
-  </tr>
+  <Tr>
+    <Td>{props.farmer.productName}</Td>
+    <Td>{props.farmer.productCategory}</Td>
+    <Td>{props.farmer.weight}</Td>
+    <Td>{props.farmer.unit}</Td>
+    <Td>{props.farmer.productPriceIdr}</Td>
+    <Td>{props.farmer.productPriceAud}</Td>
+    <Td>{props.farmer.countryOfManufacture}</Td>
+    <Td>{props.farmer.productClaims}</Td>
+    <Td>{props.farmer.typeOfPackaging}</Td>
+    <Td>{props.farmer.positioningInStore}</Td>
+    <Td>{props.farmer.promotion}</Td>
+    <Td>{props.farmer.importer}</Td>
+  </Tr>
 )
 class FarmerList extends Component {
   constructor(props) {
@@ -108,32 +110,33 @@ farmerList() {
         <br />
 
 
-        <table className="table table-striped">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="row">Product Name</th>
-              <th scope="row">Product Category</th>
-              <th scope="row">Weight</th>
-              <th scope="row">Unit</th>
-              <th scope="row">Price (IDR)</th>
-              <th scope="row">Price (AUD)</th>
-              <th scope="row">Country of Manufacture</th>
-              <th scope="row">Product Claims</th>
-              <th scope="row">Type of Packaging</th>
-              <th scope="row">Position in Store</th>
-              <th scope="row">Promotion</th>
-              <th scope="row">Importer</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.farmerList() }
-          </tbody>
-        </table>
+          <Table>
+              <Thead>
+              <Tr>
+                  <Th scope="row">Product Name</Th>
+                  <Th scope="row">Product Category</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+                  <Th scope="row">Type of Packaging</Th>
+                  <Th scope="row">Position in Store</Th>
+                  <Th scope="row">Promotion</Th>
+                  <Th scope="row">Importer</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+                { this.farmerList() }
+            </Tbody>
+        </Table>
         <button title='Back to top' className='scroll'
          onClick={ () => { this.scrollToTop(); }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
-
+        <br/>
+        <br/>
       </div>
     )
   }

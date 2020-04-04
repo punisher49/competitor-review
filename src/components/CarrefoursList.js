@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Styles.css"
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const Carrefour = props => (
-  <tr>
-    <td>{props.carrefour.productName}</td>
-    <td>{props.carrefour.productCategory}</td>
-    <td>{props.carrefour.weight}</td>
-    <td>{props.carrefour.unit}</td>
-    <td>{props.carrefour.productPriceIdr}</td>
-    <td>{props.carrefour.productPriceAud}</td>
-    <td>{props.carrefour.countryOfManufacture}</td>
-    <td>{props.carrefour.productClaims}</td>
-    <td>{props.carrefour.typeOfPackaging}</td>
-    <td>{props.carrefour.positioningInStore}</td>
-    <td>{props.carrefour.promotion}</td>
-    <td>{props.carrefour.importer}</td>
-  </tr>
+  <Tr>
+    <Td>{props.carrefour.productName}</Td>
+    <Td>{props.carrefour.productCategory}</Td>
+    <Td>{props.carrefour.weight}</Td>
+    <Td>{props.carrefour.unit}</Td>
+    <Td>{props.carrefour.productPriceIdr}</Td>
+    <Td>{props.carrefour.productPriceAud}</Td>
+    <Td>{props.carrefour.countryOfManufacture}</Td>
+    <Td>{props.carrefour.productClaims}</Td>
+    <Td>{props.carrefour.typeOfPackaging}</Td>
+    <Td>{props.carrefour.positioningInStore}</Td>
+    <Td>{props.carrefour.promotion}</Td>
+    <Td>{props.carrefour.importer}</Td>
+  </Tr>
 )
 class CarrefoursList extends Component {
   constructor(props) {
@@ -109,32 +111,33 @@ carrefourList() {
         <br />
 
 
-        <table className="table table-striped">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="row">Product Name</th>
-              <th scope="row">Product Category</th>
-              <th scope="row">Weight</th>
-              <th scope="row">Unit</th>
-              <th scope="row">Price (IDR)</th>
-              <th scope="row">Price (AUD)</th>
-              <th scope="row">Country of Manufacture</th>
-              <th scope="row">Product Claims</th>
-              <th scope="row">Type of Packaging</th>
-              <th scope="row">Position in Store</th>
-              <th scope="row">Promotion</th>
-              <th scope="row">Importer</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.carrefourList() }
-          </tbody>
-        </table>
+          <Table>
+              <Thead>
+              <Tr>
+                  <Th scope="row">Product Name</Th>
+                  <Th scope="row">Product Category</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+                  <Th scope="row">Type of Packaging</Th>
+                  <Th scope="row">Position in Store</Th>
+                  <Th scope="row">Promotion</Th>
+                  <Th scope="row">Importer</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+                { this.carrefourList() }
+            </Tbody>
+        </Table>
         <button title='Back to top' className='scroll'
          onClick={ () => { this.scrollToTop(); }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
-
+        <br/>
+        <br/>
       </div>
     )
   }

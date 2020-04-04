@@ -9,9 +9,7 @@
   border: none;
   outline: none
 }
-.render{
-  font-size: 15px
-}
+
 .nav-link{
   color: aqua !important;
   border: 1px solid aqua
@@ -33,4 +31,19 @@ input{
   outline: none !important;
   box-shadow: 7px 10px !important;
 
+}
+Thead{
+  background-color: #343A41 !important;
+  color: white !important;
+}
+Th{
+  border: 1px solid white !important;
+}
+
+.render{
+  font-size: 15px;
+  text-align: center;
+}
+Tr:nth-child(even) {
+  background: #E7E7E7 !important;
 }

@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Styles.css"
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const Primo = props => (
-  <tr>
-    <td>{props.primo.productName}</td>
-    <td>{props.primo.productCategory}</td>
-    <td>{props.primo.weight}</td>
-    <td>{props.primo.unit}</td>
-    <td>{props.primo.productPriceIdr}</td>
-    <td>{props.primo.productPriceAud}</td>
-    <td>{props.primo.countryOfManufacture}</td>
-    <td>{props.primo.productClaims}</td>
-    <td>{props.primo.typeOfPackaging}</td>
-    <td>{props.primo.positioningInStore}</td>
-    <td>{props.primo.promotion}</td>
-    <td>{props.primo.importer}</td>
-  </tr>
+  <Tr>
+    <Td>{props.primo.productName}</Td>
+    <Td>{props.primo.productCategory}</Td>
+    <Td>{props.primo.weight}</Td>
+    <Td>{props.primo.unit}</Td>
+    <Td>{props.primo.productPriceIdr}</Td>
+    <Td>{props.primo.productPriceAud}</Td>
+    <Td>{props.primo.countryOfManufacture}</Td>
+    <Td>{props.primo.productClaims}</Td>
+    <Td>{props.primo.typeOfPackaging}</Td>
+    <Td>{props.primo.positioningInStore}</Td>
+    <Td>{props.primo.promotion}</Td>
+    <Td>{props.primo.importer}</Td>
+  </Tr>
 )
 class PrimosList extends Component {
   constructor(props) {
@@ -108,32 +110,33 @@ primoList() {
         <br />
 
 
-        <table className="table table-striped">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="row">Product Name</th>
-              <th scope="row">Product Category</th>
-              <th scope="row">Weight</th>
-              <th scope="row">Unit</th>
-              <th scope="row">Price (IDR)</th>
-              <th scope="row">Price (AUD)</th>
-              <th scope="row">Country of Manufacture</th>
-              <th scope="row">Product Claims</th>
-              <th scope="row">Type of Packaging</th>
-              <th scope="row">Position in Store</th>
-              <th scope="row">Promotion</th>
-              <th scope="row">Importer</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.primoList() }
-          </tbody>
-        </table>
+          <Table>
+              <Thead>
+              <Tr>
+                  <Th scope="row">Product Name</Th>
+                  <Th scope="row">Product Category</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+                  <Th scope="row">Type of Packaging</Th>
+                  <Th scope="row">Position in Store</Th>
+                  <Th scope="row">Promotion</Th>
+                  <Th scope="row">Importer</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+                { this.primoList() }
+            </Tbody>
+          </Table>
         <button title='Back to top' className='scroll'
          onClick={ () => { this.scrollToTop(); }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
-
+        <br/>
+        <br/>
       </div>
     )
   }

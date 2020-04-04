@@ -1,21 +1,24 @@
   import React, { Component } from 'react';
   import axios from 'axios';
   import "./Styles.css"
+  import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+  import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+
   const Aeon = props => (
-    <tr>
-      <td>{props.aeon.productName}</td>
-      <td>{props.aeon.productCategory}</td>
-      <td>{props.aeon.weight}</td>
-      <td>{props.aeon.unit}</td>
-      <td>{props.aeon.productPriceIdr}</td>
-      <td>{props.aeon.productPriceAud}</td>
-      <td>{props.aeon.countryOfManufacture}</td>
-      <td>{props.aeon.productClaims}</td>
-      <td>{props.aeon.typeOfPackaging}</td>
-      <td>{props.aeon.positioningInStore}</td>
-      <td>{props.aeon.promotion}</td>
-      <td>{props.aeon.importer}</td>
-    </tr>
+    <Tr>
+      <Td>{props.aeon.productName}</Td>
+      <Td>{props.aeon.productCategory}</Td>
+      <Td>{props.aeon.weight}</Td>
+      <Td>{props.aeon.unit}</Td>
+      <Td>{props.aeon.productPriceIdr}</Td>
+      <Td>{props.aeon.productPriceAud}</Td>
+      <Td>{props.aeon.countryOfManufacture}</Td>
+      <Td>{props.aeon.productClaims}</Td>
+      <Td>{props.aeon.typeOfPackaging}</Td>
+      <Td>{props.aeon.positioningInStore}</Td>
+      <Td>{props.aeon.promotion}</Td>
+      <Td>{props.aeon.importer}</Td>
+    </Tr>
   )
   class AeonsList extends Component {
     constructor(props) {
@@ -23,7 +26,7 @@
       this.state = {
         aeons: [],
         query: '',
-        intervalId: 0
+        intervalId: 0,
       };
     }
     componentDidMount() {
@@ -57,6 +60,11 @@
     scrollToTop() {
       let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
       this.setState({ intervalId: intervalId });
+    }
+    noMatch(){
+      return (
+        <div>No match</div>
+        )
     }
 
   aeonList() {
@@ -108,32 +116,34 @@
           <br />
 
 
-          <table className="table table-striped">
-            <thead className="thead-dark">
-              <tr>
-                <th scope="row">Product Name</th>
-                <th scope="row">Product Category</th>
-                <th scope="row">Weight</th>
-                <th scope="row">Unit</th>
-                <th scope="row">Price (IDR)</th>
-                <th scope="row">Price (AUD)</th>
-                <th scope="row">Country of Manufacture</th>
-                <th scope="row">Product Claims</th>
-                <th scope="row">Type of Packaging</th>
-                <th scope="row">Position in Store</th>
-                <th scope="row">Promotion</th>
-                <th scope="row">Importer</th>
-              </tr>
-            </thead>
-            <tbody>
-              { this.aeonList() }
-            </tbody>
-          </table>
+            <Table>
+                <Thead>
+                <Tr>
+                    <Th scope="row">Product Name</Th>
+                    <Th scope="row">Product Category</Th>
+                    <Th scope="row">Weight</Th>
+                    <Th scope="row">Unit</Th>
+                    <Th scope="row">Price (IDR)</Th>
+                    <Th scope="row">Price (AUD)</Th>
+                    <Th scope="row">Country of Manufacture</Th>
+                    <Th scope="row">Product Claims</Th>
+                    <Th scope="row">Type of Packaging</Th>
+                    <Th scope="row">Position in Store</Th>
+                    <Th scope="row">Promotion</Th>
+                    <Th scope="row">Importer</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                  { this.aeonList() }
+              </Tbody>
+          </Table>
+
           <button title='Back to top' className='scroll'
            onClick={ () => { this.scrollToTop(); }}>
             <i className="fa fa-arrow-up" ></i>
           </button>
-
+          <br/>
+          <br/>
         </div>
       )
     }

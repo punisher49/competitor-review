@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Styles.css"
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const Rancho = props => (
-  <tr>
-    <td>{props.rancho.productName}</td>
-    <td>{props.rancho.productCategory}</td>
-    <td>{props.rancho.weight}</td>
-    <td>{props.rancho.unit}</td>
-    <td>{props.rancho.productPriceIdr}</td>
-    <td>{props.rancho.productPriceAud}</td>
-    <td>{props.rancho.countryOfManufacture}</td>
-    <td>{props.rancho.productClaims}</td>
-    <td>{props.rancho.typeOfPackaging}</td>
-    <td>{props.rancho.positioningInStore}</td>
-    <td>{props.rancho.promotion}</td>
-    <td>{props.rancho.importer}</td>
-  </tr>
+  <Tr>
+    <Td>{props.rancho.productName}</Td>
+    <Td>{props.rancho.productCategory}</Td>
+    <Td>{props.rancho.weight}</Td>
+    <Td>{props.rancho.unit}</Td>
+    <Td>{props.rancho.productPriceIdr}</Td>
+    <Td>{props.rancho.productPriceAud}</Td>
+    <Td>{props.rancho.countryOfManufacture}</Td>
+    <Td>{props.rancho.productClaims}</Td>
+    <Td>{props.rancho.typeOfPackaging}</Td>
+    <Td>{props.rancho.positioningInStore}</Td>
+    <Td>{props.rancho.promotion}</Td>
+    <Td>{props.rancho.importer}</Td>
+  </Tr>
 )
 class RanchosList extends Component {
   constructor(props) {
@@ -108,32 +110,33 @@ ranchoList() {
         <br />
 
 
-        <table className="table table-striped">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="row">Product Name</th>
-              <th scope="row">Product Category</th>
-              <th scope="row">Weight</th>
-              <th scope="row">Unit</th>
-              <th scope="row">Price (IDR)</th>
-              <th scope="row">Price (AUD)</th>
-              <th scope="row">Country of Manufacture</th>
-              <th scope="row">Product Claims</th>
-              <th scope="row">Type of Packaging</th>
-              <th scope="row">Position in Store</th>
-              <th scope="row">Promotion</th>
-              <th scope="row">Importer</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.ranchoList() }
-          </tbody>
-        </table>
+          <Table>
+              <Thead>
+              <Tr>
+                  <Th scope="row">Product Name</Th>
+                  <Th scope="row">Product Category</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+                  <Th scope="row">Type of Packaging</Th>
+                  <Th scope="row">Position in Store</Th>
+                  <Th scope="row">Promotion</Th>
+                  <Th scope="row">Importer</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+                { this.ranchoList() }
+            </Tbody>
+          </Table>
         <button title='Back to top' className='scroll'
          onClick={ () => { this.scrollToTop(); }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
-
+        <br/>
+        <br/>
       </div>
     )
   }
