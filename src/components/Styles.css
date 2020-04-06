@@ -68,5 +68,19 @@ Tr:nth-child(even) {
 }
 .btn-dark{
   color: aqua !important;
-  border: 1px solid aqua
+  border: 1px solid aqua;
+}
+#sign-out{
+  border: 1px solid orange;
+  color: orange !important;
+    background-color: #343A41 !important;
+}
+#sign-out:hover{
+  background-color: orange !important;
+  color: black !important;
+  border: 1px solid orange
+}
+.hidden{
+    margin: 5px;
+    display: none
 }

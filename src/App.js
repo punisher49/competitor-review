@@ -38,9 +38,9 @@ class App extends React.Component {
 						<PrivateRoute path="/heros" exact component={HerosList} />
 						<PrivateRoute path="/primos" exact component={PrimosList} />
 						<PrivateRoute path="/ranchos" exact component={RanchsList} />
-
 						<Route path="/login" exact component={Login} />
 						<Route path="/signup" exact component={SignUp} />
+
 					</div>
 				</Router>
 			</AuthProvider>

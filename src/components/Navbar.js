@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import app from "./base";
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -23,12 +24,6 @@ export default class Navbar extends Component {
         <div className={"collapse navbar-collapse " + show}>
           <div className="navbar-nav">
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li className="liss">
-                <Link to="/" className="nav-link" id="home-link" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Home
-                </Link>
-              </li>
-
               <li className="liss">
                 <Link to="/carrefours" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
                   Carrefours Transmart
@@ -80,22 +75,9 @@ export default class Navbar extends Component {
               </li>
 
               <li className="liss">
-                <Link to="/login" className="nav-link" id="home-link" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Login
-                </Link>
+                <button onClick={() => app.auth().signOut()} className="nav-link" id="sign-out">Sign out</button>
               </li>
-
-              <li className="liss">
-                <Link to="/signup" className="nav-link" id="home-link" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Sign Up
-                </Link>
-              </li>
-
-
-
-
             </ul>
-
           </div>
 
         </div>
