@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./Styles.css"
+import "./style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const Farmer = props => (

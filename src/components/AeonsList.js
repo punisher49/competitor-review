@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./Styles.css"
+import "./style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
-import app from "./base";
+import app from "./auth/base";
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -112,7 +112,6 @@ class AeonsList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
-
         </form>
 
         <br />

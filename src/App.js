@@ -11,10 +11,10 @@ import PrimosList from "./components/PrimosList";
 import RanchsList from "./components/RanchsList";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import { AuthProvider } from "./components/Auth";
-import PrivateRoute from "./components/PrivateRoute";
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
+import { AuthProvider } from "./components/auth/Auth";
+import PrivateRoute from "./components/auth/PrivateRoute";
 
 
 // import React from "react";

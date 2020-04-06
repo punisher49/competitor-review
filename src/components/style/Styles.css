@@ -72,13 +72,15 @@ Tr:nth-child(even) {
 }
 #sign-out{
   border: 1px solid orange;
+  border-radius: 5px;
   color: orange !important;
-    background-color: #343A41 !important;
+  background-color: #343A41 !important;
 }
 #sign-out:hover{
   background-color: orange !important;
   color: black !important;
-  border: 1px solid orange
+  border: 1px solid orange;
+  outline: none !important
 }
 .hidden{
     margin: 5px;
