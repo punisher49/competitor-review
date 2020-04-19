@@ -4,6 +4,10 @@ import "./style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import app from "./auth/base";
+import Modal from "react-bootstrap/Modal"
+import AeonImages from "./AeonImages"
+
+
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -18,6 +22,7 @@ const Aeon = props => (
     <Td>{props.aeon.positioningInStore}</Td>
     <Td>{props.aeon.promotion}</Td>
     <Td>{props.aeon.importer}</Td>
+    <Td><AeonImages dataFromAeonList = {props.aeon.productImage}/></Td>
   </Tr>
 )
 class AeonsList extends Component {
@@ -27,7 +32,9 @@ class AeonsList extends Component {
       aeons: [],
       query: '',
       intervalId: 0,
+      showImage: false
     };
+    this.handleCounter = this.handleCounter.bind(this);
   }
   componentDidMount() {
     axios.get('http://localhost:5000/aeons/')
@@ -96,7 +103,9 @@ class AeonsList extends Component {
       }
     })
   }
-
+  handleCounter(_State){
+    console.log(_State);
+  }
   render() {
     return (
       <div className="render">
@@ -131,6 +140,7 @@ class AeonsList extends Component {
               <Th scope="row">Position in Store</Th>
               <Th scope="row">Promotion</Th>
               <Th scope="row">Importer</Th>
+              <Th scope="row">Images</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -144,6 +154,7 @@ class AeonsList extends Component {
         </button>
         <br/>
         <br/>
+
       </div>
     )
   }

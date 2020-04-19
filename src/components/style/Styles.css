@@ -41,8 +41,9 @@ Th{
 }
 
 .render{
-  font-size: 15px;
+  font-size: 12px;
   text-align: center;
+  margin: 20px
 }
 Tr:nth-child(even) {
   background: #E7E7E7 !important;
@@ -85,4 +86,9 @@ Tr:nth-child(even) {
 .hidden{
     margin: 5px;
     display: none
+}
+.btn-sm{
+  background-color: black !important;
+  color: aqua !important;
+  font-size: 12px !important
 }

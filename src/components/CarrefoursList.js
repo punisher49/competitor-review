@@ -3,6 +3,8 @@ import axios from 'axios';
 import "./style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+
+
 const Carrefour = props => (
   <Tr>
     <Td>{props.carrefour.productName}</Td>
@@ -90,6 +92,9 @@ class CarrefoursList extends Component {
       }
     })
   }
+  handleClick(){
+    console.log('The link was clicked.');
+  }
 
   render() {
     return (
@@ -114,7 +119,7 @@ class CarrefoursList extends Component {
 
         <Table>
           <Thead>
-            <Tr>
+            <Tr >
               <Th scope="row">Product Name</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
@@ -129,7 +134,7 @@ class CarrefoursList extends Component {
               <Th scope="row">Importer</Th>
             </Tr>
           </Thead>
-          <Tbody>
+          <Tbody onClick={this.handleClick}>
             { this.carrefourList() }
           </Tbody>
         </Table>
