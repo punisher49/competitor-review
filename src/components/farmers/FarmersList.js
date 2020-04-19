@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./style/Styles.css"
+import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import FarmerImages from "./FarmerImages"
 const Farmer = props => (
   <Tr>
     <Td>{props.farmer.productName}</Td>
+    <Td><FarmerImages dataFromFarmerList = {props.farmer.productImage}/></Td>
     <Td>{props.farmer.productCategory}</Td>
     <Td>{props.farmer.weight}</Td>
     <Td>{props.farmer.unit}</Td>
@@ -114,6 +116,7 @@ class FarmerList extends Component {
           <Thead>
             <Tr>
               <Th scope="row">Product Name</Th>
+              <Th scope="row">Images</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>

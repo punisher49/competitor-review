@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import AeonsList from "./components/AeonsList";
+import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/CarrefoursList";
-import FarmersList from "./components/FarmersList";
+import FarmersList from "./components/farmers/FarmersList";
 import FoodhallsList from "./components/FoodhallsList";
 import GrandsList from "./components/GrandsList";
 import HerosList from "./components/HerosList";

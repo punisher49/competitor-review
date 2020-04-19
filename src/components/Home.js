@@ -1,5 +1,4 @@
 import React from "react";
-import app from "./auth/base";
 
 const Home = () => {
   return (

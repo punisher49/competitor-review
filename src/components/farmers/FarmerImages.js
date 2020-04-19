@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import "./style/Styles.css";
+import "../style/Styles.css";
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
-import Iframe from 'react-iframe'
 
-class AeonImages extends Component {
+class FarmerImages extends Component {
 
 
   constructor(props) {
@@ -28,14 +26,12 @@ class AeonImages extends Component {
   }
 
   imageList() {
-    return this.props.dataFromAeonList
+    return this.props.dataFromFarmerList
   }
   render(){
     return (
       <>
-      <Button className="btn-sm" onClick={() => this.handleShow()}>
-      Image
-      </Button>
+      <img src="image.png" width="40px" height="40px" onClick={() => this.handleShow()}/>
 
       <Modal show={this.state.show} onHide={() => this.handleClose()} animation={false}>
       <Modal.Header closeButton>
@@ -46,7 +42,7 @@ class AeonImages extends Component {
 
       <Modal.Body>
 
-      <Iframe src={this.imageList()} fluid />
+      <Image src={this.imageList()} fluid />
 
       </Modal.Body>
 
@@ -64,4 +60,4 @@ class AeonImages extends Component {
   }
 }
 
-export default AeonImages
+export default FarmerImages
