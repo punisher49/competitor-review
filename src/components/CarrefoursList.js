@@ -101,7 +101,8 @@ class CarrefoursList extends Component {
 
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-          <i className="fas fa-search" aria-hidden="true"></i>
+          <h4>Carrefours Transmart</h4>
+
           <input
             className="form-control form-control-lrg ml-3 w-50"
             name="query"
@@ -112,6 +113,8 @@ class CarrefoursList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
+          <br/>
+            <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
         </form>
 
         <br />

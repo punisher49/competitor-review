@@ -9,19 +9,19 @@ import AeonImages from "./AeonImages"
 
 const Aeon = props => (
   <Tr>
-  <Td>{props.aeon.productName}</Td>
-  <Td><AeonImages dataFromAeonList = {props.aeon.productImage}/></Td>
-  <Td>{props.aeon.productCategory}</Td>
-  <Td>{props.aeon.weight}</Td>
-  <Td>{props.aeon.unit}</Td>
-  <Td>{props.aeon.productPriceIdr}</Td>
-  <Td>{props.aeon.productPriceAud}</Td>
-  <Td>{props.aeon.countryOfManufacture}</Td>
-  <Td>{props.aeon.productClaims}</Td>
-  <Td>{props.aeon.typeOfPackaging}</Td>
-  <Td>{props.aeon.positioningInStore}</Td>
-  <Td>{props.aeon.promotion}</Td>
-  <Td>{props.aeon.importer}</Td>
+    <Td>{props.aeon.productName}</Td>
+    <Td><AeonImages dataFromAeonList = {props.aeon.productImage}/></Td>
+    <Td>{props.aeon.productCategory}</Td>
+    <Td>{props.aeon.weight}</Td>
+    <Td>{props.aeon.unit}</Td>
+    <Td>{props.aeon.productPriceIdr}</Td>
+    <Td>{props.aeon.productPriceAud}</Td>
+    <Td>{props.aeon.countryOfManufacture}</Td>
+    <Td>{props.aeon.productClaims}</Td>
+    <Td>{props.aeon.typeOfPackaging}</Td>
+    <Td>{props.aeon.positioningInStore}</Td>
+    <Td>{props.aeon.promotion}</Td>
+    <Td>{props.aeon.importer}</Td>
   </Tr>
 )
 class AeonsList extends Component {
@@ -108,52 +108,55 @@ class AeonsList extends Component {
   render() {
     return (
       <div className="render">
-      <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-      <i className="fas fa-search" aria-hidden="true"></i>
-      <input
-      className="form-control form-control-lrg ml-3 w-50"
-      name="query"
-      id="search-input"
-      type="search"
-      placeholder="Search for a Product"
-      aria-label="Search"
-      onChange={this.handleInputChange}
-      onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
-      />
-      </form>
+        <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+          <h4>Aeon Market</h4>
 
-      <br />
+          <input
+            className="form-control form-control-lrg ml-3 w-50"
+            name="query"
+            id="search-input"
+            type="search"
+            placeholder="Search for a Product"
+            aria-label="Search"
+            onChange={this.handleInputChange}
+            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+            />
+          <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
+        </form>
 
-      <Table>
-      <Thead>
-      <Tr>
-      <Th scope="row">Product Name</Th>
-      <Th scope="row">Image</Th>
-      <Th scope="row">Product Category</Th>
-      <Th scope="row">Weight</Th>
-      <Th scope="row">Unit</Th>
-      <Th scope="row">Price (IDR)</Th>
-      <Th scope="row">Price (AUD)</Th>
-      <Th scope="row">Country of Manufacture</Th>
-      <Th scope="row">Product Claims</Th>
-      <Th scope="row">Type of Packaging</Th>
-      <Th scope="row">Position in Store</Th>
-      <Th scope="row">Promotion</Th>
-      <Th scope="row">Importer</Th>
+        <br />
 
-      </Tr>
-      </Thead>
-      <Tbody>
-      { this.aeonList() }
-      </Tbody>
-      </Table>
 
-      <button title='Back to top' className='scroll'
-      onClick={ () => { this.scrollToTop(); }}>
-      <i className="fa fa-arrow-up" ></i>
-      </button>
-      <br/>
-      <br/>
+        <Table>
+          <Thead>
+            <Tr>
+              <Th scope="row">Product Name</Th>
+              <Th scope="row">Image</Th>
+              <Th scope="row">Product Category</Th>
+              <Th scope="row">Weight</Th>
+              <Th scope="row">Unit</Th>
+              <Th scope="row">Price (IDR)</Th>
+              <Th scope="row">Price (AUD)</Th>
+              <Th scope="row">Country of Manufacture</Th>
+              <Th scope="row">Product Claims</Th>
+              <Th scope="row">Type of Packaging</Th>
+              <Th scope="row">Position in Store</Th>
+              <Th scope="row">Promotion</Th>
+              <Th scope="row">Importer</Th>
+
+            </Tr>
+          </Thead>
+          <Tbody>
+            { this.aeonList() }
+          </Tbody>
+        </Table>
+
+        <button title='Back to top' className='scroll'
+          onClick={ () => { this.scrollToTop(); }}>
+          <i className="fa fa-arrow-up" ></i>
+        </button>
+        <br/>
+        <br/>
 
       </div>
     )

@@ -95,7 +95,7 @@ class GrandsList extends Component {
     return (
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-          <i className="fas fa-search" aria-hidden="true"></i>
+          <h4>Grand Lucky</h4>
           <input
             className="form-control form-control-lrg ml-3 w-50"
             name="query"
@@ -106,6 +106,7 @@ class GrandsList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
+            <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
         </form>
         <br />
 

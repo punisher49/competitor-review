@@ -4,6 +4,7 @@ import app from "./base.js";
 import { AuthContext } from "./Auth.js";
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button'
 
 const Login = ({ history }) => {
   const handleLogin = useCallback(
@@ -41,11 +42,11 @@ const Login = ({ history }) => {
           <input type="password" className="form-control mr-sm-2" id="exampleInputPassword1" name="password" placeholder="Password"/>
         </div>
 
-        <button type="submit" className="btn btn-dark">Log In</button>
+        <Button type="submit" variant="outline-success">Log In</Button>
 
-        <Link to="/signup" className="btn btn-dark" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
+        <Button href="/signup" type="submit" variant="outline-danger">
           Sign Up
-        </Link>
+        </Button>
       </form>
     </div>
   );
