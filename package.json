@@ -4,11 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@okta/okta-react": "^3.0.0",
-    "@okta/okta-signin-widget": "^3.9.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "firebase": "^7.13.2",
@@ -30,7 +25,6 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
