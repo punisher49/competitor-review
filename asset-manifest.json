@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/competitor-review-frontend/static/css/main.bae14c16.chunk.css",
-    "main.js": "/competitor-review-frontend/static/js/main.7d3ad08a.chunk.js",
-    "main.js.map": "/competitor-review-frontend/static/js/main.7d3ad08a.chunk.js.map",
+    "main.css": "/competitor-review-frontend/static/css/main.c7bd3991.chunk.css",
+    "main.js": "/competitor-review-frontend/static/js/main.5ffcee9f.chunk.js",
+    "main.js.map": "/competitor-review-frontend/static/js/main.5ffcee9f.chunk.js.map",
     "runtime-main.js": "/competitor-review-frontend/static/js/runtime-main.c9c07725.js",
     "runtime-main.js.map": "/competitor-review-frontend/static/js/runtime-main.c9c07725.js.map",
     "static/css/2.05988dc8.chunk.css": "/competitor-review-frontend/static/css/2.05988dc8.chunk.css",
-    "static/js/2.c5f5fa6c.chunk.js": "/competitor-review-frontend/static/js/2.c5f5fa6c.chunk.js",
-    "static/js/2.c5f5fa6c.chunk.js.map": "/competitor-review-frontend/static/js/2.c5f5fa6c.chunk.js.map",
+    "static/js/2.51e0e085.chunk.js": "/competitor-review-frontend/static/js/2.51e0e085.chunk.js",
+    "static/js/2.51e0e085.chunk.js.map": "/competitor-review-frontend/static/js/2.51e0e085.chunk.js.map",
     "index.html": "/competitor-review-frontend/index.html",
-    "precache-manifest.fb66d888aefd0a1ab00d74b6ad1cfa8c.js": "/competitor-review-frontend/precache-manifest.fb66d888aefd0a1ab00d74b6ad1cfa8c.js",
+    "precache-manifest.af4dff32e70c06858e49588597629615.js": "/competitor-review-frontend/precache-manifest.af4dff32e70c06858e49588597629615.js",
     "service-worker.js": "/competitor-review-frontend/service-worker.js",
     "static/css/2.05988dc8.chunk.css.map": "/competitor-review-frontend/static/css/2.05988dc8.chunk.css.map",
-    "static/css/main.bae14c16.chunk.css.map": "/competitor-review-frontend/static/css/main.bae14c16.chunk.css.map",
-    "static/js/2.c5f5fa6c.chunk.js.LICENSE.txt": "/competitor-review-frontend/static/js/2.c5f5fa6c.chunk.js.LICENSE.txt"
+    "static/css/main.c7bd3991.chunk.css.map": "/competitor-review-frontend/static/css/main.c7bd3991.chunk.css.map",
+    "static/js/2.51e0e085.chunk.js.LICENSE.txt": "/competitor-review-frontend/static/js/2.51e0e085.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c9c07725.js",
     "static/css/2.05988dc8.chunk.css",
-    "static/js/2.c5f5fa6c.chunk.js",
-    "static/css/main.bae14c16.chunk.css",
-    "static/js/main.7d3ad08a.chunk.js"
+    "static/js/2.51e0e085.chunk.js",
+    "static/css/main.c7bd3991.chunk.css",
+    "static/js/main.5ffcee9f.chunk.js"
   ]
 }
