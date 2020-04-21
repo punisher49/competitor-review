@@ -17,10 +17,8 @@ import { AuthProvider } from "./components/auth/Auth";
 import PrivateRoute from "./components/auth/PrivateRoute";
 
 
-// import React from "react";
 
 class App extends React.Component {
-// const App = () => {
 	render(){
 		return (
 			<AuthProvider>
@@ -49,6 +47,3 @@ class App extends React.Component {
 		}
 
 		export default App;
-
-
-		// <Route path="/primos" exact component={} />
