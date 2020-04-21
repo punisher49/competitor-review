@@ -3,7 +3,6 @@ import "../style/Styles.css";
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
-import Iframe from 'react-iframe'
 
 class AeonImages extends Component {
 
