@@ -3,7 +3,7 @@ import "../style/Styles.css";
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
-
+import "../style/Styles.css"
 class FarmerImages extends Component {
 
 
@@ -31,7 +31,7 @@ class FarmerImages extends Component {
   render(){
     return (
       <>
-      <img src="image.png" width="40px" height="40px" onClick={() => this.handleShow()}/>
+      <img src="https://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/Photo-icon.png" width="40px" height="40px" onClick={() => this.handleShow()}/>
 
       <Modal show={this.state.show} onHide={() => this.handleClose()} animation={false}>
       <Modal.Header closeButton>
