@@ -5,7 +5,8 @@ import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import app from "../auth/base";
 import AeonImages from "./AeonImages"
-
+import { ExportCSV } from '../ExportCSV'
+import { ExportReactCSV } from '../ExportReactCSV'
 
 const Aeon = props => (
   <Tr>
@@ -31,7 +32,8 @@ class AeonsList extends Component {
       aeons: [],
       query: '',
       intervalId: 0,
-      showImage: false
+      showImage: false,
+      fileName: 'AeonList'
     };
     this.handleCounter = this.handleCounter.bind(this);
   }
@@ -122,6 +124,7 @@ class AeonsList extends Component {
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
           <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
+          <ExportReactCSV csvData={this.aeonList().toString()} fileName={this.state.fileName} />
         </form>
 
         <br />
