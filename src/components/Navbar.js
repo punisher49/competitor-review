@@ -19,9 +19,13 @@ export default function SimpleMenu() {
 
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-      <Button className="btn btn-light" aria-haspopup="true" onClick={handleClick}>
-        Open Menu
-      </Button>
+      <Link to="/" className="btn btn-outline-light">
+      Home
+      </Link>
+      <button className="btn btn-outline-info" onClick={handleClick}>
+         Baby Food
+      </button>
+
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
@@ -36,34 +40,35 @@ export default function SimpleMenu() {
           Farmers Market
         </Link></MenuItem>
 
-      <MenuItem onClick={handleClose}><Link to="/ranchos" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/ranchos" className="btn btn-dark">
           Ranch Market
         </Link></MenuItem>
 
-      <MenuItem onClick={handleClose}><Link to="/grands" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/grands" className="btn btn-dark">
           Grand Lucky
         </Link></MenuItem>
 
-      <MenuItem onClick={handleClose}><Link to="/foodhalls" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/foodhalls" className="btn btn-dark">
           Foodhall
         </Link></MenuItem>
 
 
-      <MenuItem onClick={handleClose}><Link to="/primos" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/primos" className="btn btn-dark">
           Primo
         </Link></MenuItem>
 
-      <MenuItem onClick={handleClose}><Link to="/aeons" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/aeons" className="btn btn-dark">
           Aeon
         </Link></MenuItem>
 
-      <MenuItem onClick={handleClose}><Link to="/heros" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/heros" className="btn btn-dark">
           Hero
         </Link></MenuItem>
 
 
-        <MenuItem onClick={handleClose}>                <button onClick={() => app.auth().signOut()} className="nav-link" id="sign-out">Sign out</button></MenuItem>
+        <MenuItem onClick={handleClose}>                </MenuItem>
       </Menu>
+      <button onClick={() => app.auth().signOut()} className="btn btn-outline-danger"  >Sign out</button>
     </nav>
   );
 }
