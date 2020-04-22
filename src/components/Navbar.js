@@ -1,87 +1,69 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 import app from "./auth/base";
-export default class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menu: false
-    };
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
-  toggleMenu(){
-    this.setState({ menu: !this.state.menu })
-  }
-  render() {
-    const show = (this.state.menu) ? "show" : "" ;
-    return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <button className="navbar-toggler" type="button"
-          onClick={ this.toggleMenu }
-          >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className={"collapse navbar-collapse " + show}>
-          <div className="navbar-nav">
-            <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li className="liss">
-                <Link to="/carrefours" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Carrefours Transmart
-                </Link>
-              </li>
-              <li className="liss">
-                <Link to="/farmers" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Farmers Market
-                </Link>
-              </li>
+import { Link } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css"
+export default function SimpleMenu() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-              <li className="liss">
-                <Link to="/ranchos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Ranch Market
-                </Link>
-              </li>
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-              <li className="liss">
-                <Link to="/grands" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Grand Lucky
-                </Link>
-              </li>
+  return (
+    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+      <Button className="btn btn-light" aria-haspopup="true" onClick={handleClick}>
+        Open Menu
+      </Button>
+      <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        >
+        <MenuItem onClick={handleClose}>  <Link to="/carrefours" className="btn btn-dark">
+          Carrefours Transmart
+        </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/farmers" className="btn btn-dark">
+          Farmers Market
+        </Link></MenuItem>
+
+      <MenuItem onClick={handleClose}><Link to="/ranchos" className="btn btn-dark">
+          Ranch Market
+        </Link></MenuItem>
+
+      <MenuItem onClick={handleClose}><Link to="/grands" className="btn btn-dark">
+          Grand Lucky
+        </Link></MenuItem>
+
+      <MenuItem onClick={handleClose}><Link to="/foodhalls" className="btn btn-dark">
+          Foodhall
+        </Link></MenuItem>
 
 
-              <li className="liss">
-                <Link to="/foodhalls" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Foodhall
-                </Link>
-              </li>
+      <MenuItem onClick={handleClose}><Link to="/primos" className="btn btn-dark">
+          Primo
+        </Link></MenuItem>
 
-              <li className="liss">
-                <Link to="/primos" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Primo
-                </Link>
-              </li>
+      <MenuItem onClick={handleClose}><Link to="/aeons" className="btn btn-dark">
+          Aeon
+        </Link></MenuItem>
 
-              <li className="liss">
-                <Link to="/aeons" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Aeon
-                </Link>
-              </li>
+      <MenuItem onClick={handleClose}><Link to="/heros" className="btn btn-dark">
+          Hero
+        </Link></MenuItem>
 
 
-              <li className="liss">
-                <Link to="/heros" className="nav-link" id="pills-home-tab" data-toggle="pill" role="tab" aria-controls="pills-home" aria-selected="true">
-                  Hero
-                </Link>
-              </li>
-
-              <li className="liss">
-                <button onClick={() => app.auth().signOut()} className="nav-link" id="sign-out">Sign out</button>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </nav>
-    );
-  }
+        <MenuItem onClick={handleClose}>                <button onClick={() => app.auth().signOut()} className="nav-link" id="sign-out">Sign out</button></MenuItem>
+      </Menu>
+    </nav>
+  );
 }
