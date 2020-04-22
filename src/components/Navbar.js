@@ -19,7 +19,7 @@ export default function SimpleMenu() {
 
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-      <Link to="/" className="btn btn-outline-light">
+      <Link to="/competitor-review" className="btn btn-outline-light">
       Home
       </Link>
       <button className="btn btn-outline-info" onClick={handleClick}>

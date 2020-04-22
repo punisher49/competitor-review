@@ -26,7 +26,7 @@ class App extends React.Component {
 					<div className="">
 						<Navbar />
 						<br />
-						<Route exact  path="/" component={Home}/>
+						<Route exact  path="/competitor-review" component={Home}/>
 
 						<PrivateRoute path="/aeons" exact component={AeonsList} />
 						<PrivateRoute path="/carrefours" exact component={CarrefoursList} />
