@@ -19,7 +19,7 @@ export default function SimpleMenu() {
 
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-      <Link to="/competitor-review" className="btn btn-outline-light">
+      <Link to="/competitor-review/" className="btn btn-outline-light">
       Home
       </Link>
       <button className="btn btn-outline-info" onClick={handleClick}>
@@ -33,35 +33,35 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         >
-        <MenuItem onClick={handleClose}>  <Link to="/carrefours" className="btn btn-dark">
+        <MenuItem onClick={handleClose}>  <Link to="/competitor-review/carrefours" className="btn btn-dark">
           Carrefours Transmart
         </Link></MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/farmers" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/farmers" className="btn btn-dark">
           Farmers Market
         </Link></MenuItem>
 
-        <MenuItem onClick={handleClose}><Link to="/ranchos" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/ranchos" className="btn btn-dark">
           Ranch Market
         </Link></MenuItem>
 
-        <MenuItem onClick={handleClose}><Link to="/grands" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/grands" className="btn btn-dark">
           Grand Lucky
         </Link></MenuItem>
 
-        <MenuItem onClick={handleClose}><Link to="/foodhalls" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/foodhalls" className="btn btn-dark">
           Foodhall
         </Link></MenuItem>
 
 
-        <MenuItem onClick={handleClose}><Link to="/primos" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/primos" className="btn btn-dark">
           Primo
         </Link></MenuItem>
 
-        <MenuItem onClick={handleClose}><Link to="/aeons" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/aeons" className="btn btn-dark">
           Aeon
         </Link></MenuItem>
 
-        <MenuItem onClick={handleClose}><Link to="/heros" className="btn btn-dark">
+        <MenuItem onClick={handleClose}><Link to="/competitor-review/heros" className="btn btn-dark">
           Hero
         </Link></MenuItem>
 
