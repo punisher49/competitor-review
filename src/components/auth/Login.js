@@ -15,7 +15,7 @@ const Login = ({ history }) => {
         await app
         .auth()
         .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/carrefours");
+        history.push("/competitor-review/");
       } catch (error) {
         alert(error);
       }
@@ -25,7 +25,7 @@ const Login = ({ history }) => {
 
   const { currentUser } = useContext(AuthContext);
   if (currentUser) {
-    return <Redirect to="/carrefours" />;
+    return <Redirect to="/competitor-review/" />;
   }
 
   return (
