@@ -29,7 +29,7 @@ class RanchosList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/ranchos/')
+    axios.get('https://hidden-dawn-00072.herokuapp.com/ranchos/')
     .then(response => {
       this.setState({
         ranchos: response.data

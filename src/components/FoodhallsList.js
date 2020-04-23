@@ -29,7 +29,7 @@ class FoodhallList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/foodhalls/')
+    axios.get('https://hidden-dawn-00072.herokuapp.com/foodhalls/')
     .then(response => {
       this.setState({
         foodhalls: response.data

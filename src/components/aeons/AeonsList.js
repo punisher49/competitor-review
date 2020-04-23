@@ -124,7 +124,6 @@ class AeonsList extends Component {
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
           <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
-          <ExportReactCSV csvData={this.aeonList().toString()} fileName={this.state.fileName} />
         </form>
 
         <br />
@@ -167,3 +166,6 @@ class AeonsList extends Component {
 }
 
 export default AeonsList;
+
+
+// <ExportReactCSV csvData={this.aeonList().toString()} fileName={this.state.fileName} />
