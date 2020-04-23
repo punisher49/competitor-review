@@ -23,9 +23,7 @@ class App extends React.Component {
 		return (
 			<AuthProvider>
 				<Router>
-					<div className="">
 						<Navbar />
-						<br />
 						<Route exact  path="/competitor-review/" component={Home}/>
 
 						<PrivateRoute path="/aeons" component={AeonsList} />
@@ -38,8 +36,6 @@ class App extends React.Component {
 						<PrivateRoute path="/ranchos" component={RanchsList} />
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={SignUp} />
-
-					</div>
 				</Router>
 			</AuthProvider>
 				)
