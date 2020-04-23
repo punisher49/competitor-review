@@ -35,9 +35,7 @@ const SignUp = ({ history }) => {
         </div>
 
         <Button type="submit" variant="outline-success">Sign Up</Button>
-        <Button href="/login" type="submit" variant="outline-danger">
-            Log In
-        </Button>
+
       </form>
     </div>
   );

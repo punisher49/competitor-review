@@ -23,23 +23,23 @@ class App extends React.Component {
 		return (
 			<AuthProvider>
 				<HashRouter>
-						<Navbar />
-						<Route exact  path="/competitor-review/" component={Home}/>
+					<Navbar />
+					<Route exact  path="/competitor-review/" component={Home}/>
+					<Route path="/login" component={Login} />
+					<Route path="/signUp" component={SignUp} />
 
-						<PrivateRoute path="/aeons" component={AeonsList} />
-						<PrivateRoute path="/carrefours" component={CarrefoursList} />
-						<PrivateRoute path="/farmers" component={FarmersList} />
-						<PrivateRoute path="/foodhalls" component={FoodhallsList} />
-						<PrivateRoute path="/grands" component={GrandsList} />
-						<PrivateRoute path="/heros" component={HerosList} />
-						<PrivateRoute path="/primos" component={PrimosList} />
-						<PrivateRoute path="/ranchos" component={RanchsList} />
-						<Route path="/login" component={Login} />
-						<Route path="/signup" component={SignUp} />
+					<PrivateRoute path="/aeons" component={AeonsList} />
+					<PrivateRoute path="/carrefours" component={CarrefoursList} />
+					<PrivateRoute path="/farmers" component={FarmersList} />
+					<PrivateRoute path="/foodhalls" component={FoodhallsList} />
+					<PrivateRoute path="/grands" component={GrandsList} />
+					<PrivateRoute path="/heros" component={HerosList} />
+					<PrivateRoute path="/primos" component={PrimosList} />
+					<PrivateRoute path="/ranchos" component={RanchsList} />
 				</HashRouter>
 			</AuthProvider>
-				)
-			}
-		}
+		)
+	}
+}
 
-		export default App;
+export default App;

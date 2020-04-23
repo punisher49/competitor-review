@@ -161,5 +161,6 @@ img{
   }
 }
 Link{
-  outline: none
+  outline: none;
+  decoration: none
 }

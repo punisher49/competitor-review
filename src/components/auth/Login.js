@@ -43,10 +43,9 @@ const Login = ({ history }) => {
         </div>
 
         <Button type="submit" variant="outline-success">Log In</Button>
-
-        <Button href="/signup" type="submit" variant="outline-danger">
-          Sign Up
-        </Button>
+          <Link to="/signup" className="btn btn-outline-danger">
+            Sign Up
+          </Link>
       </form>
     </div>
   );
