@@ -38,7 +38,7 @@ class AeonsList extends Component {
     this.handleCounter = this.handleCounter.bind(this);
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/aeons/')
+    axios.get('https://hidden-dawn-00072.herokuapp.com/aeons')
     .then(response => {
       this.setState({
         aeons: response.data
