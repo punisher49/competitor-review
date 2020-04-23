@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, HashRouter} from 'react-router-dom'
 import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/CarrefoursList";
 import FarmersList from "./components/farmers/FarmersList";
@@ -22,7 +22,7 @@ class App extends React.Component {
 	render(){
 		return (
 			<AuthProvider>
-				<Router>
+				<HashRouter>
 						<Navbar />
 						<Route exact  path="/competitor-review/" component={Home}/>
 
@@ -36,7 +36,7 @@ class App extends React.Component {
 						<PrivateRoute path="/ranchos" component={RanchsList} />
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={SignUp} />
-				</Router>
+				</HashRouter>
 			</AuthProvider>
 				)
 			}
