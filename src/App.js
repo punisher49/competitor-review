@@ -28,16 +28,16 @@ class App extends React.Component {
 						<br />
 						<Route exact  path="/competitor-review/" component={Home}/>
 
-						<PrivateRoute path="/aeons" exact component={AeonsList} />
-						<PrivateRoute path="/carrefours" exact component={CarrefoursList} />
-						<PrivateRoute path="/farmers" exact component={FarmersList} />
-						<PrivateRoute path="/foodhalls" exact component={FoodhallsList} />
-						<PrivateRoute path="/grands" exact component={GrandsList} />
-						<PrivateRoute path="/heros" exact component={HerosList} />
-						<PrivateRoute path="/primos" exact component={PrimosList} />
-						<PrivateRoute path="/ranchos" exact component={RanchsList} />
-						<Route path="/Login" exact component={Login} />
-						<Route path="/Signup" exact component={SignUp} />
+						<PrivateRoute path="/aeons" component={AeonsList} />
+						<PrivateRoute path="/carrefours" component={CarrefoursList} />
+						<PrivateRoute path="/farmers" component={FarmersList} />
+						<PrivateRoute path="/foodhalls" component={FoodhallsList} />
+						<PrivateRoute path="/grands" component={GrandsList} />
+						<PrivateRoute path="/heros" component={HerosList} />
+						<PrivateRoute path="/primos" component={PrimosList} />
+						<PrivateRoute path="/ranchos" component={RanchsList} />
+						<Route path="/login" component={Login} />
+						<Route path="/signup" component={SignUp} />
 
 					</div>
 				</Router>
