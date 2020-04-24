@@ -15,7 +15,7 @@ const Login = ({ history }) => {
         await app
         .auth()
         .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/competitor-review/");
+        history.push("/");
       } catch (error) {
         alert(error);
       }
@@ -25,7 +25,7 @@ const Login = ({ history }) => {
 
   const { currentUser } = useContext(AuthContext);
   if (currentUser) {
-    return <Redirect to="/competitor-review/" />;
+    return <Redirect to="/" />;
   }
 
   return (
@@ -43,9 +43,6 @@ const Login = ({ history }) => {
         </div>
 
         <Button type="submit" variant="outline-success">Log In</Button>
-          <Link to="/signup" className="btn btn-outline-danger">
-            Sign Up
-          </Link>
       </form>
     </div>
   );

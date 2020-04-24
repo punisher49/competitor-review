@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-import {BrowserRouter as Router, Route, HashRouter} from 'react-router-dom'
+import {Route, HashRouter} from 'react-router-dom'
 import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/CarrefoursList";
 import FarmersList from "./components/farmers/FarmersList";
@@ -24,10 +24,9 @@ class App extends React.Component {
 			<AuthProvider>
 				<HashRouter>
 					<Navbar />
-					<Route exact  path="/competitor-review/" component={Home}/>
+					<PrivateRoute exact  path="/" component={Home}/>
 					<Route path="/login" component={Login} />
 					<Route path="/signUp" component={SignUp} />
-
 					<PrivateRoute path="/aeons" component={AeonsList} />
 					<PrivateRoute path="/carrefours" component={CarrefoursList} />
 					<PrivateRoute path="/farmers" component={FarmersList} />

@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "./base";
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button'
 
 const SignUp = ({ history }) => {
@@ -34,7 +33,7 @@ const SignUp = ({ history }) => {
           <input type="password" className="form-control mr-sm-2" id="exampleInputPassword1" name="password" placeholder="Password"/>
         </div>
 
-        <Button type="submit" variant="outline-success">Sign Up</Button>
+        <Button type="submit" variant="outline-primary">Sign Up</Button>
 
       </form>
     </div>
