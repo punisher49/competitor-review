@@ -72,6 +72,7 @@ export default function SimpleMenu() {
         </Menu>
       </div>
 
+
         <div className="btn-group mr-2" role="group" aria-label="Second group">
           <Link to="/login" className="btn btn-outline-success">
             Login
@@ -79,8 +80,9 @@ export default function SimpleMenu() {
           <Link to="/signup" className="btn btn-outline-primary">
             Sign Up
           </Link>
+          <button onClick={() => app.auth().signOut()} className="btn btn-outline-danger"  >Sign out</button>
         </div>
-        <button onClick={() => app.auth().signOut()} className="btn btn-outline-danger"  >Sign out</button>
+        :
       </nav>
     );
   }

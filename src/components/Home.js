@@ -4,7 +4,6 @@ const Home = () => {
   return (
     <>
       <h3>This is going to be a Home page but I don't have any content to put in</h3>
-      <button onClick={() => app.auth().signOut()} className="btn btn-outline-danger"  >Sign out</button>
     </>
   );
 };
