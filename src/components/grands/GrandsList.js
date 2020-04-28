@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./style/Styles.css"
+import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import GrandImages from "./GrandImages"
 const Grand = props => (
   <Tr>
     <Td>{props.grand.productName}</Td>
+    <Td><GrandImages dataFromGrandList = {props.grand.productImage}/></Td>
     <Td>{props.grand.productCategory}</Td>
     <Td>{props.grand.weight}</Td>
     <Td>{props.grand.unit}</Td>
@@ -17,6 +19,7 @@ const Grand = props => (
     <Td>{props.grand.positioningInStore}</Td>
     <Td>{props.grand.promotion}</Td>
     <Td>{props.grand.importer}</Td>
+
   </Tr>
 )
 class GrandsList extends Component {
@@ -115,6 +118,7 @@ class GrandsList extends Component {
           <Thead>
             <Tr>
               <Th scope="row">Product Name</Th>
+              <Th scope="row">Image</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>

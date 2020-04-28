@@ -4,11 +4,11 @@ import {Route, HashRouter} from 'react-router-dom'
 import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/carrefours/CarrefoursList";
 import FarmersList from "./components/farmers/FarmersList";
-import FoodhallsList from "./components/FoodhallsList";
-import GrandsList from "./components/GrandsList";
+import FoodhallsList from "./components/foodhalls/FoodhallsList";
+import GrandsList from "./components/grands/GrandsList";
 import HerosList from "./components/HerosList";
 import PrimosList from "./components/PrimosList";
-import RanchsList from "./components/RanchsList";
+import RanchsList from "./components/ranchs/RanchsList";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Login from "./components/auth/Login";

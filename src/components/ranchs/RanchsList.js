@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./style/Styles.css"
+import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import RanchImages from "./RanchImages"
 const Rancho = props => (
   <Tr>
     <Td>{props.rancho.productName}</Td>
+    <Td><RanchImages dataFromRanchList = {props.rancho.productImage}/></Td>
     <Td>{props.rancho.productCategory}</Td>
     <Td>{props.rancho.weight}</Td>
     <Td>{props.rancho.unit}</Td>
@@ -17,6 +19,7 @@ const Rancho = props => (
     <Td>{props.rancho.positioningInStore}</Td>
     <Td>{props.rancho.promotion}</Td>
     <Td>{props.rancho.importer}</Td>
+    <Td>{props.rancho.location}</Td>
   </Tr>
 )
 class RanchosList extends Component {
@@ -87,6 +90,8 @@ class RanchosList extends Component {
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else if (currentrancho.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
+      }else if (currentrancho.location.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }
     })
   }
@@ -115,6 +120,7 @@ class RanchosList extends Component {
           <Thead>
             <Tr>
               <Th scope="row">Product Name</Th>
+              <Th scope="row">Image</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
@@ -126,6 +132,7 @@ class RanchosList extends Component {
               <Th scope="row">Position in Store</Th>
               <Th scope="row">Promotion</Th>
               <Th scope="row">Importer</Th>
+              <Th scope="row">Location</Th>
             </Tr>
           </Thead>
           <Tbody>
