@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./style/Styles.css"
+import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import CarrefourImages from "./CarrefourImages"
 
 
 const Carrefour = props => (
   <Tr>
-    <Td>{props.carrefour.productName}</Td>
-    <Td>{props.carrefour.productCategory}</Td>
-    <Td>{props.carrefour.weight}</Td>
-    <Td>{props.carrefour.unit}</Td>
-    <Td>{props.carrefour.productPriceIdr}</Td>
-    <Td>{props.carrefour.productPriceAud}</Td>
-    <Td>{props.carrefour.countryOfManufacture}</Td>
-    <Td>{props.carrefour.productClaims}</Td>
-    <Td>{props.carrefour.typeOfPackaging}</Td>
-    <Td>{props.carrefour.positioningInStore}</Td>
-    <Td>{props.carrefour.promotion}</Td>
-    <Td>{props.carrefour.importer}</Td>
+  <Td>{props.carrefour.productName}</Td>
+  <Td><CarrefourImages dataFromCarrefourList = {props.carrefour.productImage}/></Td>
+  <Td>{props.carrefour.productCategory}</Td>
+  <Td>{props.carrefour.weight}</Td>
+  <Td>{props.carrefour.unit}</Td>
+  <Td>{props.carrefour.productPriceIdr}</Td>
+  <Td>{props.carrefour.productPriceAud}</Td>
+  <Td>{props.carrefour.countryOfManufacture}</Td>
+  <Td>{props.carrefour.productClaims}</Td>
+  <Td>{props.carrefour.typeOfPackaging}</Td>
+  <Td>{props.carrefour.positioningInStore}</Td>
+  <Td>{props.carrefour.promotion}</Td>
+  <Td>{props.carrefour.importer}</Td>
   </Tr>
 )
 class CarrefoursList extends Component {
@@ -100,53 +102,54 @@ class CarrefoursList extends Component {
     return (
 
       <div className="render">
-        <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-          <h4>Carrefours Transmart</h4>
+      <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+      <h4>Carrefours Transmart</h4>
 
-          <input
-            className="form-control form-control-lrg ml-3 w-50"
-            name="query"
-            id="search-input"
-            type="search"
-            placeholder="Search for a Product"
-            aria-label="Search"
-            onChange={this.handleInputChange}
-            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
-            />
-          <br/>
-            <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
-        </form>
+      <input
+      className="form-control form-control-lrg ml-3 w-50"
+      name="query"
+      id="search-input"
+      type="search"
+      placeholder="Search for a Product"
+      aria-label="Search"
+      onChange={this.handleInputChange}
+      onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+      />
+      <br/>
+      <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
+      </form>
 
-        <br />
+      <br />
 
 
-        <Table>
-          <Thead>
-            <Tr >
-              <Th scope="row">Product Name</Th>
-              <Th scope="row">Product Category</Th>
-              <Th scope="row">Weight</Th>
-              <Th scope="row">Unit</Th>
-              <Th scope="row">Price (IDR)</Th>
-              <Th scope="row">Price (AUD)</Th>
-              <Th scope="row">Country of Manufacture</Th>
-              <Th scope="row">Product Claims</Th>
-              <Th scope="row">Type of Packaging</Th>
-              <Th scope="row">Position in Store</Th>
-              <Th scope="row">Promotion</Th>
-              <Th scope="row">Importer</Th>
-            </Tr>
-          </Thead>
-          <Tbody onClick={this.handleClick}>
-            { this.carrefourList() }
-          </Tbody>
-        </Table>
-        <button title='Back to top' className='scroll'
-          onClick={ () => { this.scrollToTop(); }}>
-          <i className="fa fa-arrow-up" ></i>
-        </button>
-        <br/>
-        <br/>
+      <Table>
+      <Thead>
+      <Tr >
+      <Th scope="row">Product Name</Th>
+      <Th scope="row">Image</Th>
+      <Th scope="row">Product Category</Th>
+      <Th scope="row">Weight</Th>
+      <Th scope="row">Unit</Th>
+      <Th scope="row">Price (IDR)</Th>
+      <Th scope="row">Price (AUD)</Th>
+      <Th scope="row">Country of Manufacture</Th>
+      <Th scope="row">Product Claims</Th>
+      <Th scope="row">Type of Packaging</Th>
+      <Th scope="row">Position in Store</Th>
+      <Th scope="row">Promotion</Th>
+      <Th scope="row">Importer</Th>
+      </Tr>
+      </Thead>
+      <Tbody onClick={this.handleClick}>
+      { this.carrefourList() }
+      </Tbody>
+      </Table>
+      <button title='Back to top' className='scroll'
+      onClick={ () => { this.scrollToTop(); }}>
+      <i className="fa fa-arrow-up" ></i>
+      </button>
+      <br/>
+      <br/>
       </div>
     )
   }

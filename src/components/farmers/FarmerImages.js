@@ -31,7 +31,7 @@ class FarmerImages extends Component {
   render(){
     return (
       <>
-      <img src="https://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/Photo-icon.png" width="40px" height="40px" alt="photos" onClick={() => this.handleShow()}/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Circle-icons-image.svg/512px-Circle-icons-image.svg.png" width="35px" height="35px" alt="photos" onClick={() => this.handleShow()}/>
 
       <Modal show={this.state.show} onHide={() => this.handleClose()} animation={false}>
       <Modal.Header closeButton>

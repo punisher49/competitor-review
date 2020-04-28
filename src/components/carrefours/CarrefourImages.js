@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 
-class AeonImages extends Component {
+class CarrefourImages extends Component {
 
 
   constructor(props) {
@@ -26,7 +26,7 @@ class AeonImages extends Component {
   }
 
   imageList() {
-    return this.props.dataFromAeonList
+    return this.props.dataFromCarrefourList
   }
   render(){
     return (
@@ -60,4 +60,4 @@ class AeonImages extends Component {
   }
 }
 
-export default AeonImages
+export default CarrefourImages
