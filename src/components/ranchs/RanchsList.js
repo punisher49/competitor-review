@@ -114,8 +114,6 @@ class RanchosList extends Component {
             <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
         </form>
         <br />
-
-
         <Table>
           <Thead>
             <Tr>

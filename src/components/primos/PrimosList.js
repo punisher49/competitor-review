@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./style/Styles.css"
+import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import PrimoImages from "./PrimoImages"
 const Primo = props => (
   <Tr>
     <Td>{props.primo.productName}</Td>
+    <Td><PrimoImages dataFromPrimoList = {props.primo.productImage}/></Td>
     <Td>{props.primo.productCategory}</Td>
     <Td>{props.primo.weight}</Td>
     <Td>{props.primo.unit}</Td>
@@ -106,7 +108,7 @@ class PrimosList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
-            <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
+          <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
         </form>
         <br />
 
@@ -115,6 +117,7 @@ class PrimosList extends Component {
           <Thead>
             <Tr>
               <Th scope="row">Product Name</Th>
+              <Th scope="row">Images</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
