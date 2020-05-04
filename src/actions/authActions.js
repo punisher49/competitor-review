@@ -14,7 +14,7 @@ import {
 export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
-  axios.get('https://hidden-dawn-00072.herokuapp.com/auth/user')
+  axios.get('https://hidden-dawn-00072.herokuapp.com/auth/')
   .then(res => dispatch({
     type: USER_LOADED,
     payload: res.data
