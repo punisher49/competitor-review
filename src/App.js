@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-import {Route, HashRouter} from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/carrefours/CarrefoursList";
