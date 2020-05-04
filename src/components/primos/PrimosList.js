@@ -31,7 +31,7 @@ class PrimosList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/primos/')
+    axios.get('https://hidden-dawn-00072.herokuapp.com/primos/')
     .then(response => {
       this.setState({
         primos: response.data

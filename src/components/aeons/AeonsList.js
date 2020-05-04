@@ -6,9 +6,10 @@ import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import AeonImages from "./AeonImages"
 // import { ExportCSV } from '../ExportCSV'
 // import { ExportReactCSV } from '../ExportReactCSV'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {tokenConfig} from "../../actions/authActions"
 import {returnErrors} from '../../actions/errorActions'
-
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -39,7 +40,14 @@ class AeonsList extends Component {
     this.handleCounter = this.handleCounter.bind(this);
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/aeons')
+
+    axios.defaults.xsrfHeaderName = "x-auth-token";
+    axios.defaults.xsrfCookieName = "xauthtoken";
+    axios.defaults.headers = {
+      "Content-Type": "application/json",
+      Authorization: `Token ${this.props.token}`,
+    };
+    axios.get('https://hidden-dawn-00072.herokuapp.com/aeons' )
     .then(response => {
       this.setState({
         aeons: response.data
@@ -166,7 +174,11 @@ class AeonsList extends Component {
   }
 }
 
-export default AeonsList;
+const mapStateToProps = state => ({
+  token: state.token
+});
+
+export default connect(mapStateToProps, { tokenConfig, returnErrors })(AeonsList);
 
 
 // <ExportReactCSV csvData={this.aeonList().toString()} fileName={this.state.fileName} />

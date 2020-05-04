@@ -14,7 +14,7 @@ import {
 export const loadUser = () => (dispatch, getState) => {
   dispatch({ type: USER_LOADING });
 
-  axios.get('http://localhost:5000/auth/user')
+  axios.get('https://hidden-dawn-00072.herokuapp.com/auth/user')
   .then(res => dispatch({
     type: USER_LOADED,
     payload: res.data
@@ -35,7 +35,7 @@ export const register = ( {email, company, name, country, state, position, passw
   }
   const body = JSON.stringify({email, company, name, country, state, position, password})
 
-  axios.post('http://localhost:5000/users', body, config)
+  axios.post('https://hidden-dawn-00072.herokuapp.com/users', body, config)
   .then(res => dispatch({
     type: REGISTER_SUCCESS,
     payload: res.data
@@ -55,7 +55,7 @@ export const login = ( {email, password} ) => dispatch => {
   }
   const body = JSON.stringify({email, password})
 
-  axios.post('http://localhost:5000/auth', body, config)
+  axios.post('https://hidden-dawn-00072.herokuapp.com/auth', body, config)
   .then(res => dispatch({
     type: LOGIN_SUCCESS,
     payload: res.data

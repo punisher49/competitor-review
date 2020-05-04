@@ -31,7 +31,7 @@ class HerosList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/heros/')
+    axios.get('https://hidden-dawn-00072.herokuapp.com/heros/')
     .then(response => {
       this.setState({
         heros: response.data

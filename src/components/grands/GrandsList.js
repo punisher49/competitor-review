@@ -32,7 +32,7 @@ class GrandsList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/grands/')
+    axios.get('https://hidden-dawn-00072.herokuapp.com/grands/')
     .then(response => {
       this.setState({
         grands: response.data
