@@ -25,7 +25,7 @@ class App extends React.Component {
 	render(){
 		return (
 			<Provider store={store}>
-				<HashRouter basename="/">
+				<HashRouter>
 					<Navbar />
 					<Route exact  path="/" component={Home}/>
 					<Route path="/aeons" component={AeonsList} />
