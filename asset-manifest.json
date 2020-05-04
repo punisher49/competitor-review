@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/competitor-review/static/css/main.78ea1aec.chunk.css",
-    "main.js": "/competitor-review/static/js/main.a3d6afae.chunk.js",
-    "main.js.map": "/competitor-review/static/js/main.a3d6afae.chunk.js.map",
+    "main.js": "/competitor-review/static/js/main.5f3ddd5b.chunk.js",
+    "main.js.map": "/competitor-review/static/js/main.5f3ddd5b.chunk.js.map",
     "runtime-main.js": "/competitor-review/static/js/runtime-main.45b0d56c.js",
     "runtime-main.js.map": "/competitor-review/static/js/runtime-main.45b0d56c.js.map",
     "static/css/2.05988dc8.chunk.css": "/competitor-review/static/css/2.05988dc8.chunk.css",
     "static/js/2.7bccc469.chunk.js": "/competitor-review/static/js/2.7bccc469.chunk.js",
     "static/js/2.7bccc469.chunk.js.map": "/competitor-review/static/js/2.7bccc469.chunk.js.map",
     "index.html": "/competitor-review/index.html",
-    "precache-manifest.f6586e683fbeb4c1b0a353cdd0900589.js": "/competitor-review/precache-manifest.f6586e683fbeb4c1b0a353cdd0900589.js",
+    "precache-manifest.d0429f2d63d2f327c25208f9b1cf741a.js": "/competitor-review/precache-manifest.d0429f2d63d2f327c25208f9b1cf741a.js",
     "service-worker.js": "/competitor-review/service-worker.js",
     "static/css/2.05988dc8.chunk.css.map": "/competitor-review/static/css/2.05988dc8.chunk.css.map",
     "static/css/main.78ea1aec.chunk.css.map": "/competitor-review/static/css/main.78ea1aec.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.05988dc8.chunk.css",
     "static/js/2.7bccc469.chunk.js",
     "static/css/main.78ea1aec.chunk.css",
-    "static/js/main.a3d6afae.chunk.js"
+    "static/js/main.5f3ddd5b.chunk.js"
   ]
 }
