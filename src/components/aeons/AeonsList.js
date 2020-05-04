@@ -3,10 +3,11 @@ import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
-import app from "../auth/base";
 import AeonImages from "./AeonImages"
 // import { ExportCSV } from '../ExportCSV'
 // import { ExportReactCSV } from '../ExportReactCSV'
+import {tokenConfig} from "../../actions/authActions"
+import {returnErrors} from '../../actions/errorActions'
 
 const Aeon = props => (
   <Tr>
@@ -38,7 +39,7 @@ class AeonsList extends Component {
     this.handleCounter = this.handleCounter.bind(this);
   }
   componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/aeons')
+    axios.get('http://localhost:5000/aeons', tokenConfig(getState))
     .then(response => {
       this.setState({
         aeons: response.data

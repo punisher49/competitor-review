@@ -31,7 +31,7 @@ class FarmerList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/farmers/')
+    axios.get('http://localhost:5000/farmers/')
     .then(response => {
       this.setState({
         farmers: response.data

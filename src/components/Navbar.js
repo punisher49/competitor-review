@@ -1,85 +1,106 @@
+import React, { Component, Fragment } from "react";
+import Menu from "@material-ui/core/Menu";
+import MenuItem from "@material-ui/core/MenuItem";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import RegisterModal from "./auth/RegisterModal";
+import LoginModal from "./auth/LoginModal";
+import Logout from "./auth/Logout";
+import "./style/Styles.css"
 
-import React from 'react';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import app from "./auth/base";
-import { Link } from 'react-router-dom';
-import "bootstrap/dist/css/bootstrap.min.css"
-import { AuthContext } from "./auth/Auth.js";
-
-
-export default function SimpleMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+class Navbar extends Component {
+  state = {
+    isOpen: false
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
+  toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
+
+  static propTypes = {
+    auth: PropTypes.object.isRequired,
   };
-  return (
 
-    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+  render() {
+    const { isAuthenticated, user } = this.props.auth;
 
-        <Link to="/" className="btn btn-outline-light">
-          Home
-        </Link>
-        <button className="btn btn-outline-warning" onClick={handleClick}>
+    const authLinks = (
+      <Fragment>
+        <span className="navbar-text mr-6">
+          <strong className="welcome">{user ? `Welcome ${user.name}` : ""}</strong>
+        </span>
+        <Logout />
+      </Fragment>
+    );
+
+    const guestLinks = (
+      <Fragment>
+        <LoginModal />
+        <RegisterModal />
+      </Fragment>
+    );
+    const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
+    const normalLinks = (
+      <Fragment>
+        <div className="dropdown" onClick={this.toggleOpen} id="dropdown">
+        <button
+          className="btn btn-warning dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+        >
           Baby Food
         </button>
+        <div className={menuClass} aria-labelledby="dropdownMenuButton">
 
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-          >
-          <MenuItem onClick={handleClose}>  <Link to="/carrefours" className="btn btn-dark">
-            Carrefours Transmart
-          </Link></MenuItem>
-          <MenuItem onClick={handleClose}><Link to="/farmers" className="btn btn-dark">
-            Farmers Market
-          </Link></MenuItem>
-
-          <MenuItem onClick={handleClose}><Link to="/ranchos" className="btn btn-dark">
+        <Link to="/ranchos" className="dropdown-item">
             Ranch Market
-          </Link></MenuItem>
+          </Link>
 
-          <MenuItem onClick={handleClose}><Link to="/grands" className="btn btn-dark">
+        <Link to="/grands" className="dropdown-item">
             Grand Lucky
-          </Link></MenuItem>
+          </Link>
 
-          <MenuItem onClick={handleClose}><Link to="/foodhalls" className="btn btn-dark">
+          <Link to="/carrefours" className="dropdown-item">
+            Carrefours
+          </Link>
+          <Link to="/foodhalls" className="dropdown-item">
             Foodhall
-          </Link></MenuItem>
+          </Link>
+          <Link to="/farmers" className="dropdown-item">
+            Farmers
+          </Link>
 
 
-          <MenuItem onClick={handleClose}><Link to="/primos" className="btn btn-dark">
+        <Link to="/primos" className="dropdown-item">
             Primo
-          </Link></MenuItem>
+          </Link>
 
-          <MenuItem onClick={handleClose}><Link to="/aeons" className="btn btn-dark">
+        <Link to="/aeons" className="dropdown-item">
             Aeon
-          </Link></MenuItem>
+          </Link>
 
-          <MenuItem onClick={handleClose}><Link to="/heros" className="btn btn-dark">
+        <Link to="/heros" className="dropdown-item">
             Hero
-          </Link></MenuItem>
+          </Link>
+        </div>
+      </div>
+    </Fragment>
+  );
 
-
-        </Menu>
-
-
-        <Link to="/login" className="btn btn-outline-success">
-          Login
-        </Link>
-        <Link to="/signup" className="btn btn-outline-primary">
-          Sign Up
-        </Link>
-        <button onClick={() => app.auth().signOut()} className="btn btn-outline-danger"  >Sign out</button>
-
+  return (
+    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+      <Link to="/" className="btn btn-dark">
+        Home
+      </Link>
+      {isAuthenticated ? normalLinks : ""}
+      {isAuthenticated ? authLinks : guestLinks}
     </nav>
   );
 }
+}
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+export default connect(mapStateToProps, null)(Navbar);

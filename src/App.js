@@ -11,32 +11,32 @@ import PrimosList from "./components/primos/PrimosList";
 import RanchsList from "./components/ranchs/RanchsList";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Login from "./components/auth/Login";
-import SignUp from "./components/auth/SignUp";
-import { AuthProvider } from "./components/auth/Auth";
-import PrivateRoute from "./components/auth/PrivateRoute";
 
+import {Provider} from 'react-redux';
+import store from './store'
+import {loadUser} from './actions/authActions'
 
 
 class App extends React.Component {
+	componentDidMount(){
+		store.dispatch(loadUser())
+	}
 	render(){
 		return (
-			<AuthProvider>
+			<Provider store={store}>
 				<HashRouter>
 					<Navbar />
-					<PrivateRoute exact  path="/" component={Home}/>
-					<Route path="/login" component={Login} />
-					<Route path="/signUp" component={SignUp} />
-					<PrivateRoute path="/aeons" component={AeonsList} />
-					<PrivateRoute path="/carrefours" component={CarrefoursList} />
-					<PrivateRoute path="/farmers" component={FarmersList} />
-					<PrivateRoute path="/foodhalls" component={FoodhallsList} />
-					<PrivateRoute path="/grands" component={GrandsList} />
-					<PrivateRoute path="/heros" component={HerosList} />
-					<PrivateRoute path="/primos" component={PrimosList} />
-					<PrivateRoute path="/ranchos" component={RanchsList} />
+					<Route exact  path="/" component={Home}/>
+					<Route path="/aeons" component={AeonsList} />
+					<Route path="/carrefours" component={CarrefoursList} />
+					<Route path="/farmers" component={FarmersList} />
+					<Route path="/foodhalls" component={FoodhallsList} />
+					<Route path="/grands" component={GrandsList} />
+					<Route path="/heros" component={HerosList} />
+					<Route path="/primos" component={PrimosList} />
+					<Route path="/ranchos" component={RanchsList} />
 				</HashRouter>
-			</AuthProvider>
+			</Provider>
 		)
 	}
 }
