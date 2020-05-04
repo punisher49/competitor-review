@@ -1,14 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-  useLocation
-} from "react-router-dom";
+import {Route, HashRouter} from 'react-router-dom'
 import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/carrefours/CarrefoursList";
 import FarmersList from "./components/farmers/FarmersList";
@@ -32,9 +24,9 @@ class App extends React.Component {
 	render(){
 		return (
 			<Provider store={store}>
-				<Router>
+				<HashRouter>
 					<Navbar />
-					<Route exact  path="/" component={Home}/>
+					<Route path="/" component={Home}/>
 					<Route path="/aeons" component={AeonsList} />
 					<Route path="/carrefours" component={CarrefoursList} />
 					<Route path="/farmers" component={FarmersList} />
@@ -43,7 +35,7 @@ class App extends React.Component {
 					<Route path="/heros" component={HerosList} />
 					<Route path="/primos" component={PrimosList} />
 					<Route path="/ranchos" component={RanchsList} />
-				</Router>
+				</HashRouter>
 			</Provider>
 		)
 	}
