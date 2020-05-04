@@ -39,7 +39,7 @@ class AeonsList extends Component {
     this.handleCounter = this.handleCounter.bind(this);
   }
   componentDidMount() {
-    axios.get('http://localhost:5000/aeons', tokenConfig(getState))
+    axios.get('http://localhost:5000/aeons')
     .then(response => {
       this.setState({
         aeons: response.data
