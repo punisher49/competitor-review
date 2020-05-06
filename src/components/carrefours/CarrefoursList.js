@@ -33,7 +33,7 @@ class CarrefoursList extends Component {
     };
   }
   componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/carrefours/')
+    axios.get('http://localhost:5000/carrefours/')
     .then(response => {
       this.setState({
         carrefours: response.data

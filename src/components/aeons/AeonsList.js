@@ -8,8 +8,8 @@ import AeonImages from "./AeonImages"
 // import { ExportReactCSV } from '../ExportReactCSV'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {tokenConfig} from "../../actions/authActions"
-import {returnErrors} from '../../actions/errorActions'
+import { getAeons } from '../../actions/aeonActions';
+import aeonReducer from '../../reducers/aeonReducer'
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -39,23 +39,19 @@ class AeonsList extends Component {
     };
     this.handleCounter = this.handleCounter.bind(this);
   }
-  componentDidMount() {
-
-    axios.defaults.xsrfHeaderName = "x-auth-token";
-    axios.defaults.xsrfCookieName = "xauthtoken";
-    axios.defaults.headers = {
-      "Content-Type": "application/json",
-      Authorization: `Token ${this.props.token}`,
-    };
-    axios.get('https://hidden-dawn-00072.herokuapp.com/aeons' )
-    .then(response => {
-      this.setState({
-        aeons: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  // componentDidMount() {
+  //   axios.get('https://hidden-dawn-00072.herokuapp.com/aeons' )
+  //   .then(response => {
+  //     this.setState({
+  //       aeons: response.data
+  //     })
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+  componentDidMount(){
+    this.props.getAeons()
   }
   handleInputChange = (event) => {
     event.preventDefault();
@@ -75,8 +71,10 @@ class AeonsList extends Component {
   }
 
   scrollToTop() {
-    let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
-    this.setState({ intervalId: intervalId });
+    // let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
+    // this.setState({ intervalId: intervalId });
+    // console.log(this.props.getAeons(this.state.payload));
+    console.log(this.props.aeon.aeons);
   }
   noMatch(){
     return (
@@ -85,7 +83,9 @@ class AeonsList extends Component {
   }
 
   aeonList() {
-    return this.state.aeons.map(currentaeon => {
+    // this.props.aeon.aeons
+    // const aeons = this.state
+    return this.props.aeon.aeons.map(currentaeon => {
       if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
       }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -117,6 +117,7 @@ class AeonsList extends Component {
     console.log(_State);
   }
   render() {
+
     return (
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
@@ -173,12 +174,15 @@ class AeonsList extends Component {
     )
   }
 }
-
-const mapStateToProps = state => ({
-  token: state.token
+AeonsList.propTypes = {
+  getAeons: PropTypes.func.isRequired,
+  aeon: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  aeon: state.aeon
 });
 
-export default connect(mapStateToProps, { tokenConfig, returnErrors })(AeonsList);
+export default connect(mapStateToProps, { getAeons })(AeonsList);
 
 
 // <ExportReactCSV csvData={this.aeonList().toString()} fileName={this.state.fileName} />
