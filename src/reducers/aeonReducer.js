@@ -2,6 +2,7 @@ import { GET_AEONS, AEONS_LOADING } from '../actions/types';
 const initialState = {
   aeons: [],
   isLoading: false
+
 };
 
 export default function(state = initialState, action) {
@@ -9,7 +10,8 @@ export default function(state = initialState, action) {
     case GET_AEONS:
       return {
         ...state,
-        isLoading: true
+        aeons: action.payload,
+        isLoading: true,
       };
     case AEONS_LOADING:
       return {

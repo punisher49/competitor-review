@@ -5,7 +5,7 @@ import { returnErrors } from "./errorActions";
 
 export const getAeons = () => (dispatch, getState) => {
   dispatch({ type: AEONS_LOADING });
-  return axios
+  axios
     .get("http://localhost:5000/aeons/", tokenConfig(getState))
     .then((res) =>
       dispatch({

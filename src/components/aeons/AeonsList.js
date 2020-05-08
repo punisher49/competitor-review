@@ -51,9 +51,9 @@ class AeonsList extends Component {
   //   })
   // }
   componentDidMount(){
-    console.log(this.props.getAeons());
-    console.log(this.props.aeon);
+    this.props.getAeons();
   }
+
   handleInputChange = (event) => {
     event.preventDefault();
     const value = event.target.value;
@@ -84,7 +84,7 @@ class AeonsList extends Component {
   aeonList() {
     // this.props.aeon.aeons
     // const aeons = this.state
-    return this.state.aeons.map(currentaeon => {
+    return this.props.aeon.aeons.map(currentaeon => {
       if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
       }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
