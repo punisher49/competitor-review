@@ -6,7 +6,7 @@ import { returnErrors } from "./errorActions";
 export const getAeons = () => (dispatch, getState) => {
   dispatch({ type: AEONS_LOADING });
   axios
-    .get("http://localhost:5000/aeons/", tokenConfig(getState))
+    .get("https://hidden-dawn-00072.herokuapp.com/aeons/", tokenConfig(getState))
     .then((res) =>
       dispatch({
         type: GET_AEONS,
