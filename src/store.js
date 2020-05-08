@@ -16,8 +16,6 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import aeonReducer from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
-
-
 const initialState = {};
 const middleware = [thunk];
 const applied = composeWithDevTools ( applyMiddleware(...middleware) ); //error!

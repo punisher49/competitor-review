@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import AeonImages from "./AeonImages"
 // import { ExportCSV } from '../ExportCSV'
 // import { ExportReactCSV } from '../ExportReactCSV'
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { getAeons } from '../../actions/aeonActions';
-import aeonReducer from '../../reducers/aeonReducer'
+// import aeonReducer from '../../reducers/aeonReducer'
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -51,7 +51,8 @@ class AeonsList extends Component {
   //   })
   // }
   componentDidMount(){
-    this.props.getAeons()
+    console.log(this.props.getAeons());
+    console.log(this.props.aeon);
   }
   handleInputChange = (event) => {
     event.preventDefault();
@@ -71,10 +72,8 @@ class AeonsList extends Component {
   }
 
   scrollToTop() {
-    // let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
-    // this.setState({ intervalId: intervalId });
-    // console.log(this.props.getAeons(this.state.payload));
-    console.log(this.props.aeon.aeons);
+    let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
+    this.setState({ intervalId: intervalId });
   }
   noMatch(){
     return (
@@ -85,7 +84,7 @@ class AeonsList extends Component {
   aeonList() {
     // this.props.aeon.aeons
     // const aeons = this.state
-    return this.props.aeon.aeons.map(currentaeon => {
+    return this.state.aeons.map(currentaeon => {
       if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
       }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -179,7 +178,8 @@ AeonsList.propTypes = {
   aeon: PropTypes.object.isRequired
 };
 const mapStateToProps = (state) => ({
-  aeon: state.aeon
+  aeon: state.aeon,
+  isAuthenticated: state.auth.isAuthenticated
 });
 
 export default connect(mapStateToProps, { getAeons })(AeonsList);

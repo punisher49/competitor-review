@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react'
-import {Button} from 'reactstrap'
 import {connect} from 'react-redux'
 import {logout} from '../../actions/authActions'
 import PropTypes from 'prop-types'
