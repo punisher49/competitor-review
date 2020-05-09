@@ -36,8 +36,8 @@ class Navbar extends Component {
 
     const guestLinks = (
       <Fragment>
-        <LoginModal />
-        <RegisterModal />
+          <LoginModal />
+          <RegisterModal />
       </Fragment>
     );
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
@@ -92,12 +92,13 @@ class Navbar extends Component {
 
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-          <Link to="/" className="btn btn-dark">
-            Home
-          </Link>
-          {isAuthenticated ? normalLinks : ""}
-          {isAuthenticated ? authLinks : guestLinks}
-        <div className="btn-group" role="group" aria-label="Third group">
+        <Link to="/" className="btn btn-dark">
+          Home
+        </Link>
+
+        {isAuthenticated ? normalLinks : ""}
+        {isAuthenticated ? authLinks : guestLinks}
+        <div className="ml-auto" role="group" aria-label="Third group">
           <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.instagram.com/exportconnect/" target="_blank" bgColor="#dd2a7b" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.linkedin.com/company/exportconnect/" target="_blank" bgColor="#0e76a8" fgColor="white" style={{ height: 40, width: 40 }}/>

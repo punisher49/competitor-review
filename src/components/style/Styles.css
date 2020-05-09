@@ -95,3 +95,6 @@ Link{
   background-image: url(../images/excon.jpg);
   color: white
 }
+#float-right{
+  float:right!
+}
