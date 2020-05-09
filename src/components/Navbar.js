@@ -9,6 +9,7 @@ import RegisterModal from "./auth/RegisterModal";
 import LoginModal from "./auth/LoginModal";
 import Logout from "./auth/Logout";
 import "./style/Styles.css"
+import { SocialIcon } from 'react-social-icons';
 
 class Navbar extends Component {
   state = {
@@ -50,7 +51,7 @@ class Navbar extends Component {
           data-toggle="dropdown"
           aria-haspopup="true"
         >
-          Baby Food
+          Baby Food Markets
         </button>
         <div className={menuClass} aria-labelledby="dropdownMenuButton">
 
@@ -96,6 +97,11 @@ class Navbar extends Component {
       </Link>
       {isAuthenticated ? normalLinks : ""}
       {isAuthenticated ? authLinks : guestLinks}
+      <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white"/>
+      <SocialIcon url="https://www.instagram.com/exportconnect/" target="_blank" bgColor="#dd2a7b" fgColor="white"/>
+      <SocialIcon url="https://www.linkedin.com/company/exportconnect/" target="_blank" bgColor="#0e76a8" fgColor="white" />
+
+
     </nav>
   );
 }

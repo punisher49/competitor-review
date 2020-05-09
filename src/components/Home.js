@@ -1,9 +1,23 @@
 import React from "react";
-// import excon from './images/excon.png'
+import "./style/Styles.css"
 const Home = () => {
   return (
-    <div>
-      <h3>This is going to be a Home page but I don't have any content to put in</h3>
+    <div id="homepage">
+      <h3>Export Connect</h3>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   );
 };
