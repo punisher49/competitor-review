@@ -108,7 +108,6 @@ class PrimosList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
-          <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
         </form>
         <br />
 

@@ -115,8 +115,6 @@ class CarrefoursList extends Component {
       onChange={this.handleInputChange}
       onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
       />
-      <br/>
-      <i className="fas fa-search fa-2x" id="searchIcon" aria-hidden="true"></i>
       </form>
 
       <br />
