@@ -20,15 +20,15 @@ class Navbar extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
   };
+  // <span className="navbar-text mr-6">
+  //   <strong className="welcome">{user ? `Welcome ${user.name}` : ""}</strong>
+  // </span>
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
       <Fragment>
-        <span className="navbar-text mr-6">
-          <strong className="welcome">{user ? `Welcome ${user.name}` : ""}</strong>
-        </span>
         <Logout />
       </Fragment>
     );
