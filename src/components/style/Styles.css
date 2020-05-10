@@ -43,9 +43,6 @@ Tr:nth-child(even) {
   background-color: aqua !important;
   color: black !important
 }
-
-
-
 .hidden{
   margin: 5px;
   display: none
@@ -92,4 +89,7 @@ Link{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.text{
+  background-color: white
 }

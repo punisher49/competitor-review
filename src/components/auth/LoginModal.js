@@ -14,7 +14,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {login} from '../../actions/authActions';
 import {clearErrors} from '../../actions/errorActions';
-
 class LoginModal extends Component {
   state = {
     modal: false,
@@ -73,7 +72,7 @@ class LoginModal extends Component {
   render(){
     return (
       <div>
-      <Button outline color="success" onClick={this.toggle} id="dropdown" className="ml-auto">
+      <Button outline color="success" onClick={this.toggle} id="dropdown">
       Login
       </Button>
 

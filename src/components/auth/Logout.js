@@ -4,6 +4,7 @@ import {logout} from '../../actions/authActions'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 export class Logout extends Component {
 
   static propTypes = {
@@ -13,7 +14,7 @@ export class Logout extends Component {
   render() {
     return (
       <Fragment>
-        <Link to="/" onClick={this.props.logout} className="btn btn-outline-danger"  >
+        <Link to="/" onClick={this.props.logout} className="btn btn-outline-danger"  id="float-right">
           Logout
         </Link>
       </Fragment>

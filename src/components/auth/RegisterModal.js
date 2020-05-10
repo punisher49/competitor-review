@@ -77,7 +77,7 @@ class RegisterModal extends Component {
   render(){
     return (
       <div>
-      <Button outline color="warning" onClick={this.toggle} id="dropdown" className="ml-auto">
+      <Button outline color="warning" onClick={this.toggle} id="dropdown" >
       Register
       </Button>
 
