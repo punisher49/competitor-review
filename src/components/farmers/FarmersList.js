@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
@@ -32,17 +31,7 @@ class FarmerList extends Component {
       intervalId: 0
     };
   }
-  // componentDidMount() {
-  //   axios.get('https://hidden-dawn-00072.herokuapp.com/farmers/')
-  //   .then(response => {
-  //     this.setState({
-  //       farmers: response.data
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // }
+
   componentDidMount(){
     this.props.getFarmers();
   }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import RanchImages from "./RanchImages"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getRanchos } from '../../actions/ranchActions';
 const Rancho = props => (
   <Tr>
     <Td>{props.rancho.productName}</Td>
@@ -31,16 +33,8 @@ class RanchosList extends Component {
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/ranchos/')
-    .then(response => {
-      this.setState({
-        ranchos: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  componentDidMount(){
+    this.props.getRanchos();
   }
   handleInputChange = (event) => {
     event.preventDefault();
@@ -65,7 +59,7 @@ class RanchosList extends Component {
   }
 
   ranchoList() {
-    return this.state.ranchos.map(currentrancho => {
+    return this.props.rancho.ranchos.map(currentrancho => {
       if(currentrancho.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else if (currentrancho.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -149,4 +143,13 @@ class RanchosList extends Component {
   }
 }
 
-export default RanchosList;
+RanchosList.propTypes = {
+  getRanchos: PropTypes.func.isRequired,
+  rancho: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  rancho: state.rancho,
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { getRanchos })(RanchosList);

@@ -23,3 +23,13 @@ export const FOODHALLS_LOADING = 'FOODHALLS_LOADING';
 
 export const GET_GRANDS = 'GET_GRANDS';
 export const GRANDS_LOADING = 'GRANDS_LOADING';
+
+export const GET_HEROS = 'GET_HEROS';
+export const HEROS_LOADING = 'HEROS_LOADING';
+
+
+export const GET_PRIMOS = 'GET_PRIMOS';
+export const PRIMOS_LOADING = 'PRIMOS_LOADING';
+
+export const GET_RANCHS = 'GET_RANCHS';
+export const RANCHS_LOADING = 'RANCHS_LOADING';

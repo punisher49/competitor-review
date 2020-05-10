@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import HeroImages from "./HeroImages"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getHeros } from '../../actions/heroActions';
 const Hero = props => (
   <Tr>
     <Td>{props.hero.productName}</Td>
@@ -25,21 +27,13 @@ class HerosList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heros: [],
       query: '',
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/heros/')
-    .then(response => {
-      this.setState({
-        heros: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+
+  componentDidMount(){
+    this.props.getHeros();
   }
   handleInputChange = (event) => {
     event.preventDefault();
@@ -64,7 +58,7 @@ class HerosList extends Component {
   }
 
   heroList() {
-    return this.state.heros.map(currenthero => {
+    return this.props.hero.heros.map(currenthero => {
       if(currenthero.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Hero hero={currenthero} key={currenthero._id}/>;
       }else if (currenthero.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -147,4 +141,13 @@ class HerosList extends Component {
   }
 }
 
-export default HerosList;
+HerosList.propTypes = {
+  getHeros: PropTypes.func.isRequired,
+  hero: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  hero: state.hero,
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { getHeros })(HerosList);

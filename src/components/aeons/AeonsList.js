@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
@@ -9,7 +8,6 @@ import AeonImages from "./AeonImages"
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAeons } from '../../actions/aeonActions';
-// import aeonReducer from '../../reducers/aeonReducer'
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -38,17 +36,7 @@ class AeonsList extends Component {
       fileName: 'AeonList'
     };
   }
-  // componentDidMount() {
-  //   axios.get('https://hidden-dawn-00072.herokuapp.com/aeons' )
-  //   .then(response => {
-  //     this.setState({
-  //       aeons: response.data
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // }
+
   componentDidMount(){
     this.props.getAeons();
   }
@@ -81,8 +69,6 @@ class AeonsList extends Component {
   }
 
   aeonList() {
-    // this.props.aeon.aeons
-    // const aeons = this.state
     return this.props.aeon.aeons.map(currentaeon => {
       if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;

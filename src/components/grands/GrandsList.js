@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
@@ -29,22 +28,10 @@ class GrandsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      grands: [],
       query: '',
       intervalId: 0
     };
   }
-  // componentDidMount() {
-  //   axios.get('https://hidden-dawn-00072.herokuapp.com/grands/')
-  //   .then(response => {
-  //     this.setState({
-  //       grands: response.data
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // }
   componentDidMount(){
     this.props.getGrands();
   }

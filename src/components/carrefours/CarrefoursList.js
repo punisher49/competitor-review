@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
@@ -33,17 +32,7 @@ class CarrefoursList extends Component {
       intervalId: 0
     };
   }
-  // componentDidMount() {
-  //   axios.get('https://hidden-dawn-00072.herokuapp.com/carrefours/')
-  //   .then(response => {
-  //     this.setState({
-  //       carrefours: response.data
-  //     })
-  //   })
-  //   .catch((error) => {
-  //     console.log(error);
-  //   })
-  // }
+
   componentDidMount(){
     this.props.getCarrefours();
   }

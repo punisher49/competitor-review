@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import PrimoImages from "./PrimoImages"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getPrimos } from '../../actions/primoActions';
 const Primo = props => (
   <Tr>
     <Td>{props.primo.productName}</Td>
@@ -25,21 +27,12 @@ class PrimosList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      primos: [],
       query: '',
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/primos/')
-    .then(response => {
-      this.setState({
-        primos: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  componentDidMount(){
+    this.props.getPrimos();
   }
   handleInputChange = (event) => {
     event.preventDefault();
@@ -64,7 +57,7 @@ class PrimosList extends Component {
   }
 
   primoList() {
-    return this.state.primos.map(currentprimo => {
+    return this.props.primo.primos.map(currentprimo => {
       if(currentprimo.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
       }else if (currentprimo.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -147,4 +140,13 @@ class PrimosList extends Component {
   }
 }
 
-export default PrimosList;
+PrimosList.propTypes = {
+  getPrimos: PropTypes.func.isRequired,
+  primo: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  primo: state.primo,
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { getPrimos })(PrimosList);

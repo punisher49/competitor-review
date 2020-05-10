@@ -6,6 +6,14 @@ import carrefourReducer from './carrefourReducer'
 import farmerReducer from './farmerReducer'
 import foodhallReducer from './foodhallReducer'
 import grandReducer from './grandReducer'
+import heroReducer from './heroReducer'
+import primoReducer from './primoReducer'
+import ranchReducer from './ranchReducer'
+
+
+
+
+
 export default combineReducers({
   error: errorReducer,
   auth: authReducer,
@@ -13,5 +21,9 @@ export default combineReducers({
   carrefour: carrefourReducer,
   farmer: farmerReducer,
   foodhall: foodhallReducer,
-  grand: grandReducer
+  grand: grandReducer,
+  hero: heroReducer,
+  primo: primoReducer,
+  rancho: ranchReducer,
+
 })
