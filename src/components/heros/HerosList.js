@@ -89,6 +89,8 @@ class HerosList extends Component {
         return <Hero hero={currenthero} key={currenthero._id}/>;
       }else if (currenthero.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Hero hero={currenthero} key={currenthero._id}/>;
+      }else{
+        return null
       }
     })
   }

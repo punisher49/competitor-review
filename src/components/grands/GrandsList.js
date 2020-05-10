@@ -90,6 +90,8 @@ class GrandsList extends Component {
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
       }else if (currentgrand.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
+      }else{
+        return null
       }
     })
   }

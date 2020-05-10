@@ -91,6 +91,8 @@ class CarrefoursList extends Component {
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
       }else if (currencarrefour.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
+      }else{
+        return null
       }
     })
   }

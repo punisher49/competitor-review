@@ -109,6 +109,8 @@ class AeonsList extends Component {
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
       }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
+      }else{
+        return null
       }
     })
   }
@@ -121,7 +123,6 @@ class AeonsList extends Component {
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
           <h4>Aeon Market</h4>
-
           <input
             className="form-control form-control-lrg ml-3 w-50"
             name="query"
@@ -132,12 +133,8 @@ class AeonsList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
-          
         </form>
-
         <br />
-
-
         <Table>
           <Thead>
             <Tr>
@@ -154,21 +151,16 @@ class AeonsList extends Component {
               <Th scope="row">Position in Store</Th>
               <Th scope="row">Promotion</Th>
               <Th scope="row">Importer</Th>
-
             </Tr>
           </Thead>
-          <Tbody>
-            { this.aeonList() }
-          </Tbody>
+          <Tbody>{ this.aeonList() }</Tbody>
         </Table>
-
         <button title='Back to top' className='scroll'
           onClick={ () => { this.scrollToTop(); }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
         <br/>
         <br/>
-
       </div>
     )
   }

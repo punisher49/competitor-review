@@ -39,18 +39,13 @@ Tr:nth-child(even) {
   color: aqua !important;
   border: 1px solid aqua;
 }
-#sign-out{
-  border: 1px solid orange;
-  border-radius: 5px;
-  color: orange !important;
-  background-color: #343A41 !important;
+.btn-dark:hover {
+  background-color: aqua !important;
+  color: black !important
 }
-#sign-out:hover{
-  background-color: orange !important;
-  color: black !important;
-  border: 1px solid orange;
-  outline: none !important
-}
+
+
+
 .hidden{
   margin: 5px;
   display: none
@@ -92,7 +87,7 @@ Link{
 }
 
 #homepage{
-  background-image: url(../images/home.jpg);
+  background-image: url(../images/pen.jpg);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;

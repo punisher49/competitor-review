@@ -92,6 +92,8 @@ class RanchosList extends Component {
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else if (currentrancho.location.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
+      }else{
+        return null
       }
     })
   }

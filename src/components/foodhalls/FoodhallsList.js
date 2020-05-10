@@ -89,6 +89,8 @@ class FoodhallList extends Component {
         return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
       }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
+      }else{
+        return null
       }
     })
   }

@@ -89,6 +89,8 @@ class PrimosList extends Component {
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
       }else if (currentprimo.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
+      }else{
+        return null
       }
     })
   }

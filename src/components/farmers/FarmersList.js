@@ -89,6 +89,8 @@ class FarmerList extends Component {
         return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
       }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
+      }else{
+        return null
       }
     })
   }
