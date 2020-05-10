@@ -4,6 +4,9 @@ import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import FoodhallImages from "./FoodhallImages"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getFoodhalls } from '../../actions/foodhallActions';
 const Foodhall = props => (
   <Tr>
     <Td>{props.foodhall.productName}</Td>
@@ -25,22 +28,27 @@ class FoodhallList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      foodhalls: [],
+      // foodhalls: [],
       query: '',
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/foodhalls/')
-    .then(response => {
-      this.setState({
-        foodhalls: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  // componentDidMount() {
+  //   axios.get('https://hidden-dawn-00072.herokuapp.com/foodhalls/')
+  //   .then(response => {
+  //     this.setState({
+  //       foodhalls: response.data
+  //     })
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+
+  componentDidMount(){
+    this.props.getFoodhalls();
   }
+
   handleInputChange = (event) => {
     event.preventDefault();
     const value = event.target.value;
@@ -64,31 +72,31 @@ class FoodhallList extends Component {
   }
 
   foodhallList() {
-    return this.state.foodhalls.map(currentaeon => {
-      if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.weight.toString().match(this.state.query)){
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.unit.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productPriceIdr.toString().match(this.state.query)){
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productPriceAud.toString().match(this.state.query)){
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentaeon} key={currentaeon._id}/>;
+    return this.props.foodhall.foodhalls.map(currentfoodhall => {
+      if(currentfoodhall.productName.toLowerCase().match(this.state.query.toLowerCase())){
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.weight.toString().match(this.state.query)){
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.unit.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.productPriceIdr.toString().match(this.state.query)){
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.productPriceAud.toString().match(this.state.query)){
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
+      }else if (currentfoodhall.importer.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
       }else{
         return null
       }
@@ -147,4 +155,13 @@ class FoodhallList extends Component {
   }
 }
 
-export default FoodhallList;
+FoodhallList.propTypes = {
+  getFoodhalls: PropTypes.func.isRequired,
+  foodhall: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  foodhall: state.foodhall,
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { getFoodhalls })(FoodhallList);

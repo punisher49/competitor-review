@@ -4,6 +4,9 @@ import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import FarmerImages from "./FarmerImages"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getFarmers } from '../../actions/farmerActions';
 const Farmer = props => (
   <Tr>
     <Td>{props.farmer.productName}</Td>
@@ -25,22 +28,25 @@ class FarmerList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      farmers: [],
       query: '',
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/farmers/')
-    .then(response => {
-      this.setState({
-        farmers: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  // componentDidMount() {
+  //   axios.get('https://hidden-dawn-00072.herokuapp.com/farmers/')
+  //   .then(response => {
+  //     this.setState({
+  //       farmers: response.data
+  //     })
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+  componentDidMount(){
+    this.props.getFarmers();
   }
+
   handleInputChange = (event) => {
     event.preventDefault();
     const value = event.target.value;
@@ -64,31 +70,31 @@ class FarmerList extends Component {
   }
 
   farmerList() {
-    return this.state.farmers.map(currentaeon => {
-      if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.weight.toString().match(this.state.query)){
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.unit.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productPriceIdr.toString().match(this.state.query)){
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productPriceAud.toString().match(this.state.query)){
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
-      }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentaeon} key={currentaeon._id}/>;
+    return this.props.farmer.farmers.map(currentfarmer => {
+      if(currentfarmer.productName.toLowerCase().match(this.state.query.toLowerCase())){
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.weight.toString().match(this.state.query)){
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.unit.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.productPriceIdr.toString().match(this.state.query)){
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.productPriceAud.toString().match(this.state.query)){
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
+      }else if (currentfarmer.importer.toLowerCase().match(this.state.query.toLowerCase())) {
+        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
       }else{
         return null
       }
@@ -147,4 +153,13 @@ class FarmerList extends Component {
   }
 }
 
-export default FarmerList;
+FarmerList.propTypes = {
+  getFarmers: PropTypes.func.isRequired,
+  farmer: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  farmer: state.farmer,
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { getFarmers })(FarmerList);

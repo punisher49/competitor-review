@@ -4,6 +4,9 @@ import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import GrandImages from "./GrandImages"
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getGrands } from '../../actions/grandActions';
 const Grand = props => (
   <Tr>
     <Td>{props.grand.productName}</Td>
@@ -31,17 +34,21 @@ class GrandsList extends Component {
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/grands/')
-    .then(response => {
-      this.setState({
-        grands: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  // componentDidMount() {
+  //   axios.get('https://hidden-dawn-00072.herokuapp.com/grands/')
+  //   .then(response => {
+  //     this.setState({
+  //       grands: response.data
+  //     })
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+  componentDidMount(){
+    this.props.getGrands();
   }
+
   handleInputChange = (event) => {
     event.preventDefault();
     const value = event.target.value;
@@ -65,7 +72,7 @@ class GrandsList extends Component {
   }
 
   grandList() {
-    return this.state.grands.map(currentgrand => {
+    return this.props.grand.grands.map(currentgrand => {
       if(currentgrand.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
       }else if (currentgrand.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -147,5 +154,13 @@ class GrandsList extends Component {
     )
   }
 }
+GrandsList.propTypes = {
+  getGrands: PropTypes.func.isRequired,
+  grand: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  grand: state.grand,
+  isAuthenticated: state.auth.isAuthenticated
+});
 
-export default GrandsList;
+export default connect(mapStateToProps, { getGrands })(GrandsList);
