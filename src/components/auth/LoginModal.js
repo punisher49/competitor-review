@@ -73,7 +73,7 @@ class LoginModal extends Component {
   render(){
     return (
       <div>
-      <Button outline color="success" onClick={this.toggle} id="dropdown">
+      <Button outline color="success" onClick={this.toggle} id="dropdown" className="ml-auto">
       Login
       </Button>
 

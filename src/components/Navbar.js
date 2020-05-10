@@ -45,7 +45,7 @@ class Navbar extends Component {
       <Fragment>
         <div className="dropdown" onClick={this.toggleOpen} id="dropdown">
           <button
-            className="btn btn-warning dropdown-toggle"
+            className="btn btn-outline-warning dropdown-toggle"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
@@ -92,13 +92,14 @@ class Navbar extends Component {
 
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+
         <Link to="/" className="btn btn-dark">
           Home
         </Link>
-
         {isAuthenticated ? normalLinks : ""}
         {isAuthenticated ? authLinks : guestLinks}
-        <div className="ml-auto" role="group" aria-label="Third group">
+
+        <div className="ml-auto">
           <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.instagram.com/exportconnect/" target="_blank" bgColor="#dd2a7b" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.linkedin.com/company/exportconnect/" target="_blank" bgColor="#0e76a8" fgColor="white" style={{ height: 40, width: 40 }}/>

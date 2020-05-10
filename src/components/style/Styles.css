@@ -92,6 +92,9 @@ Link{
 }
 
 #homepage{
-  background-image: url(../images/excon.jpg);
-  color: white
+  background-image: url(../images/home.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
