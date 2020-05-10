@@ -1,18 +1,18 @@
-import { GET_AEONS, AEONS_LOADING } from '../actions/types';
+import { GET_CARREFOURS, CARREFOURS_LOADING } from '../actions/types';
 const initialState = {
-  aeons: [],
+  carrefours: [],
   isLoading: false
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_AEONS:
+    case GET_CARREFOURS:
       return {
         ...state,
-        aeons: action.payload,
+        carrefours: action.payload,
         isLoading: true,
       };
-    case AEONS_LOADING:
+    case CARREFOURS_LOADING:
       return {
         ...state,
         isLoading: true

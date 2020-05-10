@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar";
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'
+import Footer from "./components/Footer";
 
 
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
 					<Route path="/ranchos" component={RanchsList} />
 				</HashRouter>
 			</Provider>
+
 		)
 	}
 }

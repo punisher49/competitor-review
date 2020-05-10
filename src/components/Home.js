@@ -1,5 +1,7 @@
 import React from "react";
 import "./style/Styles.css"
+import Footer from "./Footer";
+
 const Home = () => {
   return (
     <div id="homepage">

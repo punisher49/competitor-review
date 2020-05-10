@@ -31,13 +31,12 @@ class AeonsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      aeons: [],
+      // aeons: [],
       query: '',
       intervalId: 0,
       showImage: false,
       fileName: 'AeonList'
     };
-    this.handleCounter = this.handleCounter.bind(this);
   }
   // componentDidMount() {
   //   axios.get('https://hidden-dawn-00072.herokuapp.com/aeons' )
@@ -113,9 +112,6 @@ class AeonsList extends Component {
         return null
       }
     })
-  }
-  handleCounter(_State){
-    console.log(_State);
   }
   render() {
 

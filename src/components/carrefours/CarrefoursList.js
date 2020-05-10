@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import CarrefourImages from "./CarrefourImages"
-
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getCarrefours } from '../../actions/carrefourActions';
 
 const Carrefour = props => (
   <Tr>
@@ -27,22 +29,26 @@ class CarrefoursList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      carrefours: [],
       query: '',
       intervalId: 0
     };
   }
-  componentDidMount() {
-    axios.get('https://hidden-dawn-00072.herokuapp.com/carrefours/')
-    .then(response => {
-      this.setState({
-        carrefours: response.data
-      })
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  // componentDidMount() {
+  //   axios.get('https://hidden-dawn-00072.herokuapp.com/carrefours/')
+  //   .then(response => {
+  //     this.setState({
+  //       carrefours: response.data
+  //     })
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   })
+  // }
+  componentDidMount(){
+    this.props.getCarrefours();
   }
+
+
   handleInputChange = (event) => {
     event.preventDefault();
     const value = event.target.value;
@@ -66,7 +72,7 @@ class CarrefoursList extends Component {
   }
 
   carrefourList() {
-    return this.state.carrefours.map(currencarrefour => {
+    return this.props.carrefour.carrefours.map(currencarrefour => {
       if(currencarrefour.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
       }else if (currencarrefour.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -96,10 +102,6 @@ class CarrefoursList extends Component {
       }
     })
   }
-  handleClick(){
-    console.log('The link was clicked.');
-  }
-
   render() {
     return (
 
@@ -140,7 +142,7 @@ class CarrefoursList extends Component {
       <Th scope="row">Importer</Th>
       </Tr>
       </Thead>
-      <Tbody onClick={this.handleClick}>
+      <Tbody>
       { this.carrefourList() }
       </Tbody>
       </Table>
@@ -155,4 +157,13 @@ class CarrefoursList extends Component {
   }
 }
 
-export default CarrefoursList;
+CarrefoursList.propTypes = {
+  getCarrefours: PropTypes.func.isRequired,
+  carrefour: PropTypes.object.isRequired
+};
+const mapStateToProps = (state) => ({
+  carrefour: state.carrefour,
+  isAuthenticated: state.auth.isAuthenticated
+});
+
+export default connect(mapStateToProps, { getCarrefours })(CarrefoursList);

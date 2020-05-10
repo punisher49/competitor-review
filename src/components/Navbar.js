@@ -10,7 +10,6 @@ import LoginModal from "./auth/LoginModal";
 import Logout from "./auth/Logout";
 import "./style/Styles.css"
 import { SocialIcon } from 'react-social-icons';
-
 class Navbar extends Component {
   state = {
     isOpen: false
