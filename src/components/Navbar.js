@@ -42,7 +42,7 @@ class Navbar extends Component {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     const normalLinks = (
       <Fragment>
-        <div className="dropdown" onClick={this.toggleOpen} id="dropdown">
+        <div className="dropdown" onClick={this.toggleOpen}>
           <button
             className="btn btn-outline-warning dropdown-toggle"
             type="button"
