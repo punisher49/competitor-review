@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/competitor-review/static/css/main.16625629.chunk.css",
-    "main.js": "/competitor-review/static/js/main.6a5860c4.chunk.js",
-    "main.js.map": "/competitor-review/static/js/main.6a5860c4.chunk.js.map",
+    "main.css": "/competitor-review/static/css/main.6a3790e7.chunk.css",
+    "main.js": "/competitor-review/static/js/main.9a54977f.chunk.js",
+    "main.js.map": "/competitor-review/static/js/main.9a54977f.chunk.js.map",
     "runtime-main.js": "/competitor-review/static/js/runtime-main.45b0d56c.js",
     "runtime-main.js.map": "/competitor-review/static/js/runtime-main.45b0d56c.js.map",
     "static/css/2.05988dc8.chunk.css": "/competitor-review/static/css/2.05988dc8.chunk.css",
-    "static/js/2.308da627.chunk.js": "/competitor-review/static/js/2.308da627.chunk.js",
-    "static/js/2.308da627.chunk.js.map": "/competitor-review/static/js/2.308da627.chunk.js.map",
+    "static/js/2.7c9eb4c9.chunk.js": "/competitor-review/static/js/2.7c9eb4c9.chunk.js",
+    "static/js/2.7c9eb4c9.chunk.js.map": "/competitor-review/static/js/2.7c9eb4c9.chunk.js.map",
     "index.html": "/competitor-review/index.html",
-    "precache-manifest.3dd0b4333c9b5ace9ea7bddbd12491e7.js": "/competitor-review/precache-manifest.3dd0b4333c9b5ace9ea7bddbd12491e7.js",
+    "precache-manifest.e87dde95358c4bcaf385e0205772b197.js": "/competitor-review/precache-manifest.e87dde95358c4bcaf385e0205772b197.js",
     "service-worker.js": "/competitor-review/service-worker.js",
     "static/css/2.05988dc8.chunk.css.map": "/competitor-review/static/css/2.05988dc8.chunk.css.map",
-    "static/css/main.16625629.chunk.css.map": "/competitor-review/static/css/main.16625629.chunk.css.map",
-    "static/js/2.308da627.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.308da627.chunk.js.LICENSE.txt",
+    "static/css/main.6a3790e7.chunk.css.map": "/competitor-review/static/css/main.6a3790e7.chunk.css.map",
+    "static/js/2.7c9eb4c9.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.7c9eb4c9.chunk.js.LICENSE.txt",
     "static/media/Styles.css": "/competitor-review/static/media/pen.f693d44c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.45b0d56c.js",
     "static/css/2.05988dc8.chunk.css",
-    "static/js/2.308da627.chunk.js",
-    "static/css/main.16625629.chunk.css",
-    "static/js/main.6a5860c4.chunk.js"
+    "static/js/2.7c9eb4c9.chunk.js",
+    "static/css/main.6a3790e7.chunk.css",
+    "static/js/main.9a54977f.chunk.js"
   ]
 }
