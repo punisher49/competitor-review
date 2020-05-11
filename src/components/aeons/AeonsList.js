@@ -3,8 +3,8 @@ import "../style/Styles.css"
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import AeonImages from "./AeonImages"
-// import { ExportCSV } from '../ExportCSV'
-// import { ExportReactCSV } from '../ExportReactCSV'
+import { ExportCSV } from '../ExportCSV'
+import { ExportReactCSV } from '../ExportReactCSV'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAeons } from '../../actions/aeonActions';
@@ -29,7 +29,6 @@ class AeonsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // aeons: [],
       query: '',
       intervalId: 0,
       showImage: false,
@@ -120,7 +119,7 @@ class AeonsList extends Component {
         <Table>
           <Thead>
             <Tr>
-              <Th scope="row">Product Name</Th>
+              <Th scope="row" style={{border: "40px !important"}}>Product Name</Th>
               <Th scope="row">Image</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>

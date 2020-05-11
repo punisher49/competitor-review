@@ -90,3 +90,7 @@ Link{
   background-repeat: no-repeat;
   background-size: cover;
 }
+th{
+  border: 45px !important;
+  border-radius: 1px solid aqua !important
+}

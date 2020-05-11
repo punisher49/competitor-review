@@ -23,9 +23,9 @@ class Navbar extends Component {
   // <span className="navbar-text mr-6">
   //   <strong className="welcome">{user ? `Welcome ${user.name}` : ""}</strong>
   // </span>
-
+  // const { isAuthenticated, user } = this.props.auth;
   render() {
-    const { isAuthenticated, user } = this.props.auth;
+    const { isAuthenticated } = this.props.auth;
 
     const authLinks = (
       <Fragment>

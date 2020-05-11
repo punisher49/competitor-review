@@ -17,6 +17,6 @@ export const ExportCSV = ({csvData, fileName}) => {
     }
 
     return (
-        <Button variant="warning" onClick={(e) => exportToCSV(csvData,fileName)}>Download Search Result</Button>
+        <Button variant="warning" onClick={(e) => exportToCSV(csvData,fileName)}>Export To Excel</Button>
     )
 }
