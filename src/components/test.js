@@ -1,54 +1,91 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import app from "./auth/base";
-import Dropdown from 'react-bootstrap/Dropdown'
-import Button from 'react-bootstrap/Button'
+import React from "react";
+import { connect } from "react-redux";
+import {Router, Redirect, withRouter } from "react-router-dom";
 
-export default class Navbar extends Component {
+class PrivateRoute extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menu: false
-    };
-    this.toggleMenu = this.toggleMenu.bind(this);
   }
-  toggleMenu(){
-    this.setState({ menu: !this.state.menu })
-  }
-  render() {
-    const show = (this.state.menu) ? "show" : "" ;
+
+  isSignedin = () => {
+    return this.props.isAuthenticated;
+  };
+
+  render = () => {
+    let { component: Component, ...rest } = this.props;
+
     return (
-
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-        <button className="navbar-toggler" type="button"
-          onClick={ this.toggleMenu }
-          >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className={"collapse navbar-collapse " + show}>
-          <a href="/" className="btn btn-outline-light" type="button">
-            Home
-          </a>
-          <Dropdown>
-            <Dropdown.Toggle variant="outline-warning" type="button">
-              Baby Food
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="/carrefours">Carrefours Transmart</Dropdown.Item>
-              <Dropdown.Item href="/farmers">Farmers Market</Dropdown.Item>
-              <Dropdown.Item href="/ranchos">Ranch Market</Dropdown.Item>
-              <Dropdown.Item href="/grands">Grand Lucky</Dropdown.Item>
-              <Dropdown.Item href="/foodhalls">Foodhall</Dropdown.Item>
-              <Dropdown.Item href="/primos">Primo</Dropdown.Item>
-              <Dropdown.Item href="/aeons">Aeon</Dropdown.Item>
-              <Dropdown.Item href="/heros">Hero</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          <Button onClick={() => app.auth().signOut()} variant="outline-warning" id="align-right">Sign out</Button>
-
-
-        </div>
-      </nav>
+      <Router
+        {...rest}
+        render={(props) =>
+          this.isSignedin() ? (
+            <Component {...props} />
+          ) : props.location.pathname === "/" ? null : (
+            <Redirect to="/" />
+          )
+        }
+      />
     );
-  }
+  };
 }
+
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth,
+  };
+};
+
+export default withRouter(connect(mapStateToProps, null)(PrivateRoute));
+
+
+
+
+
+
+////////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+///////////////////version 2
+
+
+
+
+
+
+
+import React, { useContext } from "react";
+import { Route, Redirect } from "react-router-dom";
+import RegisterModal from "./RegisterModal";
+import LoginModal from "./LoginModal";
+import Logout from "./Logout";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
+const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
+  const AuthContext = React.createContext()
+  const user = useContext(AuthContext);
+  return (
+    <Route
+      {...rest}
+      render={routeProps =>
+        user ? (
+          <RouteComponent {...routeProps} />
+        ) : (
+          <Redirect to={"/"} />
+        )
+      }
+      />
+  );
+};
+
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+export default connect(mapStateToProps, null)(PrivateRoute);

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 export const ExportReactCSV = ({csvData, fileName}) => {
     return (
         <Button variant="warning">
-            <CSVLink data={csvData} filename={fileName}>Export</CSVLink>
+            <CSVLink data={csvData} filename={fileName}>Export to Excel</CSVLink>
         </Button>
     )
 }

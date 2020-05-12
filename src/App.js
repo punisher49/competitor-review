@@ -16,6 +16,7 @@ import Navbar from "./components/Navbar";
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'
+import PrivateRoute from './components/auth/PrivateRoute'
 
 
 class App extends React.Component {
@@ -29,14 +30,14 @@ class App extends React.Component {
 				<HashRouter basename="/">
 					<Navbar />
 					<Route exact  path="/" component={Home}/>
-					<Route path="/aeons" component={AeonsList} />
-					<Route path="/carrefours" component={CarrefoursList} />
-					<Route path="/farmers" component={FarmersList} />
-					<Route path="/foodhalls" component={FoodhallsList} />
-					<Route path="/grands" component={GrandsList} />
-					<Route path="/heros" component={HerosList} />
-					<Route path="/primos" component={PrimosList} />
-					<Route path="/ranchos" component={RanchsList} />
+					<PrivateRoute path="/aeons" component={AeonsList} />
+					<PrivateRoute path="/carrefours" component={CarrefoursList} />
+					<PrivateRoute path="/farmers" component={FarmersList} />
+					<PrivateRoute path="/foodhalls" component={FoodhallsList} />
+					<PrivateRoute path="/grands" component={GrandsList} />
+					<PrivateRoute path="/heros" component={HerosList} />
+					<PrivateRoute path="/primos" component={PrimosList} />
+					<PrivateRoute path="/ranchos" component={RanchsList} />
 				</HashRouter>
 			</Provider>
 

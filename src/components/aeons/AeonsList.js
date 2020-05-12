@@ -29,6 +29,7 @@ class AeonsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // aeons: [],
       query: '',
       intervalId: 0,
       showImage: false,
@@ -114,12 +115,16 @@ class AeonsList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
+          <ExportReactCSV csvData={
+            this.props.aeon.aeons
+            } fileName={this.state.fileName} />
+
         </form>
         <br />
         <Table>
           <Thead>
             <Tr>
-              <Th scope="row" style={{border: "40px !important"}}>Product Name</Th>
+              <Th scope="row" title="Product Name">Product Name</Th>
               <Th scope="row">Image</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
@@ -156,6 +161,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { getAeons })(AeonsList);
-
-
-// <ExportReactCSV csvData={this.aeonList().toString()} fileName={this.state.fileName} />
