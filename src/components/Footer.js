@@ -1,12 +1,14 @@
 import React from "react";
+import "./style/Styles.css"
 import { MDBContainer,  MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
   return (
-    <MDBFooter color="blue" className="font-small pt-4 mt-4">
-      <div className="footer-copyright text-center py-3">
+
+    <MDBFooter className="footer">
+      <div className="footer-copyright text-center">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://hasan-aliyev.site/"> Hasan Aliyev</a>
+          &copy; {new Date().getFullYear()} Developed by <a href="https://hasan-aliyev.site/"> HA</a>
         </MDBContainer>
       </div>
     </MDBFooter>

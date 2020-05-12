@@ -94,3 +94,15 @@ th{
   border: 45px !important;
   border-radius: 1px solid aqua !important
 }
+a{
+  color: white;
+  outline: none !important
+}
+a:hover{
+    outline: none;
+    color: white
+}
+.footer{
+  background-color: black !important;
+  color: white !important
+}

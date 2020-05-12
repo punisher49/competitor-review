@@ -11,12 +11,12 @@ export const ExportCSV = ({csvData, fileName}) => {
     const exportToCSV = (csvData, fileName) => {
         const ws = XLSX.utils.json_to_sheet(csvData);
         const wb = { Sheets: { 'data': ws }, SheetNames: ['data'] };
-        const excelBuffer = XLSX.write(wb, { fileType: 'xlsx', type: 'array' });
+        const excelBuffer = XLSX.write(wb, { fileType: 'xlsx', type: 'object' });
         const data = new Blob([excelBuffer], {type: fileType});
         FileSaver.saveAs(data, fileName + fileExtension);
     }
 
     return (
-        <Button variant="warning" onClick={(e) => exportToCSV(csvData,fileName)}>Export To Excel</Button>
+        <Button variant="outline-dark" onClick={(e) => exportToCSV(csvData,fileName)}>Export To Excel</Button>
     )
 }

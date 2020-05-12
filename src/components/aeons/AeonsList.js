@@ -61,6 +61,8 @@ class AeonsList extends Component {
   scrollToTop() {
     let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
     this.setState({ intervalId: intervalId });
+    console.log(this.props.aeon.aeons.map(x => x.productName ))
+
   }
   noMatch(){
     return (
@@ -116,8 +118,10 @@ class AeonsList extends Component {
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
           <ExportReactCSV csvData={
-            this.props.aeon.aeons
-            } fileName={this.state.fileName} />
+
+              this.props.aeon.aeons
+
+              } fileName={this.state.fileName} />
 
         </form>
         <br />

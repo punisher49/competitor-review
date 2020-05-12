@@ -4,6 +4,7 @@ import Footer from "./Footer";
 
 const Home = () => {
   return (
+    <div>
     <div id="homepage">
       <div className="col-md-12">
         <div className="jumbotron">
@@ -11,7 +12,11 @@ const Home = () => {
           <p>Founded in 2017, Export Connect exists to help Australian businesses develop the strategies and connections they need to export successfully and grow.</p>
         </div>
       </div>
+
     </div>
+    <Footer/>
+    </div>
+
   );
 };
 

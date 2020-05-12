@@ -112,7 +112,7 @@ class HerosList extends Component {
           <Thead>
             <Tr>
               <Th scope="row">Product Name</Th>
-              <Th scope="row">Images</Th>
+              <Th scope="row">Image</Th>
               <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
