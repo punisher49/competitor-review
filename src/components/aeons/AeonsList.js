@@ -29,11 +29,10 @@ class AeonsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // aeons: [],
       query: '',
       intervalId: 0,
       showImage: false,
-      fileName: 'AeonList'
+      fileName: 'AeonList',
     };
   }
 
@@ -61,7 +60,8 @@ class AeonsList extends Component {
   scrollToTop() {
     let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
     this.setState({ intervalId: intervalId });
-    console.log(this.props.aeon.aeons.map(x => x.productName ))
+    console.log(this.data())
+
 
   }
   noMatch(){
@@ -70,6 +70,26 @@ class AeonsList extends Component {
     )
   }
 
+  data = () => {
+    const data = this.props.aeon.aeons
+    const result = data.map(({_id,productImage,...rest}) => ({...rest}));
+    const query = this.state.query
+    const search= result.filter(x=> [
+      'productName',
+      'productCategory',
+      'weight',
+      'unit',
+      'productPriceIdr',
+      'productPriceAud',
+      'countryOfManufacture',
+      'productClaims',
+      'typeOfPackaging',
+      'positioningInStore',
+      'promotion',
+      'importer']
+     .reduce((accumulator,currentValue)=> x[currentValue].toString().toLowerCase().includes(query.toLowerCase()) || accumulator, false) );
+     return search
+  }
   aeonList() {
     return this.props.aeon.aeons.map(currentaeon => {
       if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
@@ -117,11 +137,7 @@ class AeonsList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
-          <ExportReactCSV csvData={
-
-              this.props.aeon.aeons
-
-              } fileName={this.state.fileName} />
+          <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
 
         </form>
         <br />
@@ -146,7 +162,7 @@ class AeonsList extends Component {
           <Tbody>{ this.aeonList() }</Tbody>
         </Table>
         <button title='Back to top' className='scroll'
-          onClick={ () => { this.scrollToTop(); }}>
+          onClick={ () => { this.scrollToTop() }}>
           <i className="fa fa-arrow-up" ></i>
         </button>
         <br/>
@@ -165,3 +181,6 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { getAeons })(AeonsList);
+
+
+          // <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
