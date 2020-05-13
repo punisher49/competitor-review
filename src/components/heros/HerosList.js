@@ -6,10 +6,11 @@ import HeroImages from "./HeroImages"
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getHeros } from '../../actions/heroActions';
+import { ExportReactCSV } from '../ExportReactCSV'
 const Hero = props => (
   <Tr>
     <Td>{props.hero.productName}</Td>
-        <Td><HeroImages dataFromHeroList = {props.hero.productImage}/></Td>
+    <Td><HeroImages dataFromHeroList = {props.hero.productImage}/></Td>
     <Td>{props.hero.productCategory}</Td>
     <Td>{props.hero.weight}</Td>
     <Td>{props.hero.unit}</Td>
@@ -28,7 +29,8 @@ class HerosList extends Component {
     super(props);
     this.state = {
       query: '',
-      intervalId: 0
+      intervalId: 0,
+      fileName: 'HeroList',
     };
   }
 
@@ -89,6 +91,27 @@ class HerosList extends Component {
     })
   }
 
+  data = () => {
+    const data = this.props.hero.heros
+    const result = data.map(({_id,productImage,...rest}) => ({...rest}));
+    const query = this.state.query
+    const search= result.filter(x=> [
+      'productName',
+      'productCategory',
+      'weight',
+      'unit',
+      'productPriceIdr',
+      'productPriceAud',
+      'countryOfManufacture',
+      'productClaims',
+      'typeOfPackaging',
+      'positioningInStore',
+      'promotion',
+      'importer']
+      .reduce((accumulator,currentValue)=> x[currentValue].toString().toLowerCase().includes(query.toLowerCase()) || accumulator, false) );
+      return search
+    }
+
   render() {
     return (
       <div className="render">
@@ -104,6 +127,7 @@ class HerosList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
+            <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
         </form>
         <br />
 

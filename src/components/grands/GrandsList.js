@@ -6,6 +6,7 @@ import GrandImages from "./GrandImages"
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGrands } from '../../actions/grandActions';
+import { ExportReactCSV } from '../ExportReactCSV'
 const Grand = props => (
   <Tr>
     <Td>{props.grand.productName}</Td>
@@ -29,7 +30,8 @@ class GrandsList extends Component {
     super(props);
     this.state = {
       query: '',
-      intervalId: 0
+      intervalId: 0,
+      fileName: 'GrandsList'
     };
   }
   componentDidMount(){
@@ -89,7 +91,26 @@ class GrandsList extends Component {
       }
     })
   }
-
+  data = () => {
+    const data = this.props.grand.grands
+    const result = data.map(({_id,productImage,...rest}) => ({...rest}));
+    const query = this.state.query
+    const search= result.filter(x=> [
+      'productName',
+      'productCategory',
+      'weight',
+      'unit',
+      'productPriceIdr',
+      'productPriceAud',
+      'countryOfManufacture',
+      'productClaims',
+      'typeOfPackaging',
+      'positioningInStore',
+      'promotion',
+      'importer']
+      .reduce((accumulator,currentValue)=> x[currentValue].toString().toLowerCase().includes(query.toLowerCase()) || accumulator, false) );
+      return search
+    }
   render() {
     return (
       <div className="render">
@@ -105,6 +126,7 @@ class GrandsList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
+            <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
         </form>
         <br />
 

@@ -6,6 +6,7 @@ import FoodhallImages from "./FoodhallImages"
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getFoodhalls } from '../../actions/foodhallActions';
+import { ExportReactCSV } from '../ExportReactCSV'
 const Foodhall = props => (
   <Tr>
     <Td>{props.foodhall.productName}</Td>
@@ -28,7 +29,8 @@ class FoodhallList extends Component {
     super(props);
     this.state = {
       query: '',
-      intervalId: 0
+      intervalId: 0,
+      fileName: 'FoodhallsList',
     };
   }
 
@@ -89,7 +91,26 @@ class FoodhallList extends Component {
       }
     })
   }
-
+  data = () => {
+    const data = this.props.foodhall.foodhalls
+    const result = data.map(({_id,productImage,...rest}) => ({...rest}));
+    const query = this.state.query
+    const search= result.filter(x=> [
+      'productName',
+      'productCategory',
+      'weight',
+      'unit',
+      'productPriceIdr',
+      'productPriceAud',
+      'countryOfManufacture',
+      'productClaims',
+      'typeOfPackaging',
+      'positioningInStore',
+      'promotion',
+      'importer']
+      .reduce((accumulator,currentValue)=> x[currentValue].toString().toLowerCase().includes(query.toLowerCase()) || accumulator, false) );
+      return search
+    }
   render() {
     return (
       <div className="render">
@@ -105,6 +126,7 @@ class FoodhallList extends Component {
             onChange={this.handleInputChange}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             />
+          <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
         </form>
         <br />
 

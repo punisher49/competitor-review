@@ -6,22 +6,23 @@ import CarrefourImages from "./CarrefourImages"
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCarrefours } from '../../actions/carrefourActions';
+import { ExportReactCSV } from '../ExportReactCSV'
 
 const Carrefour = props => (
   <Tr>
-  <Td>{props.carrefour.productName}</Td>
-  <Td><CarrefourImages dataFromCarrefourList = {props.carrefour.productImage}/></Td>
-  <Td>{props.carrefour.productCategory}</Td>
-  <Td>{props.carrefour.weight}</Td>
-  <Td>{props.carrefour.unit}</Td>
-  <Td>{props.carrefour.productPriceIdr}</Td>
-  <Td>{props.carrefour.productPriceAud}</Td>
-  <Td>{props.carrefour.countryOfManufacture}</Td>
-  <Td>{props.carrefour.productClaims}</Td>
-  <Td>{props.carrefour.typeOfPackaging}</Td>
-  <Td>{props.carrefour.positioningInStore}</Td>
-  <Td>{props.carrefour.promotion}</Td>
-  <Td>{props.carrefour.importer}</Td>
+    <Td>{props.carrefour.productName}</Td>
+    <Td><CarrefourImages dataFromCarrefourList = {props.carrefour.productImage}/></Td>
+    <Td>{props.carrefour.productCategory}</Td>
+    <Td>{props.carrefour.weight}</Td>
+    <Td>{props.carrefour.unit}</Td>
+    <Td>{props.carrefour.productPriceIdr}</Td>
+    <Td>{props.carrefour.productPriceAud}</Td>
+    <Td>{props.carrefour.countryOfManufacture}</Td>
+    <Td>{props.carrefour.productClaims}</Td>
+    <Td>{props.carrefour.typeOfPackaging}</Td>
+    <Td>{props.carrefour.positioningInStore}</Td>
+    <Td>{props.carrefour.promotion}</Td>
+    <Td>{props.carrefour.importer}</Td>
   </Tr>
 )
 class CarrefoursList extends Component {
@@ -29,7 +30,8 @@ class CarrefoursList extends Component {
     super(props);
     this.state = {
       query: '',
-      intervalId: 0
+      intervalId: 0,
+      fileName: 'CarrefoursList',
     };
   }
 
@@ -91,68 +93,91 @@ class CarrefoursList extends Component {
       }
     })
   }
-  render() {
-    return (
 
-      <div className="render">
-      <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-      <h4>Carrefours Transmart</h4>
+  data = () => {
+    const data = this.props.carrefour.carrefours
+    const result = data.map(({_id,productImage,...rest}) => ({...rest}));
+    const query = this.state.query
+    const search= result.filter(x=> [
+      'productName',
+      'productCategory',
+      'weight',
+      'unit',
+      'productPriceIdr',
+      'productPriceAud',
+      'countryOfManufacture',
+      'productClaims',
+      'typeOfPackaging',
+      'positioningInStore',
+      'promotion',
+      'importer']
+      .reduce((accumulator,currentValue)=> x[currentValue].toString().toLowerCase().includes(query.toLowerCase()) || accumulator, false) );
+      return search
+    }
+    render() {
+      return (
 
-      <input
-      className="form-control form-control-lrg ml-3 w-50"
-      name="query"
-      id="search-input"
-      type="search"
-      placeholder="Search for a Product"
-      aria-label="Search"
-      onChange={this.handleInputChange}
-      onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
-      />
-      </form>
+        <div className="render">
+          <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+            <h4>Carrefours Transmart</h4>
 
-      <br />
+            <input
+              className="form-control form-control-lrg ml-3 w-50"
+              name="query"
+              id="search-input"
+              type="search"
+              placeholder="Search for a Product"
+              aria-label="Search"
+              onChange={this.handleInputChange}
+              onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+              />
+            <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
+          </form>
 
 
-      <Table>
-      <Thead>
-      <Tr >
-      <Th scope="row">Product Name</Th>
-      <Th scope="row">Image</Th>
-      <Th scope="row">Product Category</Th>
-      <Th scope="row">Weight</Th>
-      <Th scope="row">Unit</Th>
-      <Th scope="row">Price (IDR)</Th>
-      <Th scope="row">Price (AUD)</Th>
-      <Th scope="row">Country of Manufacture</Th>
-      <Th scope="row">Product Claims</Th>
-      <Th scope="row">Type of Packaging</Th>
-      <Th scope="row">Position in Store</Th>
-      <Th scope="row">Promotion</Th>
-      <Th scope="row">Importer</Th>
-      </Tr>
-      </Thead>
-      <Tbody>
-      { this.carrefourList() }
-      </Tbody>
-      </Table>
-      <button title='Back to top' className='scroll'
-      onClick={ () => { this.scrollToTop(); }}>
-      <i className="fa fa-arrow-up" ></i>
-      </button>
-      <br/>
-      <br/>
-      </div>
-    )
+          <br />
+
+
+          <Table>
+            <Thead>
+              <Tr >
+                <Th scope="row">Product Name</Th>
+                <Th scope="row">Image</Th>
+                <Th scope="row">Product Category</Th>
+                <Th scope="row">Weight</Th>
+                <Th scope="row">Unit</Th>
+                <Th scope="row">Price (IDR)</Th>
+                <Th scope="row">Price (AUD)</Th>
+                <Th scope="row">Country of Manufacture</Th>
+                <Th scope="row">Product Claims</Th>
+                <Th scope="row">Type of Packaging</Th>
+                <Th scope="row">Position in Store</Th>
+                <Th scope="row">Promotion</Th>
+                <Th scope="row">Importer</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              { this.carrefourList() }
+            </Tbody>
+          </Table>
+          <button title='Back to top' className='scroll'
+            onClick={ () => { this.scrollToTop(); }}>
+            <i className="fa fa-arrow-up" ></i>
+          </button>
+          <br/>
+          <br/>
+        </div>
+      )
+    }
   }
-}
 
-CarrefoursList.propTypes = {
-  getCarrefours: PropTypes.func.isRequired,
-  carrefour: PropTypes.object.isRequired
-};
-const mapStateToProps = (state) => ({
-  carrefour: state.carrefour,
-  isAuthenticated: state.auth.isAuthenticated
-});
+  CarrefoursList.propTypes = {
+    getCarrefours: PropTypes.func.isRequired,
+    carrefour: PropTypes.object.isRequired
+  };
+  const mapStateToProps = (state) => ({
+    carrefour: state.carrefour,
+    isAuthenticated: state.auth.isAuthenticated
+  });
 
-export default connect(mapStateToProps, { getCarrefours })(CarrefoursList);
+  export default connect(mapStateToProps, { getCarrefours })(CarrefoursList);
