@@ -188,3 +188,56 @@ export default connect(mapStateToProps, null)(PrivateRoute);
   const result = arrayData.map(({type,index,...rest}) => ({...rest}));
 
   console.log(result);
+
+
+
+
+
+
+  class App extends Component {
+    state = {
+      showPaypal: false
+    };
+
+    showPaypalButtons = () => {
+      this.setState({ showPaypal: true });
+    };
+
+    render() {
+      const { showPaypal } = this.state;
+      if (showPaypal) {
+        return <PaypalButtons />;
+      } else {
+        return (
+          <div className="main">
+            <h2> Buy this Mercedes at a giveaway price (Super Cheap) </h2>
+            <img alt="Mercedes G-Wagon" src={Car} />
+            <h3>
+              <b>$200</b>
+            </h3>
+            <button onClick={this.showPaypalButtons}> Pay </button>
+          </div>
+        );
+      }
+    }
+  }
+
+  export default App;
+
+
+
+
+
+
+  <div>
+    <div id="homepage">
+      <div className="col-md-12">
+        <div className="jumbotron">
+          <h3>Export Connect</h3>
+          <p>Founded in 2017, Export Connect exists to help Australian businesses develop the strategies and connections they need to export successfully and grow.</p>
+        </div>
+      </div>
+
+    </div>
+    <Footer/>
+  </div>

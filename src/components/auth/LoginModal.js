@@ -72,44 +72,44 @@ class LoginModal extends Component {
   render(){
     return (
       <div>
-      <Button outline color="success" onClick={this.toggle} id="dropdown">
-      Login
-      </Button>
+        <Button outline color="success" onClick={this.toggle} id="dropdown">
+          Login
+        </Button>
 
-      <Modal isOpen={this.state.modal} toggle={this.toggle}>
-      <ModalHeader toggle={this.toggle}>Login</ModalHeader>
-      <ModalBody>
-      {this.state.msg ? <Alert color="danger">{this.state.msg}</Alert> : null }
-      <Form onSubmit={this.onSubmit}>
-      <FormGroup>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader toggle={this.toggle}>Login</ModalHeader>
+          <ModalBody>
+            {this.state.msg ? <Alert color="danger">{this.state.msg}</Alert> : null }
+            <Form onSubmit={this.onSubmit}>
+              <FormGroup>
 
 
-      <Label for="email">Email</Label>
-      <Input
-      type="email"
-      name="email"
-      id="email"
-      placeholder="Email"
-      className="mb-3"
-      onChange={this.onChange}
-      />
+                <Label for="email">Email</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  className="mb-3"
+                  onChange={this.onChange}
+                  />
 
-      <Label for="password">Password</Label>
-      <Input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="Password"
-      className="mb-3"
-      onChange={this.onChange}
-      />
-      <Button outline color="success" style={{ marginTop: "2rem" }} block>
-      Login
-      </Button>
-      </FormGroup>
-      </Form>
-      </ModalBody>
-      </Modal>
+                <Label for="password">Password</Label>
+                <Input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  className="mb-3"
+                  onChange={this.onChange}
+                  />
+                <Button outline color="success" style={{ marginTop: "2rem" }} block>
+                  Login
+                </Button>
+              </FormGroup>
+            </Form>
+          </ModalBody>
+        </Modal>
       </div>
     );
 
