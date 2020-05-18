@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import RegisterModal from "./auth/RegisterModal";
-import LoginModal from "./auth/LoginModal";
+// import RegisterModal from "./auth/RegisterModal";
+// import LoginModal from "./auth/LoginModal";
 import Logout from "./auth/Logout";
 import "./style/Styles.css"
 import { SocialIcon } from 'react-social-icons';
+
 class Navbar extends Component {
   state = {
     isOpen: false
@@ -33,12 +34,6 @@ class Navbar extends Component {
       </Fragment>
     );
 
-    const guestLinks = (
-      <Fragment>
-          <LoginModal />
-          <RegisterModal />
-      </Fragment>
-    );
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     const normalLinks = (
       <Fragment>
@@ -96,7 +91,7 @@ class Navbar extends Component {
           Home
         </Link>
         {isAuthenticated ? normalLinks : ""}
-        {isAuthenticated ? authLinks : guestLinks}
+        {isAuthenticated ? authLinks : ""}
 
         <div className="ml-auto">
           <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white" style={{ height: 40, width: 40 }}/>

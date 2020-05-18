@@ -14,6 +14,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {register} from '../../actions/authActions';
 import {clearErrors} from '../../actions/errorActions';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class RegisterModal extends Component {
   state = {
@@ -77,9 +78,9 @@ class RegisterModal extends Component {
   render(){
     return (
       <div>
-      <Button outline color="warning" onClick={this.toggle} id="dropdown" >
+      <button className="btn btn-danger btn-lg" onClick={this.toggle} id="dropdown" >
       Register
-      </Button>
+    </button>
 
       <Modal isOpen={this.state.modal} toggle={this.toggle}>
       <ModalHeader toggle={this.toggle}>Register</ModalHeader>

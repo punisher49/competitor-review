@@ -1,7 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { HashRouter, Route } from 'react-router-dom';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AeonsList from "./components/aeons/AeonsList";
 import CarrefoursList from "./components/carrefours/CarrefoursList";
 import FarmersList from "./components/farmers/FarmersList";
@@ -12,7 +11,6 @@ import PrimosList from "./components/primos/PrimosList";
 import RanchsList from "./components/ranchs/RanchsList";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'

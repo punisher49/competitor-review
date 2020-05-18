@@ -10,6 +10,7 @@ import {
   Input,
   Alert
 } from 'reactstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {login} from '../../actions/authActions';
@@ -72,9 +73,9 @@ class LoginModal extends Component {
   render(){
     return (
       <div>
-        <Button outline color="success" onClick={this.toggle} id="dropdown">
+        <button className="btn btn-info btn-lg" onClick={this.toggle} id="dropdown">
           Login
-        </Button>
+        </button>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Login</ModalHeader>
