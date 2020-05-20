@@ -24,17 +24,17 @@ Th{
 .render{
   font-size: 12px;
   text-align: center;
-  margin: 20px
+  margin: 5px
 }
 Tr:nth-child(even) {
   background: #E7E7E7 !important;
 }
 
-.container{
-  width: 50% !important;
-  padding: 20px;
-  border-radius: 20px;
-}
+/* .container{
+width: 50% !important;
+padding: 20px;
+border-radius: 20px;
+} */
 .btn-dark{
   color: aqua !important;
   border: 1px solid aqua;
@@ -99,8 +99,8 @@ a{
   outline: none !important
 }
 a:hover{
-    outline: none;
-    color: white
+  outline: none;
+  color: white
 }
 Th{
   border-radius: 10px;
@@ -118,45 +118,13 @@ Th{
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.competitors{
+  background-image: url(../images/competitors.jpg);
+  height: 87vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-
-
-.lambo {
-  max-height: 220px;
-  max-width: 220px;
-  padding: 10px;
-  border: 1px dashed #999;
-}
-.images {
-  display: flex;
-  justify-content: center;
-}
-
-.delete {
-  position: relative;
-  top: 16px;
-  right: 15px
-}
-
-/* Animations */
-.fadein {
-  animation: fadein 2s;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.jumbotron {
+  background: rgba(226, 217, 217, 0.8)
 }

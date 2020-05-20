@@ -11,21 +11,24 @@ import PrimosList from "./components/primos/PrimosList";
 import RanchsList from "./components/ranchs/RanchsList";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Competitors from "./components/competitors/Competitors";
+import Indonesia from "./components/competitors/Indonesia";
+import BabyFood from "./components/competitors/BabyFood";
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'
 import PrivateRoute from './components/auth/PrivateRoute'
-
+import { createBrowserHistory } from "history";
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
 	componentDidMount(){
 		store.dispatch(loadUser())
 	}
-
 	render(){
 		return (
 			<Provider store={store}>
-				<HashRouter basename="/">
+				<HashRouter basename="/" >
 					<Navbar />
 					<Route exact  path="/" component={Home}/>
 					<PrivateRoute path="/aeons" component={AeonsList} />
@@ -36,6 +39,9 @@ class App extends React.Component {
 					<PrivateRoute path="/heros" component={HerosList} />
 					<PrivateRoute path="/primos" component={PrimosList} />
 					<PrivateRoute path="/ranchos" component={RanchsList} />
+					<PrivateRoute path="/competitors" component={Competitors} />
+					<PrivateRoute path="/indonesia" component={Indonesia} />
+					<PrivateRoute path="/babyfood" component={BabyFood} />
 				</HashRouter>
 			</Provider>
 
@@ -43,4 +49,4 @@ class App extends React.Component {
 	}
 }
 
-export default App;
+export default App

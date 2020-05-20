@@ -10,6 +10,9 @@ import PropTypes from "prop-types";
 import Logout from "./auth/Logout";
 import "./style/Styles.css"
 import { SocialIcon } from 'react-social-icons';
+import GoBackButton from "./GoBackButton";
+import Competitors from "./competitors/Competitors";
+
 
 class Navbar extends Component {
   state = {
@@ -30,70 +33,138 @@ class Navbar extends Component {
 
     const authLinks = (
       <Fragment>
+        <GoBackButton/>
         <Logout />
       </Fragment>
     );
 
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
-    const normalLinks = (
-      <Fragment>
-        <div className="dropdown" onClick={this.toggleOpen}>
-          <button
-            className="btn btn-outline-warning dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            >
-            Baby Food Markets
-          </button>
-          <div className={menuClass} aria-labelledby="dropdownMenuButton">
+    // const normalLinks = (
+    //   <Fragment>
+    //     <div className="dropdown" onClick={this.toggleOpen}>
+    //       <button
+    //         className="btn btn-outline-warning dropdown-toggle"
+    //         type="button"
+    //         id="dropdownMenuButton"
+    //         data-toggle="dropdown"
+    //         aria-haspopup="true"
+    //         >
+    //         Baby Food Markets
+    //       </button>
+    //       <div className={menuClass} aria-labelledby="dropdownMenuButton">
+    //
+    //         <Link to="/ranchos" className="dropdown-item">
+    //           Ranch Market
+    //         </Link>
+    //
+    //         <Link to="/grands" className="dropdown-item">
+    //           Grand Lucky
+    //         </Link>
+    //
+    //         <Link to="/carrefours" className="dropdown-item">
+    //           Carrefours
+    //         </Link>
+    //         <Link to="/foodhalls" className="dropdown-item">
+    //           Foodhall
+    //         </Link>
+    //         <Link to="/farmers" className="dropdown-item">
+    //           Farmers
+    //         </Link>
+    //
+    //
+    //         <Link to="/primos" className="dropdown-item">
+    //           Primo
+    //         </Link>
+    //
+    //         <Link to="/aeons" className="dropdown-item">
+    //           Aeon
+    //         </Link>
+    //
+    //         <Link to="/heros" className="dropdown-item">
+    //           Hero
+    //         </Link>
+    //       </div>
+    //     </div>
+    //   </Fragment>
+    // );
 
-            <Link to="/ranchos" className="dropdown-item">
-              Ranch Market
-            </Link>
-
-            <Link to="/grands" className="dropdown-item">
-              Grand Lucky
-            </Link>
-
-            <Link to="/carrefours" className="dropdown-item">
-              Carrefours
-            </Link>
-            <Link to="/foodhalls" className="dropdown-item">
-              Foodhall
-            </Link>
-            <Link to="/farmers" className="dropdown-item">
-              Farmers
-            </Link>
-
-
-            <Link to="/primos" className="dropdown-item">
-              Primo
-            </Link>
-
-            <Link to="/aeons" className="dropdown-item">
-              Aeon
-            </Link>
-
-            <Link to="/heros" className="dropdown-item">
-              Hero
-            </Link>
-          </div>
-        </div>
-      </Fragment>
-    );
-
+    // {<Competitors/> ?
+    //
+    //   <div className="dropdown" onClick={this.toggleOpen}>
+    //     <button
+    //       className="btn btn-primary btn-lg dropdown-toggle"
+    //       type="button"
+    //       id="dropdownMenuButton"
+    //       data-toggle="dropdown"
+    //       aria-haspopup="true"
+    //       >
+    //       Countries
+    //     </button>
+    //     <div className={menuClass} aria-labelledby="dropdownMenuButton">
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         China
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Hong Kong
+    //       </Link>
+    //
+    //       <Link to="/indonesia" className="dropdown-item">
+    //         Indonesia
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Japan
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Malaysia
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Saudi Arabia
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Singapore
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         South Korea
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Philippines
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         UAE
+    //       </Link>
+    //
+    //       <Link to="/" className="dropdown-item">
+    //         Vietnam
+    //       </Link>
+    //     </div>
+    //   </div>
+    //
+    //   :
+    //
+    //   null
+    //
+    //
+    // }
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
 
         <Link to="/" className="btn btn-dark">
           Home
         </Link>
-        {isAuthenticated ? normalLinks : ""}
         {isAuthenticated ? authLinks : ""}
 
+
         <div className="ml-auto">
+          <SocialIcon url="https://exportconnect.com.au/" target="_blank" bgColor="#f7aa00" fgColor="black" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.instagram.com/exportconnect/" target="_blank" bgColor="#dd2a7b" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.linkedin.com/company/exportconnect/" target="_blank" bgColor="#0e76a8" fgColor="white" style={{ height: 40, width: 40 }}/>

@@ -241,3 +241,80 @@ export default connect(mapStateToProps, null)(PrivateRoute);
     </div>
     <Footer/>
   </div>
+
+
+
+
+  import React from "react";
+  import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+  import {withRouter} from "react-router";
+
+  export default function BasicExample() {
+      return (
+          <Router>
+              <div>
+                  <ul>
+                      <li>
+                          <Link to="/">Home</Link>
+                      </li>
+                      <li>
+                          <Link to="/about">About</Link>
+                      </li>
+                      <li>
+                          <Link to="/about/insideabout">Inside About</Link>
+                      </li>
+                  </ul>
+                  <hr/>
+                  <Switch>
+                      <Route exact path="/">
+                          <Home/>
+                      </Route>
+                      <Route exact path="/about">
+                          <About/>
+                      </Route>
+                      <Route path="/about/insideabout">
+                          <InsideAbout/>
+                      </Route>
+                  </Switch>
+              </div>
+          </Router>
+      );
+  }
+
+  function Home() {
+      return (
+          <div>
+              <h2>Home</h2>
+          </div>
+      );
+  }
+
+  const About = withRouter(({history, ...props}) => (
+      <div>
+          <h1>
+              About
+              <hr/>
+              <button onClick={() => {
+                  // history.push('/')
+                  history.goBack(-1);
+              }}>go back
+              </button>
+          </h1>
+      </div>
+  ));
+
+  const InsideAbout = withRouter(({history, ...props}) => (
+      <h1 {...props}>
+          Inside About
+          <hr/>
+
+          <button onClick={() => {
+              history.goBack();
+          }}>go back
+          </button>
+          <button onClick={() => {
+              history.go(-2);
+          }}>go home
+          </button>
+      </h1>
+  ));
