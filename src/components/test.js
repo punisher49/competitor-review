@@ -318,3 +318,16 @@ export default connect(mapStateToProps, null)(PrivateRoute);
           </button>
       </h1>
   ));
+
+  state.loginname = ''
+
+    handleLoginnameChange(login) {
+      this.setState(loginname: login)
+    }
+
+    render () {
+      <Login loginname={this.state.loginname}
+             handleLoginnameChange={this.handleLoginnameChange} />
+
+      <Member loginname={this.state.loginname} />
+    }

@@ -60,6 +60,7 @@ class AeonsList extends Component {
   scrollToTop() {
     let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
     this.setState({ intervalId: intervalId });
+    console.log(this.props.competitors);
   }
   noMatch(){
     return (

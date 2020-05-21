@@ -9,7 +9,7 @@ import GrandsList from "./components/grands/GrandsList";
 import HerosList from "./components/heros/HerosList";
 import PrimosList from "./components/primos/PrimosList";
 import RanchsList from "./components/ranchs/RanchsList";
-import Home from "./components/Home";
+import Home from "./Home";
 import Navbar from "./components/Navbar";
 import Competitors from "./components/competitors/Competitors";
 import Indonesia from "./components/competitors/Indonesia";

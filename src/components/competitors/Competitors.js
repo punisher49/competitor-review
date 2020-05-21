@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import "../style/Styles.css"
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
-
+import Navbar from "../Navbar";
 class Competitors extends Component {
   state = {
     isOpen: false
@@ -16,7 +16,6 @@ class Competitors extends Component {
       <div className="competitors">
       <div className="jumbotron">
       <div className="container">
-
       <h1>Competitors</h1>
       <div className="dropdown" onClick={this.toggleOpen}>
       <button

@@ -17,7 +17,7 @@ class Competitors extends Component {
       <div className="jumbotron">
       <div className="container">
 
-      <h1>Indonesia</h1>
+      <h1>Baby Food Markets</h1>
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
       className="btn btn-success btn-lg btn-block dropdown-toggle"
