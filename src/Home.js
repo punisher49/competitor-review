@@ -97,10 +97,7 @@ class Home extends Component {
         {isAuthenticated ? threeDestinations : ""}
         </div>
         </div>
-        <button title='Back to top' className='scroll'
-          onClick={ () => { this.scrollToTop() }}>
-          <i className="fa fa-arrow-up" ></i>
-        </button>
+
         <Footer/>
         </div>
       );
