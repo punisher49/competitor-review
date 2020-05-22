@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getPrimos } from '../../actions/primoActions';
 import { ExportReactCSV } from '../ExportReactCSV'
+import NavbarWithCountriesAndCategories from "../competitors/NavbarWithCountriesAndCategories";
 const Primo = props => (
   <Tr>
     <Td>{props.primo.productName}</Td>
@@ -112,6 +113,8 @@ class PrimosList extends Component {
 
   render() {
     return (
+      <div>
+        <NavbarWithCountriesAndCategories/>
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
           <h4>Primo Market</h4>
@@ -159,6 +162,7 @@ class PrimosList extends Component {
         <br/>
         <br/>
       </div>
+    </div>
     )
   }
 }

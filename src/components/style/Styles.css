@@ -201,12 +201,10 @@ Th{
 .nav{
   position: fixed !important;
 }
-#spy{
-  right: 0;
-}
+
 .nav-link{
   background-color: #B44E3C !important;
-  font-size: 15px !important;
+  font-size: 11.5px !important;
   color: white;
   border: 1px solid white;
   cursor: pointer;

@@ -8,6 +8,7 @@ import { ExportReactCSV } from '../ExportReactCSV'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAeons } from '../../actions/aeonActions';
+import NavbarWithCountriesAndCategories from "../competitors/NavbarWithCountriesAndCategories";
 const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
@@ -122,49 +123,54 @@ class AeonsList extends Component {
     render() {
 
       return (
-        <div className="render">
-          <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-            <h4>Aeon Market</h4>
-            <input
-              className="form-control form-control-lrg ml-3 w-50"
-              name="query"
-              id="search-input"
-              type="search"
-              placeholder="Search for a Product"
-              aria-label="Search"
-              onChange={this.handleInputChange}
-              onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
-              />
-            <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
+        <div>
+          <NavbarWithCountriesAndCategories/>
 
-          </form>
-          <br />
-          <Table>
-            <Thead>
-              <Tr>
-                <Th scope="row" title="Product Name">Product Name</Th>
-                <Th scope="row">Image</Th>
-                <Th scope="row">Product Category</Th>
-                <Th scope="row">Weight</Th>
-                <Th scope="row">Unit</Th>
-                <Th scope="row">Price (IDR)</Th>
-                <Th scope="row">Price (AUD)</Th>
-                <Th scope="row">Country of Manufacture</Th>
-                <Th scope="row">Product Claims</Th>
-                <Th scope="row">Type of Packaging</Th>
-                <Th scope="row">Position in Store</Th>
-                <Th scope="row">Promotion</Th>
-                <Th scope="row">Importer</Th>
-              </Tr>
-            </Thead>
-            <Tbody>{ this.aeonList() }</Tbody>
-          </Table>
-          <button title='Back to top' className='scroll'
-            onClick={ () => { this.scrollToTop() }}>
-            <i className="fa fa-arrow-up" ></i>
-          </button>
-          <br/>
-          <br/>
+          <div className="render">
+            <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+
+              <h4>Aeon Market</h4>
+              <input
+                className="form-control form-control-lrg ml-3 w-50"
+                name="query"
+                id="search-input"
+                type="search"
+                placeholder="Search for a Product"
+                aria-label="Search"
+                onChange={this.handleInputChange}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+                />
+              <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
+
+            </form>
+            <br />
+            <Table>
+              <Thead>
+                <Tr>
+                  <Th scope="row" title="Product Name">Product Name</Th>
+                  <Th scope="row">Image</Th>
+                  <Th scope="row">Product Category</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+                  <Th scope="row">Type of Packaging</Th>
+                  <Th scope="row">Position in Store</Th>
+                  <Th scope="row">Promotion</Th>
+                  <Th scope="row">Importer</Th>
+                </Tr>
+              </Thead>
+              <Tbody>{ this.aeonList() }</Tbody>
+            </Table>
+            <button title='Back to top' className='scroll'
+              onClick={ () => { this.scrollToTop() }}>
+              <i className="fa fa-arrow-up" ></i>
+            </button>
+            <br/>
+            <br/>
+          </div>
         </div>
       )
     }

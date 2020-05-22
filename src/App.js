@@ -10,12 +10,11 @@ import HerosList from "./components/heros/HerosList";
 import PrimosList from "./components/primos/PrimosList";
 import RanchsList from "./components/ranchs/RanchsList";
 import Home from "./Home";
-import Navbar from "./components/Navbar";
 import Competitors from "./components/competitors/Competitors";
 import Indonesia from "./components/competitors/Indonesia";
-import BabyFood from "./components/competitors/BabyFood";
-import Insights from "./components/insights/Insights";
+import InsightsCountries from "./components/insights/InsightsCountries";
 import IndonesiaInsights from "./components/insights/IndonesiaInsights";
+import IndonesiaBabyFoodInsights from "./components/insights/IndonesiaBabyFoodInsights";
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'
@@ -29,7 +28,6 @@ class App extends React.Component {
 		return (
 			<Provider store={store}>
 				<HashRouter basename="/" >
-					<Navbar />
 					<Route exact  path="/" component={Home}/>
 					<PrivateRoute path="/aeons" component={AeonsList} />
 					<PrivateRoute path="/carrefours" component={CarrefoursList} />
@@ -41,10 +39,10 @@ class App extends React.Component {
 					<PrivateRoute path="/ranchos" component={RanchsList} />
 					<PrivateRoute path="/competitors" component={Competitors} />
 					<PrivateRoute path="/indonesia" component={Indonesia} />
-					<PrivateRoute path="/babyfood" component={BabyFood} />
 
-				<PrivateRoute path="/insights" component={Insights} />
-				<PrivateRoute path="/indonesiaInsights" component={IndonesiaInsights} />
+				<PrivateRoute path="/insightscountries" component={InsightsCountries} />
+				<PrivateRoute path="/indonesiababyfoodinsights" component={IndonesiaBabyFoodInsights} />
+				<PrivateRoute path="/indonesiainsights" component={IndonesiaInsights} />
 				</HashRouter>
 			</Provider>
 

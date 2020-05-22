@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getGrands } from '../../actions/grandActions';
 import { ExportReactCSV } from '../ExportReactCSV'
+import NavbarWithCountriesAndCategories from "../competitors/NavbarWithCountriesAndCategories";
 const Grand = props => (
   <Tr>
     <Td>{props.grand.productName}</Td>
@@ -113,6 +114,8 @@ class GrandsList extends Component {
     }
   render() {
     return (
+      <div>
+        <NavbarWithCountriesAndCategories/>
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
           <h4>Grand Lucky</h4>
@@ -160,6 +163,7 @@ class GrandsList extends Component {
         <br/>
         <br/>
       </div>
+    </div>
     )
   }
 }

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import "../style/Styles.css"
-import Footer from "../Footer";
 import { Link } from "react-router-dom";
-import NavbarWithCountries from "./NavbarWithCountries";
-
-class Indonesia extends Component {
+class InsightsDropdownCategories extends Component {
   state = {
     isOpen: false
   };
@@ -13,15 +10,10 @@ class Indonesia extends Component {
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
-      <div>
-        <NavbarWithCountries/>
-        <div className="competitors">
-          <div className="jumbotron">
-            <div className="container">
-              <h1>Indonesia</h1>
+
               <div className="dropdown" onClick={this.toggleOpen}>
                 <button
-                  className="btn btn-success btn-lg btn-block dropdown-toggle"
+                  className="btn btn-success dropdown-toggle"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
@@ -31,44 +23,40 @@ class Indonesia extends Component {
                 </button>
                 <div className={menuClass} aria-labelledby="dropdownMenuButton">
 
-                  <Link to="/aeons" className="dropdown-item">
-                    Baby Food
+                  <Link to="/indonesiababyfoodinsights" className="dropdown-item">
+                    Baby Food Insights
                   </Link>
 
                   <Link to="/" className="dropdown-item">
-                    Coffee
+                    Coffee Insights
                   </Link>
 
                   <Link to="/" className="dropdown-item">
-                    Free-From Food
+                    Free-From Food Insights
                   </Link>
 
                   <Link to="/" className="dropdown-item">
-                    Functional Packaged Food
+                    Functional Packaged Food Insights
                   </Link>
 
                   <Link to="/" className="dropdown-item">
-                    Organic Packaged Food
+                    Organic Packaged Food Insights
                   </Link>
 
                   <Link to="/" className="dropdown-item">
-                    Sauces and Condiments
+                    Sauces and Condiments Insights
                   </Link>
 
                   <Link to="/" className="dropdown-item">
-                    Savoury Snack Food
+                    Savoury Snack Food Insights
                   </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <Footer/>
-      </div>
+
     );
   }
 }
 
 
 
-export default Indonesia
+export default InsightsDropdownCategories

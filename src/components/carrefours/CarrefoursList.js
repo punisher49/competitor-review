@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCarrefours } from '../../actions/carrefourActions';
 import { ExportReactCSV } from '../ExportReactCSV'
+import NavbarWithCountriesAndCategories from "../competitors/NavbarWithCountriesAndCategories";
 
 const Carrefour = props => (
   <Tr>
@@ -116,7 +117,8 @@ class CarrefoursList extends Component {
     }
     render() {
       return (
-
+        <div>
+          <NavbarWithCountriesAndCategories/>
         <div className="render">
           <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
             <h4>Carrefours Transmart</h4>
@@ -167,6 +169,7 @@ class CarrefoursList extends Component {
           <br/>
           <br/>
         </div>
+      </div>
       )
     }
   }

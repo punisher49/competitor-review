@@ -13,7 +13,6 @@ import { SocialIcon } from 'react-social-icons';
 import GoBackButton from "./GoBackButton";
 
 
-
 class Navbar extends Component {
 
   constructor(props) {
@@ -23,104 +22,25 @@ class Navbar extends Component {
 
     };
   }
-  componentDidMount(){
-    setTimeout(() => {
-      console.log(this.props.dataFromHome);
-    }, 16000);
-  }
-  toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
-
   static propTypes = {
     auth: PropTypes.object.isRequired,
   };
-  dataFromHome () {
-    return this.props.dataFromHome
-  }
-  // <span className="navbar-text mr-6">
-  //   <strong className="welcome">{user ? `Welcome ${user.name}` : ""}</strong>
-  // </span>
-  // const { isAuthenticated, user } = this.props.auth;
+      // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
   render() {
     const { isAuthenticated } = this.props.auth;
-
     const authLinks = (
       <Fragment>
         <GoBackButton/>
         <Logout />
       </Fragment>
     );
-
-    const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
-
-    const trufish = (
-      <Fragment>
-        <div className="dropdown" onClick={this.toggleOpen}>
-          <button
-            className="btn btn-primary btn-lg dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            >
-            Countries
-          </button>
-          <div className={menuClass} aria-labelledby="dropdownMenuButton">
-
-            <Link to="/" className="dropdown-item">
-              China
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Hong Kong
-            </Link>
-
-            <Link to="/indonesia" className="dropdown-item">
-              Indonesia
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Japan
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Malaysia
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Saudi Arabia
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Singapore
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              South Korea
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Philippines
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              UAE
-            </Link>
-
-            <Link to="/" className="dropdown-item">
-              Vietnam
-            </Link>
-          </div>
-        </div>
-
-      </Fragment>
-    )
-
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
 
-        <Link to="/" className="btn btn-outline-info" onClick={() => this.dataFromHome()}>
+        <Link to="/" className="btn btn-outline-info">
           Home
         </Link>
+
         {isAuthenticated ? authLinks : ""}
 
         <div className="ml-auto">
@@ -190,3 +110,7 @@ export default connect(mapStateToProps, null)(Navbar);
 //     </div>
 //   </Fragment>
 // );
+// <span className="navbar-text mr-6">
+//   <strong className="welcome">{user ? `Welcome ${user.name}` : ""}</strong>
+// </span>
+// const { isAuthenticated, user } = this.props.auth;

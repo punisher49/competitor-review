@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getHeros } from '../../actions/heroActions';
 import { ExportReactCSV } from '../ExportReactCSV'
+import NavbarWithCountriesAndCategories from "../competitors/NavbarWithCountriesAndCategories";
 const Hero = props => (
   <Tr>
     <Td>{props.hero.productName}</Td>
@@ -114,6 +115,8 @@ class HerosList extends Component {
 
   render() {
     return (
+      <div>
+        <NavbarWithCountriesAndCategories/>
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
           <h4>Hero Market</h4>
@@ -161,6 +164,7 @@ class HerosList extends Component {
         <br/>
         <br/>
       </div>
+    </div>
     )
   }
 }

@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getRanchos } from '../../actions/ranchActions';
 import { ExportReactCSV } from '../ExportReactCSV'
+import NavbarWithCountriesAndCategories from "../competitors/NavbarWithCountriesAndCategories";
 const Rancho = props => (
   <Tr>
     <Td>{props.rancho.productName}</Td>
@@ -115,6 +116,8 @@ class RanchosList extends Component {
     }
   render() {
     return (
+      <div>
+        <NavbarWithCountriesAndCategories/>
       <div className="render">
         <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
           <h4>Ranch Market</h4>
@@ -161,6 +164,7 @@ class RanchosList extends Component {
         <br/>
         <br/>
       </div>
+    </div>
     )
   }
 }

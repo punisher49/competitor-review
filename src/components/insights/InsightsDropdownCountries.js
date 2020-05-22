@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import "../style/Styles.css"
-import Footer from "../Footer";
 import { Link } from "react-router-dom";
-class Competitors extends Component {
+class InsightsDropdownCountries extends Component {
   state = {
     isOpen: false
   };
@@ -11,14 +10,10 @@ class Competitors extends Component {
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
-      <div>
-      <div className="insights">
-      <div className="jumbotron">
-      <div className="container">
-      <h1>Market Insights</h1>
+
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
-      className="btn btn-success btn-lg btn-block dropdown-toggle"
+      className="btn btn-info dropdown-toggle"
       type="button"
       id="dropdownMenuButton"
       data-toggle="dropdown"
@@ -73,15 +68,11 @@ class Competitors extends Component {
       </Link>
       </div>
       </div>
-      </div>
-      </div>
-      </div>
-      <Footer/>
-      </div>
+
     );
   }
 }
 
 
 
-export default Competitors
+export default InsightsDropdownCountries

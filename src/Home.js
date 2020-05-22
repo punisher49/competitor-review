@@ -10,96 +10,69 @@ import LoginModal from "./components/auth/LoginModal";
 import { connect } from "react-redux";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      competitors: false,
-      intervalId: 0,
-    };
-  };
-
-  clickedCompetitors(){
-    this.setState({
-      competitors : true });
-    }
-
-    scrollStep() {
-      if (window.pageYOffset === 0) {
-        clearInterval(this.state.intervalId);
-      }
-      window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
-    }
-    scrollToTop() {
-      let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
-      this.setState({ intervalId: intervalId });
-      console.log(this.state.competitors);
-    }
-
-    render() {
-      // const { showPaypal } = this.state;
-      const { isAuthenticated } = this.props.auth;
-      const guestLinks = (
-        <Fragment>
+  render() {
+    // const { showPaypal } = this.state;
+    const { isAuthenticated } = this.props.auth;
+    const information = (
+      <Fragment>
         <div className="jumbotron">
 
-        <h3>Export Connect</h3>
-        <p>Founded in 2017, Export Connect exists to help Australian businesses develop the strategies and connections they need to export successfully and grow.</p>
-        <div className="row">
-        <LoginModal />
-        <RegisterModal />
+          <h3>Export Connect</h3>
+          <p>Founded in 2017, Export Connect exists to help Australian businesses develop the strategies and connections they need to export successfully and grow.</p>
+          <div className="row">
+            <LoginModal />
+            <RegisterModal />
+          </div>
         </div>
-        </div>
-        </Fragment>
-      );
-      const threeDestinations =(
-        <Fragment>
+      </Fragment>
+    );
+    const threeDestinations =(
+      <Fragment>
 
         <div className="jumbotron">
-        <div className="container">
-        <div className="row">
-        <div className="col-md-4">
-
-        <Link to="competitors" className="btn btn-info btn-lg" onClick={() => this.clickedCompetitors()}>Competiror's Review</Link>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4">
+                <Link to="competitors" className="btn btn-info btn-lg btn-block" >Competiror's Review</Link>
+              </div>
+              <div className="col-md-4">
+                <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block">Market Insights</Link>
+              </div>
+              <div className="col-md-4">
+                <Link to="/" className="btn btn-success btn-lg btn-block">Export Training</Link>
+              </div>
+            </div>
+          </div>
         </div>
 
+      </Fragment>
+    )
 
-        <br/>
-        <div className="col-md-4">
-        <Link to="/insights" className="btn btn-danger btn-lg">Market Insights</Link>
-        </div>
-        <div className="col-md-4">
-        <Link to="/" className="btn btn-success btn-lg">Export Training</Link>
-        </div>
-        </div>
-        </div>
-        </div>
+    return (
 
-        </Fragment>
-      )
-
-      return (
-
-        <div>
-
+      <div>
+        <Navbar/>
         <div id="homepage">
 
-        <div className="col-md-12">
+          <div className="col-md-12">
 
-        {isAuthenticated ? "" : guestLinks}
-        {isAuthenticated ? threeDestinations : ""}
-        </div>
+            {isAuthenticated ? "" : information}
+            {isAuthenticated ? threeDestinations : ""}
+          </div>
         </div>
 
         <Footer/>
-        </div>
-      );
-    }
+      </div>
+    );
   }
+}
 
 
-  const mapStateToProps = (state) => ({
-    auth: state.auth,
-  });
-  export default connect(mapStateToProps, null)(Home);
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+export default connect(mapStateToProps, null)(Home);
