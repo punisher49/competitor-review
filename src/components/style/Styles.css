@@ -208,5 +208,6 @@ Th{
   background-color: #B44E3C !important;
   font-size: 15px !important;
   color: white;
-  border: 1px solid white
+  border: 1px solid white;
+  cursor: pointer;
 }
