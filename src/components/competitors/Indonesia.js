@@ -9,7 +9,6 @@ class Indonesia extends Component {
     isOpen: false
   };
   toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
-
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
