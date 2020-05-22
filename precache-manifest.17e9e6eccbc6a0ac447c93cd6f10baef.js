@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f7de2649c816daa96aa9bca5346e6dc",
+    "revision": "d93be4a294ad7366d04a9ef333c2491c",
     "url": "/competitor-review/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/css/2.05988dc8.chunk.css"
   },
   {
-    "revision": "1493c317c5e2a36421a9",
-    "url": "/competitor-review/static/css/main.63393eff.chunk.css"
+    "revision": "98f1f1d3db39d59ca88c",
+    "url": "/competitor-review/static/css/main.6b721e74.chunk.css"
   },
   {
     "revision": "928653b101b4c7dcf5f8",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/js/2.e7564538.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1493c317c5e2a36421a9",
-    "url": "/competitor-review/static/js/main.1d2bbe51.chunk.js"
+    "revision": "98f1f1d3db39d59ca88c",
+    "url": "/competitor-review/static/js/main.8119fdef.chunk.js"
   },
   {
     "revision": "1deb9431c91afdf0a154",
@@ -46,14 +46,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "71bca1c1cf605552ee883972bafb6659",
     "url": "/competitor-review/static/media/indonesiababyfood11.71bca1c1.png"
-  },
-  {
-    "revision": "1a694f5e149efc1de99ce1e9fd56367e",
-    "url": "/competitor-review/static/media/indonesiababyfood12.1a694f5e.png"
-  },
-  {
-    "revision": "e3258ca2733c032c6cb1e69f6afcd589",
-    "url": "/competitor-review/static/media/indonesiababyfood13.e3258ca2.png"
   },
   {
     "revision": "1332a412e0ffc7a060dd7a367f37a143",
@@ -82,10 +74,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "89d1ab60ba82d5616cccd35f28c2745b",
     "url": "/competitor-review/static/media/indonesiababyfood8.89d1ab60.png"
-  },
-  {
-    "revision": "d34a38b7cca9fc3abc484e665c66ae12",
-    "url": "/competitor-review/static/media/indonesiababyfood9.d34a38b7.png"
   },
   {
     "revision": "337ce732a4fa73312c7f7cda36b0f471",
