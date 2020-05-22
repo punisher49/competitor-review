@@ -52,9 +52,7 @@ class IndonesiaInsights extends Component {
     this.scrollDiv8.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  scrollSmoothHandler9 = () => {
-    this.scrollDiv9.current.scrollIntoView({ behavior: "smooth" });
-  };
+
 
   scrollSmoothHandler10 = () => {
     this.scrollDiv10.current.scrollIntoView({ behavior: "smooth" });
@@ -64,13 +62,7 @@ class IndonesiaInsights extends Component {
     this.scrollDiv11.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  scrollSmoothHandler12 = () => {
-    this.scrollDiv12.current.scrollIntoView({ behavior: "smooth" });
-  };
 
-  scrollSmoothHandler13 = () => {
-    this.scrollDiv13.current.scrollIntoView({ behavior: "smooth" });
-  };
   render() {
     return (
       <div className="bg-dark">
@@ -94,16 +86,12 @@ class IndonesiaInsights extends Component {
       </div>
       <div id="scroll8" ref={this.scrollDiv8}>
       </div>
-      <div id="scroll9" ref={this.scrollDiv9}>
-      </div>
+
       <div id="scroll10" ref={this.scrollDiv10}>
       </div>
       <div id="scroll11" ref={this.scrollDiv11}>
       </div>
-      <div id="scroll12" ref={this.scrollDiv12}>
-      </div>
-      <div id="scroll13" ref={this.scrollDiv13}>
-      </div>
+
       </div>
 
 
@@ -111,17 +99,17 @@ class IndonesiaInsights extends Component {
       <div className="hidden-sm-down" id="spy">
 
       <ul className="nav nav-pills flex-column">
-      <li className="nav-link" onClick={this.scrollSmoothHandler}>Intro</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler2}>Demographics1</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler3}>Demographics2</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler4}>Demographics3</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler5}>Consumer Profile</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler6}>Retail Channel Developments</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler7}>Leading Retailers That List Western Brands</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler8}>Foodservice Channel Developments</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler9}>Leading E-Commerce Grocers</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler10}>Average Channel Margins</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler11}>Category Overview
+      <li className="nav-link" onClick={this.scrollSmoothHandler}>Title</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler2}>Economic / Demographics</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler3}>Consumer Profile</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler4}>Retail Channel Developments</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler5}>Leading Retailers That Stock Western Brands</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler6}>Leading E-Commerce Grocers</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler7}>Foodservice Channel Developments</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler8}>Recommended Promotional Activities</li>
+
+      <li className="nav-link" onClick={this.scrollSmoothHandler10}>Category Overview - Baby Food</li>
+      <li className="nav-link" onClick={this.scrollSmoothHandler11}>Key Import Partners
       </li>
 
       </ul>

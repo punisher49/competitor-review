@@ -174,13 +174,7 @@ Th{
   background-size:contain;
   background-position:right;
 }
-#scroll9{
-  background-image: url(../images/indonesiababyfood9.png);
-  height: 87vh;
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:right;
-}
+
 #scroll10{
   background-image: url(../images/indonesiababyfood10.png);
   height: 87vh;
@@ -195,20 +189,7 @@ Th{
   background-size:contain;
   background-position:right;
 }
-#scroll12{
-  background-image: url(../images/indonesiababyfood12.png);
-  height: 87vh;
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:right;
-}
-#scroll13{
-  background-image: url(../images/indonesiababyfood13.png);
-  height: 87vh;
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:right;
-}
+
 
 
 .insightsBackground{
