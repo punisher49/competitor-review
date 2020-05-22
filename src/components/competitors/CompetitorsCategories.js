@@ -11,7 +11,6 @@ class CompetitorsCategories extends Component {
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
-      <div>
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
       className="btn btn-danger dropdown-toggle"
@@ -51,7 +50,6 @@ class CompetitorsCategories extends Component {
       <Link to="/" className="dropdown-item">
       Savoury Snack Food
       </Link>
-      </div>
       </div>
       </div>
     );

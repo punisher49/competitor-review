@@ -24,7 +24,7 @@ class InsightsNavbarWithCountriesAndCategories extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
   };
-      // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
+  // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
   render() {
     const { isAuthenticated } = this.props.auth;
     const authLinks = (

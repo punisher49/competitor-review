@@ -11,7 +11,6 @@ class BabyFoodMarkets extends Component {
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
-      <div>
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
       className="btn btn-success dropdown-toggle"
@@ -54,7 +53,6 @@ class BabyFoodMarkets extends Component {
       <Link to="/heros" className="dropdown-item">
       Hero
       </Link>
-      </div>
       </div>
       </div>
 

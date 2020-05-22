@@ -10,7 +10,6 @@ class CompetitorsCountries extends Component {
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
-      <div>
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
       className="btn btn-info dropdown-toggle"
@@ -66,7 +65,6 @@ class CompetitorsCountries extends Component {
       <Link to="/" className="dropdown-item">
       Vietnam
       </Link>
-      </div>
       </div>
       </div>
 
