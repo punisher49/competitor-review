@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import "../style/Styles.css"
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
@@ -68,7 +68,5 @@ class Competitors extends Component {
 }
 
 
-const mapStateToProps = (state) => ({
-  auth: state.auth,
-});
+
 export default Competitors

@@ -11,8 +11,7 @@ import Logout from "./auth/Logout";
 import "./style/Styles.css"
 import { SocialIcon } from 'react-social-icons';
 import GoBackButton from "./GoBackButton";
-import Competitors from "./competitors/Competitors";
-import Home from "../Home";
+
 
 
 class Navbar extends Component {
@@ -119,7 +118,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
 
-        <Link to="/" className="btn btn-outline-primary" onClick={() => this.dataFromHome()}>
+        <Link to="/" className="btn btn-outline-info" onClick={() => this.dataFromHome()}>
           Home
         </Link>
         {isAuthenticated ? authLinks : ""}

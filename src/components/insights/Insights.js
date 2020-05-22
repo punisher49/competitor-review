@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "../style/Styles.css"
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
-
 class Competitors extends Component {
   state = {
     isOpen: false
@@ -13,11 +12,10 @@ class Competitors extends Component {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
       <div>
-        <div className="competitors">
+      <div className="insights">
       <div className="jumbotron">
       <div className="container">
-
-      <h1>Baby Food Markets</h1>
+      <h1>Market Insights</h1>
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
       className="btn btn-success btn-lg btn-block dropdown-toggle"
@@ -26,50 +24,64 @@ class Competitors extends Component {
       data-toggle="dropdown"
       aria-haspopup="true"
       >
-      Baby Food Markets
+      Countries
       </button>
       <div className={menuClass} aria-labelledby="dropdownMenuButton">
 
-      <Link to="/ranchos" className="dropdown-item">
-      Ranch Market
+      <Link to="/" className="dropdown-item">
+      China
       </Link>
 
-      <Link to="/grands" className="dropdown-item">
-      Grand Lucky
+      <Link to="/" className="dropdown-item">
+      Hong Kong
       </Link>
 
-      <Link to="/carrefours" className="dropdown-item">
-      Carrefours
-      </Link>
-      <Link to="/foodhalls" className="dropdown-item">
-      Foodhall
-      </Link>
-      <Link to="/farmers" className="dropdown-item">
-      Farmers
+      <Link to="/indonesiaInsights" className="dropdown-item">
+      Indonesia
       </Link>
 
-
-      <Link to="/primos" className="dropdown-item">
-      Primo
+      <Link to="/" className="dropdown-item">
+      Japan
       </Link>
 
-      <Link to="/aeons" className="dropdown-item">
-      Aeon
+      <Link to="/" className="dropdown-item">
+      Malaysia
       </Link>
 
-      <Link to="/heros" className="dropdown-item">
-      Hero
+      <Link to="/" className="dropdown-item">
+      Saudi Arabia
+      </Link>
+
+      <Link to="/" className="dropdown-item">
+      Singapore
+      </Link>
+
+      <Link to="/" className="dropdown-item">
+      South Korea
+      </Link>
+
+      <Link to="/" className="dropdown-item">
+      Philippines
+      </Link>
+
+      <Link to="/" className="dropdown-item">
+      UAE
+      </Link>
+
+      <Link to="/" className="dropdown-item">
+      Vietnam
       </Link>
       </div>
       </div>
       </div>
       </div>
-          </div>
+      </div>
       <Footer/>
       </div>
     );
   }
 }
+
 
 
 export default Competitors

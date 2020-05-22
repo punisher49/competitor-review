@@ -14,12 +14,12 @@ import Navbar from "./components/Navbar";
 import Competitors from "./components/competitors/Competitors";
 import Indonesia from "./components/competitors/Indonesia";
 import BabyFood from "./components/competitors/BabyFood";
+import Insights from "./components/insights/Insights";
+import IndonesiaInsights from "./components/insights/IndonesiaInsights";
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'
 import PrivateRoute from './components/auth/PrivateRoute'
-import { createBrowserHistory } from "history";
-import PropTypes from 'prop-types';
 
 class App extends React.Component {
 	componentDidMount(){
@@ -42,6 +42,9 @@ class App extends React.Component {
 					<PrivateRoute path="/competitors" component={Competitors} />
 					<PrivateRoute path="/indonesia" component={Indonesia} />
 					<PrivateRoute path="/babyfood" component={BabyFood} />
+
+				<PrivateRoute path="/insights" component={Insights} />
+				<PrivateRoute path="/indonesiaInsights" component={IndonesiaInsights} />
 				</HashRouter>
 			</Provider>
 

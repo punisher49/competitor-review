@@ -10,7 +10,6 @@ import LoginModal from "./components/auth/LoginModal";
 import { connect } from "react-redux";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
 
 class Home extends Component {
   constructor(props) {
@@ -40,7 +39,6 @@ class Home extends Component {
 
     render() {
       // const { showPaypal } = this.state;
-      const {competitors} = this.state;
       const { isAuthenticated } = this.props.auth;
       const guestLinks = (
         <Fragment>
@@ -63,13 +61,13 @@ class Home extends Component {
         <div className="row">
         <div className="col-md-4">
 
-        <Link to="competitors" className="btn btn-primary btn-lg" onClick={() => this.clickedCompetitors()}>Competiror's Review</Link>
+        <Link to="competitors" className="btn btn-info btn-lg" onClick={() => this.clickedCompetitors()}>Competiror's Review</Link>
         </div>
 
 
         <br/>
         <div className="col-md-4">
-        <Link to="/" className="btn btn-danger btn-lg">Market Insights</Link>
+        <Link to="/insights" className="btn btn-danger btn-lg">Market Insights</Link>
         </div>
         <div className="col-md-4">
         <Link to="/" className="btn btn-success btn-lg">Export Training</Link>
@@ -80,11 +78,7 @@ class Home extends Component {
 
         </Fragment>
       )
-      const navbar = (
-        <Fragment>
 
-        </Fragment>
-      )
       return (
 
         <div>
