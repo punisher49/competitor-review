@@ -14,11 +14,8 @@ class IndonesiaInsights extends Component {
     this.scrollDiv6 = createRef();
     this.scrollDiv7 = createRef();
     this.scrollDiv8 = createRef();
-    this.scrollDiv9 = createRef();
     this.scrollDiv10 = createRef();
     this.scrollDiv11 = createRef();
-    this.scrollDiv12 = createRef();
-    this.scrollDiv13 = createRef();
   }
   scrollSmoothHandler = () => {
     this.scrollDiv.current.scrollIntoView({ behavior: "smooth" });
