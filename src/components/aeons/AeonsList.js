@@ -57,7 +57,6 @@ class AeonsList extends Component {
   scrollToTop() {
     let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
     this.setState({ intervalId: intervalId });
-    console.log(this.props.aeon.aeons.map(x => x.productPriceAud.toFixed(2)))
   }
   noMatch(){
     return (
