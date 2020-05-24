@@ -12,18 +12,13 @@ const Grand = props => (
   <Tr>
     <Td>{props.grand.productName}</Td>
     <Td><GrandImages dataFromGrandList = {props.grand.productImage}/></Td>
-    <Td>{props.grand.productCategory}</Td>
     <Td>{props.grand.weight}</Td>
     <Td>{props.grand.unit}</Td>
-    <Td>{props.grand.productPriceIdr}</Td>
-    <Td>{props.grand.productPriceAud}</Td>
+    <Td>{props.grand.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.grand.productPriceAud.toFixed(2)}</Td>
+    <Td>01/03/2020</Td>
     <Td>{props.grand.countryOfManufacture}</Td>
     <Td>{props.grand.productClaims}</Td>
-    <Td>{props.grand.typeOfPackaging}</Td>
-    <Td>{props.grand.positioningInStore}</Td>
-    <Td>{props.grand.promotion}</Td>
-    <Td>{props.grand.importer}</Td>
-
   </Tr>
 )
 class GrandsList extends Component {
@@ -65,8 +60,6 @@ class GrandsList extends Component {
     return this.props.grand.grands.map(currentgrand => {
       if(currentgrand.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
-      }else if (currentgrand.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Grand grand={currentgrand} key={currentgrand._id}/>;
       }else if (currentgrand.weight.toString().match(this.state.query)){
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
       }else if (currentgrand.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -78,14 +71,6 @@ class GrandsList extends Component {
       }else if (currentgrand.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
       }else if (currentgrand.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Grand grand={currentgrand} key={currentgrand._id}/>;
-      }else if (currentgrand.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Grand grand={currentgrand} key={currentgrand._id}/>;
-      }else if (currentgrand.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Grand grand={currentgrand} key={currentgrand._id}/>;
-      }else if (currentgrand.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Grand grand={currentgrand} key={currentgrand._id}/>;
-      }else if (currentgrand.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Grand grand={currentgrand} key={currentgrand._id}/>;
       }else{
         return null
@@ -139,17 +124,13 @@ class GrandsList extends Component {
             <Tr>
               <Th scope="row">Product Name</Th>
               <Th scope="row">Image</Th>
-              <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
               <Th scope="row">Price (IDR)</Th>
               <Th scope="row">Price (AUD)</Th>
+              <Th scope="row">Date Created</Th>
               <Th scope="row">Country of Manufacture</Th>
               <Th scope="row">Product Claims</Th>
-              <Th scope="row">Type of Packaging</Th>
-              <Th scope="row">Position in Store</Th>
-              <Th scope="row">Promotion</Th>
-              <Th scope="row">Importer</Th>
             </Tr>
           </Thead>
           <Tbody>

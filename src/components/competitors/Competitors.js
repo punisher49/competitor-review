@@ -42,48 +42,47 @@ class Competitors extends Component {
                     Countries
                   </button>
                   <div className={menuClass} aria-labelledby="dropdownMenuButton">
-
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/indonesia" className="dropdown-item">
+                    Indonesia
+                    </Link>
+                    
+                    <Link to="/" className="dropdown-item disabled">
                       China
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Hong Kong
                     </Link>
 
-                    <Link to="/indonesia" className="dropdown-item">
-                      Indonesia
-                    </Link>
-
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Japan
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Malaysia
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Saudi Arabia
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Singapore
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       South Korea
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Philippines
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       UAE
                     </Link>
 
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item disabled">
                       Vietnam
                     </Link>
                   </div>

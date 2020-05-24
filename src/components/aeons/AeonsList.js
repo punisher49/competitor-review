@@ -13,17 +13,13 @@ const Aeon = props => (
   <Tr>
     <Td>{props.aeon.productName}</Td>
     <Td><AeonImages dataFromAeonList = {props.aeon.productImage}/></Td>
-    <Td>{props.aeon.productCategory}</Td>
     <Td>{props.aeon.weight}</Td>
     <Td>{props.aeon.unit}</Td>
-    <Td>{props.aeon.productPriceIdr}</Td>
-    <Td>{props.aeon.productPriceAud}</Td>
+    <Td>{props.aeon.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.aeon.productPriceAud.toFixed(2)}</Td>
+    <Td>01/03/2020</Td>
     <Td>{props.aeon.countryOfManufacture}</Td>
     <Td>{props.aeon.productClaims}</Td>
-    <Td>{props.aeon.typeOfPackaging}</Td>
-    <Td>{props.aeon.positioningInStore}</Td>
-    <Td>{props.aeon.promotion}</Td>
-    <Td>{props.aeon.importer}</Td>
   </Tr>
 )
 class AeonsList extends Component {
@@ -61,7 +57,7 @@ class AeonsList extends Component {
   scrollToTop() {
     let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
     this.setState({ intervalId: intervalId });
-    console.log(this.props.competitors);
+    console.log(this.props.aeon.aeons.map(x => x.productPriceAud.toFixed(2)))
   }
   noMatch(){
     return (
@@ -93,8 +89,6 @@ class AeonsList extends Component {
       return this.props.aeon.aeons.map(currentaeon => {
         if(currentaeon.productName.toLowerCase().match(this.state.query.toLowerCase())){
           return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
-        }else if (currentaeon.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-          return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
         }else if (currentaeon.weight.toString().match(this.state.query)){
           return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
         }else if (currentaeon.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -106,14 +100,6 @@ class AeonsList extends Component {
         }else if (currentaeon.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
           return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
         }else if (currentaeon.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-          return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
-        }else if (currentaeon.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-          return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
-        }else if (currentaeon.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-          return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
-        }else if (currentaeon.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-          return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
-        }else if (currentaeon.importer.toLowerCase().match(this.state.query.toLowerCase())) {
           return <Aeon aeon={currentaeon} key={currentaeon._id}/>;
         }else{
           return null
@@ -149,17 +135,13 @@ class AeonsList extends Component {
                 <Tr>
                   <Th scope="row" title="Product Name">Product Name</Th>
                   <Th scope="row">Image</Th>
-                  <Th scope="row">Product Category</Th>
                   <Th scope="row">Weight</Th>
                   <Th scope="row">Unit</Th>
                   <Th scope="row">Price (IDR)</Th>
                   <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Date Created</Th>
                   <Th scope="row">Country of Manufacture</Th>
                   <Th scope="row">Product Claims</Th>
-                  <Th scope="row">Type of Packaging</Th>
-                  <Th scope="row">Position in Store</Th>
-                  <Th scope="row">Promotion</Th>
-                  <Th scope="row">Importer</Th>
                 </Tr>
               </Thead>
               <Tbody>{ this.aeonList() }</Tbody>

@@ -13,17 +13,13 @@ const Carrefour = props => (
   <Tr>
     <Td>{props.carrefour.productName}</Td>
     <Td><CarrefourImages dataFromCarrefourList = {props.carrefour.productImage}/></Td>
-    <Td>{props.carrefour.productCategory}</Td>
     <Td>{props.carrefour.weight}</Td>
     <Td>{props.carrefour.unit}</Td>
-    <Td>{props.carrefour.productPriceIdr}</Td>
-    <Td>{props.carrefour.productPriceAud}</Td>
+    <Td>{props.carrefour.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.carrefour.productPriceAud.toFixed(2)}</Td>
+    <Td>01/03/2020</Td>
     <Td>{props.carrefour.countryOfManufacture}</Td>
     <Td>{props.carrefour.productClaims}</Td>
-    <Td>{props.carrefour.typeOfPackaging}</Td>
-    <Td>{props.carrefour.positioningInStore}</Td>
-    <Td>{props.carrefour.promotion}</Td>
-    <Td>{props.carrefour.importer}</Td>
   </Tr>
 )
 class CarrefoursList extends Component {
@@ -67,8 +63,6 @@ class CarrefoursList extends Component {
     return this.props.carrefour.carrefours.map(currencarrefour => {
       if(currencarrefour.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
-      }else if (currencarrefour.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
       }else if (currencarrefour.weight.toString().match(this.state.query)){
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
       }else if (currencarrefour.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -80,14 +74,6 @@ class CarrefoursList extends Component {
       }else if (currencarrefour.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
       }else if (currencarrefour.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
-      }else if (currencarrefour.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
-      }else if (currencarrefour.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
-      }else if (currencarrefour.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
-      }else if (currencarrefour.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Carrefour carrefour={currencarrefour} key={currencarrefour._id}/>;
       }else{
         return null
@@ -145,17 +131,14 @@ class CarrefoursList extends Component {
               <Tr >
                 <Th scope="row">Product Name</Th>
                 <Th scope="row">Image</Th>
-                <Th scope="row">Product Category</Th>
                 <Th scope="row">Weight</Th>
                 <Th scope="row">Unit</Th>
                 <Th scope="row">Price (IDR)</Th>
                 <Th scope="row">Price (AUD)</Th>
+                <Th scope="row">Date Created</Th>
                 <Th scope="row">Country of Manufacture</Th>
                 <Th scope="row">Product Claims</Th>
-                <Th scope="row">Type of Packaging</Th>
-                <Th scope="row">Position in Store</Th>
-                <Th scope="row">Promotion</Th>
-                <Th scope="row">Importer</Th>
+
               </Tr>
             </Thead>
             <Tbody>

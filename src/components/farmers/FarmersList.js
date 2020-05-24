@@ -12,17 +12,13 @@ const Farmer = props => (
   <Tr>
     <Td>{props.farmer.productName}</Td>
     <Td><FarmerImages dataFromFarmerList = {props.farmer.productImage}/></Td>
-    <Td>{props.farmer.productCategory}</Td>
     <Td>{props.farmer.weight}</Td>
     <Td>{props.farmer.unit}</Td>
-    <Td>{props.farmer.productPriceIdr}</Td>
-    <Td>{props.farmer.productPriceAud}</Td>
+    <Td>{props.farmer.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.farmer.productPriceAud.toFixed(2)}</Td>
+      <Td>01/03/2020</Td>
     <Td>{props.farmer.countryOfManufacture}</Td>
     <Td>{props.farmer.productClaims}</Td>
-    <Td>{props.farmer.typeOfPackaging}</Td>
-    <Td>{props.farmer.positioningInStore}</Td>
-    <Td>{props.farmer.promotion}</Td>
-    <Td>{props.farmer.importer}</Td>
   </Tr>
 )
 class FarmerList extends Component {
@@ -65,8 +61,6 @@ class FarmerList extends Component {
     return this.props.farmer.farmers.map(currentfarmer => {
       if(currentfarmer.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
-      }else if (currentfarmer.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
       }else if (currentfarmer.weight.toString().match(this.state.query)){
         return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
       }else if (currentfarmer.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -78,14 +72,6 @@ class FarmerList extends Component {
       }else if (currentfarmer.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
       }else if (currentfarmer.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
-      }else if (currentfarmer.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
-      }else if (currentfarmer.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
-      }else if (currentfarmer.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
-      }else if (currentfarmer.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Farmer farmer={currentfarmer} key={currentfarmer._id}/>;
       }else{
         return null
@@ -141,17 +127,14 @@ class FarmerList extends Component {
             <Tr>
               <Th scope="row">Product Name</Th>
               <Th scope="row">Image</Th>
-              <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
               <Th scope="row">Price (IDR)</Th>
               <Th scope="row">Price (AUD)</Th>
+              <Th scope="row">Date Created</Th>
               <Th scope="row">Country of Manufacture</Th>
               <Th scope="row">Product Claims</Th>
-              <Th scope="row">Type of Packaging</Th>
-              <Th scope="row">Position in Store</Th>
-              <Th scope="row">Promotion</Th>
-              <Th scope="row">Importer</Th>
+
             </Tr>
           </Thead>
           <Tbody>

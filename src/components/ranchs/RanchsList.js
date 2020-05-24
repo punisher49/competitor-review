@@ -12,18 +12,14 @@ const Rancho = props => (
   <Tr>
     <Td>{props.rancho.productName}</Td>
     <Td><RanchImages dataFromRanchList = {props.rancho.productImage}/></Td>
-    <Td>{props.rancho.productCategory}</Td>
     <Td>{props.rancho.weight}</Td>
     <Td>{props.rancho.unit}</Td>
-    <Td>{props.rancho.productPriceIdr}</Td>
-    <Td>{props.rancho.productPriceAud}</Td>
+    <Td>{props.rancho.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.rancho.productPriceAud.toFixed(2)}</Td>
+    <Td>01/03/2020</Td>
     <Td>{props.rancho.countryOfManufacture}</Td>
     <Td>{props.rancho.productClaims}</Td>
-    <Td>{props.rancho.typeOfPackaging}</Td>
-    <Td>{props.rancho.positioningInStore}</Td>
-    <Td>{props.rancho.promotion}</Td>
-    <Td>{props.rancho.importer}</Td>
-    <Td>{props.rancho.location}</Td>
+
   </Tr>
 )
 class RanchosList extends Component {
@@ -65,8 +61,6 @@ class RanchosList extends Component {
     return this.props.rancho.ranchos.map(currentrancho => {
       if(currentrancho.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
-      }else if (currentrancho.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else if (currentrancho.weight.toString().match(this.state.query)){
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else if (currentrancho.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -78,16 +72,6 @@ class RanchosList extends Component {
       }else if (currentrancho.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else if (currentrancho.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
-      }else if (currentrancho.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
-      }else if (currentrancho.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
-      }else if (currentrancho.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
-      }else if (currentrancho.importer.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
-      }else if (currentrancho.location.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Rancho rancho={currentrancho} key={currentrancho._id}/>;
       }else{
         return null
@@ -139,18 +123,14 @@ class RanchosList extends Component {
             <Tr>
               <Th scope="row">Product Name</Th>
               <Th scope="row">Image</Th>
-              <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
               <Th scope="row">Price (IDR)</Th>
               <Th scope="row">Price (AUD)</Th>
+              <Th scope="row">Date Created</Th>
               <Th scope="row">Country of Manufacture</Th>
               <Th scope="row">Product Claims</Th>
-              <Th scope="row">Type of Packaging</Th>
-              <Th scope="row">Position in Store</Th>
-              <Th scope="row">Promotion</Th>
-              <Th scope="row">Importer</Th>
-              <Th scope="row">Location</Th>
+
             </Tr>
           </Thead>
           <Tbody>

@@ -12,17 +12,14 @@ const Foodhall = props => (
   <Tr>
     <Td>{props.foodhall.productName}</Td>
     <Td><FoodhallImages dataFromFoodhallList = {props.foodhall.productImage}/></Td>
-    <Td>{props.foodhall.productCategory}</Td>
     <Td>{props.foodhall.weight}</Td>
     <Td>{props.foodhall.unit}</Td>
-    <Td>{props.foodhall.productPriceIdr}</Td>
-    <Td>{props.foodhall.productPriceAud}</Td>
+    <Td>{props.foodhall.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.foodhall.productPriceAud.toFixed(2)}</Td>
+    <Td>01/03/2020</Td>
     <Td>{props.foodhall.countryOfManufacture}</Td>
     <Td>{props.foodhall.productClaims}</Td>
-    <Td>{props.foodhall.typeOfPackaging}</Td>
-    <Td>{props.foodhall.positioningInStore}</Td>
-    <Td>{props.foodhall.promotion}</Td>
-    <Td>{props.foodhall.importer}</Td>
+
   </Tr>
 )
 class FoodhallList extends Component {
@@ -65,8 +62,6 @@ class FoodhallList extends Component {
     return this.props.foodhall.foodhalls.map(currentfoodhall => {
       if(currentfoodhall.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
-      }else if (currentfoodhall.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
       }else if (currentfoodhall.weight.toString().match(this.state.query)){
         return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
       }else if (currentfoodhall.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -78,14 +73,6 @@ class FoodhallList extends Component {
       }else if (currentfoodhall.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
       }else if (currentfoodhall.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
-      }else if (currentfoodhall.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
-      }else if (currentfoodhall.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
-      }else if (currentfoodhall.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
-      }else if (currentfoodhall.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Foodhall foodhall={currentfoodhall} key={currentfoodhall._id}/>;
       }else{
         return null
@@ -112,69 +99,66 @@ class FoodhallList extends Component {
       .reduce((accumulator,currentValue)=> x[currentValue].toString().toLowerCase().includes(query.toLowerCase()) || accumulator, false) );
       return search
     }
-  render() {
-    return (
-      <div>
-        <NavbarWithCountriesAndCategories/>
-      <div className="render">
-        <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
-          <h4>Foodhall Market</h4>
-          <input
-            className="form-control form-control-lrg ml-3 w-50"
-            name="query"
-            id="search-input"
-            type="search"
-            placeholder="Search for a Product"
-            aria-label="Search"
-            onChange={this.handleInputChange}
-            onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
-            />
-          <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
-        </form>
-        <br />
+    render() {
+      return (
+        <div>
+          <NavbarWithCountriesAndCategories/>
+          <div className="render">
+            <form className="form-inline d-flex justify-content-center md-form form-sm mt-0">
+              <h4>Foodhall Market</h4>
+              <input
+                className="form-control form-control-lrg ml-3 w-50"
+                name="query"
+                id="search-input"
+                type="search"
+                placeholder="Search for a Product"
+                aria-label="Search"
+                onChange={this.handleInputChange}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+                />
+              <ExportReactCSV csvData={this.data()} fileName={this.state.fileName} />
+            </form>
+            <br />
 
 
-        <Table>
-          <Thead>
-            <Tr>
-              <Th scope="row">Product Name</Th>
-              <Th scope="row">Image</Th>
-              <Th scope="row">Product Category</Th>
-              <Th scope="row">Weight</Th>
-              <Th scope="row">Unit</Th>
-              <Th scope="row">Price (IDR)</Th>
-              <Th scope="row">Price (AUD)</Th>
-              <Th scope="row">Country of Manufacture</Th>
-              <Th scope="row">Product Claims</Th>
-              <Th scope="row">Type of Packaging</Th>
-              <Th scope="row">Position in Store</Th>
-              <Th scope="row">Promotion</Th>
-              <Th scope="row">Importer</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            { this.foodhallList() }
-          </Tbody>
-        </Table>
-        <button title='Back to top' className='scroll'
-          onClick={ () => { this.scrollToTop(); }}>
-          <i className="fa fa-arrow-up" ></i>
-        </button>
-        <br/>
-        <br/>
-      </div>
-    </div>
-    )
+            <Table>
+              <Thead>
+                <Tr>
+                  <Th scope="row">Product Name</Th>
+                  <Th scope="row">Image</Th>
+                  <Th scope="row">Weight</Th>
+                  <Th scope="row">Unit</Th>
+                  <Th scope="row">Price (IDR)</Th>
+                  <Th scope="row">Price (AUD)</Th>
+                  <Th scope="row">Date Created</Th>
+                  <Th scope="row">Country of Manufacture</Th>
+                  <Th scope="row">Product Claims</Th>
+
+                </Tr>
+              </Thead>
+              <Tbody>
+                { this.foodhallList() }
+              </Tbody>
+            </Table>
+            <button title='Back to top' className='scroll'
+              onClick={ () => { this.scrollToTop(); }}>
+              <i className="fa fa-arrow-up" ></i>
+            </button>
+            <br/>
+            <br/>
+          </div>
+        </div>
+      )
+    }
   }
-}
 
-FoodhallList.propTypes = {
-  getFoodhalls: PropTypes.func.isRequired,
-  foodhall: PropTypes.object.isRequired
-};
-const mapStateToProps = (state) => ({
-  foodhall: state.foodhall,
-  isAuthenticated: state.auth.isAuthenticated
-});
+  FoodhallList.propTypes = {
+    getFoodhalls: PropTypes.func.isRequired,
+    foodhall: PropTypes.object.isRequired
+  };
+  const mapStateToProps = (state) => ({
+    foodhall: state.foodhall,
+    isAuthenticated: state.auth.isAuthenticated
+  });
 
-export default connect(mapStateToProps, { getFoodhalls })(FoodhallList);
+  export default connect(mapStateToProps, { getFoodhalls })(FoodhallList);

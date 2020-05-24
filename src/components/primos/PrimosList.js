@@ -12,17 +12,14 @@ const Primo = props => (
   <Tr>
     <Td>{props.primo.productName}</Td>
     <Td><PrimoImages dataFromPrimoList = {props.primo.productImage}/></Td>
-    <Td>{props.primo.productCategory}</Td>
     <Td>{props.primo.weight}</Td>
     <Td>{props.primo.unit}</Td>
-    <Td>{props.primo.productPriceIdr}</Td>
-    <Td>{props.primo.productPriceAud}</Td>
+    <Td>{props.primo.productPriceIdr.toFixed(2)}</Td>
+    <Td>{props.primo.productPriceAud.toFixed(2)}</Td>
+    <Td>01/03/2020</Td>
     <Td>{props.primo.countryOfManufacture}</Td>
     <Td>{props.primo.productClaims}</Td>
-    <Td>{props.primo.typeOfPackaging}</Td>
-    <Td>{props.primo.positioningInStore}</Td>
-    <Td>{props.primo.promotion}</Td>
-    <Td>{props.primo.importer}</Td>
+
   </Tr>
 )
 class PrimosList extends Component {
@@ -63,8 +60,6 @@ class PrimosList extends Component {
     return this.props.primo.primos.map(currentprimo => {
       if(currentprimo.productName.toLowerCase().match(this.state.query.toLowerCase())){
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
-      }else if (currentprimo.productCategory.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Primo primo={currentprimo} key={currentprimo._id}/>;
       }else if (currentprimo.weight.toString().match(this.state.query)){
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
       }else if (currentprimo.unit.toLowerCase().match(this.state.query.toLowerCase())) {
@@ -76,14 +71,6 @@ class PrimosList extends Component {
       }else if (currentprimo.countryOfManufacture.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
       }else if (currentprimo.productClaims.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Primo primo={currentprimo} key={currentprimo._id}/>;
-      }else if (currentprimo.typeOfPackaging.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Primo primo={currentprimo} key={currentprimo._id}/>;
-      }else if (currentprimo.positioningInStore.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Primo primo={currentprimo} key={currentprimo._id}/>;
-      }else if (currentprimo.promotion.toLowerCase().match(this.state.query.toLowerCase())) {
-        return <Primo primo={currentprimo} key={currentprimo._id}/>;
-      }else if (currentprimo.importer.toLowerCase().match(this.state.query.toLowerCase())) {
         return <Primo primo={currentprimo} key={currentprimo._id}/>;
       }else{
         return null
@@ -138,17 +125,14 @@ class PrimosList extends Component {
             <Tr>
               <Th scope="row">Product Name</Th>
               <Th scope="row">Image</Th>
-              <Th scope="row">Product Category</Th>
               <Th scope="row">Weight</Th>
               <Th scope="row">Unit</Th>
               <Th scope="row">Price (IDR)</Th>
               <Th scope="row">Price (AUD)</Th>
+              <Th scope="row">Date Created</Th>
               <Th scope="row">Country of Manufacture</Th>
               <Th scope="row">Product Claims</Th>
-              <Th scope="row">Type of Packaging</Th>
-              <Th scope="row">Position in Store</Th>
-              <Th scope="row">Promotion</Th>
-              <Th scope="row">Importer</Th>
+
             </Tr>
           </Thead>
           <Tbody>

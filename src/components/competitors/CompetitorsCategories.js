@@ -27,27 +27,27 @@ class CompetitorsCategories extends Component {
       Baby Food
       </Link>
 
-      <Link to="/" className="dropdown-item">
+      <Link to="/" className="dropdown-item disabled">
       Coffee
       </Link>
 
-      <Link to="/" className="dropdown-item">
+      <Link to="/" className="dropdown-item disabled">
       Free-From Food
       </Link>
 
-      <Link to="/" className="dropdown-item">
+      <Link to="/" className="dropdown-item disabled">
       Functional Packaged Food
       </Link>
 
-      <Link to="/" className="dropdown-item">
+      <Link to="/" className="dropdown-item disabled">
       Organic Packaged Food
       </Link>
 
-      <Link to="/" className="dropdown-item">
+      <Link to="/" className="dropdown-item disabled">
       Sauces and Condiments
       </Link>
 
-      <Link to="/" className="dropdown-item">
+      <Link to="/" className="dropdown-item disabled">
       Savoury Snack Food
       </Link>
       </div>

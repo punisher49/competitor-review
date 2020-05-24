@@ -27,27 +27,27 @@ class InsightsDropdownCategories extends Component {
             Baby Food Insights
           </Link>
 
-          <Link to="/" className="dropdown-item">
+          <Link to="/" className="dropdown-item disabled">
             Coffee Insights
           </Link>
 
-          <Link to="/" className="dropdown-item">
+          <Link to="/" className="dropdown-item disabled">
             Free-From Food Insights
           </Link>
 
-          <Link to="/" className="dropdown-item">
+          <Link to="/" className="dropdown-item disabled">
             Functional Packaged Food Insights
           </Link>
 
-          <Link to="/" className="dropdown-item">
+          <Link to="/" className="dropdown-item disabled">
             Organic Packaged Food Insights
           </Link>
 
-          <Link to="/" className="dropdown-item">
+          <Link to="/" className="dropdown-item disabled">
             Sauces and Condiments Insights
           </Link>
 
-          <Link to="/" className="dropdown-item">
+          <Link to="/" className="dropdown-item disabled">
             Savoury Snack Food Insights
           </Link>
         </div>

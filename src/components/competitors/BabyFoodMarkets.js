@@ -19,7 +19,7 @@ class BabyFoodMarkets extends Component {
       data-toggle="dropdown"
       aria-haspopup="true"
       >
-      Baby Food Markets
+      Supermarkets and eCommerce Platforms
       </button>
       <div className={menuClass} aria-labelledby="dropdownMenuButton">
 

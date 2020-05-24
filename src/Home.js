@@ -37,7 +37,7 @@ class Home extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-4">
-                <Link to="competitors" className="btn btn-info btn-lg btn-block" >Competiror's Review</Link>
+                <Link to="competitors" className="btn btn-info btn-lg btn-block" >Competitor's Review</Link>
               </div>
               <div className="col-md-4">
                 <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block">Market Insights</Link>

@@ -22,9 +22,9 @@ Th{
 }
 
 .render{
-  font-size: 12px;
+  font-size: 12.9px;
   text-align: center;
-  margin: 5px
+  margin: 25px
 }
 Tr:nth-child(even) {
   background: #E7E7E7 !important;
