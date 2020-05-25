@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/style/Styles.css"
 
 class Home extends Component {
   render() {
@@ -33,17 +34,17 @@ class Home extends Component {
     const threeDestinations =(
       <Fragment>
 
-        <div className="jumbotron">
-          <div className="container">
+        <div className="container">
+          <div className="jumbotron" id="mainButtons">
             <div className="row">
-              <div className="col-md-4">
-                <Link to="competitors" className="btn btn-info btn-lg btn-block" >Competitor's Review</Link>
+              <div className="col-md-4 text-center">
+                <Link to="competitors" className="btn btn-info btn-lg btn-block" id="homeNavigation">Competitor's Review</Link>
               </div>
-              <div className="col-md-4">
-                <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block">Market Insights</Link>
+              <div className="col-md-4 text-center">
+                <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block" id="homeNavigation">Market Insights</Link>
               </div>
-              <div className="col-md-4">
-                <Link to="/" className="btn btn-success btn-lg btn-block">Export Training</Link>
+              <div className="col-md-4 text-center">
+                <Link to="/" className="btn btn-success btn-lg btn-block" id="homeNavigation">Export Training</Link>
               </div>
             </div>
           </div>
@@ -58,7 +59,7 @@ class Home extends Component {
         <Navbar/>
         <div id="homepage">
 
-          <div className="col-md-12">
+          <div className="col-md-12 ">
 
             {isAuthenticated ? "" : information}
             {isAuthenticated ? threeDestinations : ""}
