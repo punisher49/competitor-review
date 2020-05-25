@@ -15,10 +15,22 @@ import Indonesia from "./components/competitors/Indonesia";
 import InsightsCountries from "./components/insights/InsightsCountries";
 import IndonesiaInsights from "./components/insights/IndonesiaInsights";
 import IndonesiaBabyFoodInsights from "./components/insights/IndonesiaBabyFoodInsights";
+import ExportTraining from "./components/training/ExportTraining";
 import {Provider} from 'react-redux';
 import store from './store'
 import {loadUser} from './actions/authActions'
 import PrivateRoute from './components/auth/PrivateRoute'
+
+import { createBrowserHistory } from 'history'
+import ReactGA from 'react-ga';
+
+const history = createBrowserHistory()
+ReactGA.initialize('UA-167540439-1');
+history.listen((location, action) => {
+    ReactGA.pageview(location.pathname + location.search);
+    console.log(location.pathname)
+});
+
 
 class App extends React.Component {
 	componentDidMount(){
@@ -26,7 +38,7 @@ class App extends React.Component {
 	}
 	render(){
 		return (
-			<Provider store={store}>
+			<Provider store={store} history={history}>
 				<HashRouter basename="/" >
 					<Route exact  path="/" component={Home}/>
 					<PrivateRoute path="/aeons" component={AeonsList} />
@@ -40,9 +52,11 @@ class App extends React.Component {
 					<PrivateRoute path="/competitors" component={Competitors} />
 					<PrivateRoute path="/indonesia" component={Indonesia} />
 
-				<PrivateRoute path="/insightscountries" component={InsightsCountries} />
-				<PrivateRoute path="/indonesiababyfoodinsights" component={IndonesiaBabyFoodInsights} />
-				<PrivateRoute path="/indonesiainsights" component={IndonesiaInsights} />
+					<PrivateRoute path="/insightscountries" component={InsightsCountries} />
+					<PrivateRoute path="/indonesiababyfoodinsights" component={IndonesiaBabyFoodInsights} />
+					<PrivateRoute path="/indonesiainsights" component={IndonesiaInsights} />
+
+					<PrivateRoute path="/exporttraining" component={ExportTraining} />
 				</HashRouter>
 			</Provider>
 
