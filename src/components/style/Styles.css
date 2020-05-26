@@ -110,6 +110,14 @@ Th{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.training{
+  /* background-image: url(../images/training.jpg); */
+  /* height: 100vh; */
+  background-color: black;
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
 
 /* .scrollspy-example {
   position: absolute;
@@ -239,7 +247,15 @@ h1{
 }
 
 #videoDiv{
-  border: 1px solid black !important;
-  border-radius: 10px !important;
-  padding: 30px !important
+  /* height: 400px */
+  background-color: black !important;
+  text-align: center !important;
+  vertical-align: middle;
+}
+#trainingJumbotron{
+  background: rgba(254, 254, 254, 0.8) !important
+}
+.headerColor{
+  color:white;
+
 }
