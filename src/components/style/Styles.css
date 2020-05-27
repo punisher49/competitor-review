@@ -218,7 +218,7 @@ Th{
   cursor: pointer;
 }
 
-#homeNavigation{
+#homeNavigation1{
     height: 120px !important;
     text-align: inherit !important;
     vertical-align: middle !important;
@@ -226,7 +226,39 @@ Th{
     display: inline-block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding: 1.5rem 1rem !important
+    padding: 1.5rem 1rem !important;
+    background-color: #1a2634 !important;
+    border: 1px solid #1a2634
+}
+
+
+
+#homeNavigation2{
+    height: 120px !important;
+    text-align: inherit !important;
+    vertical-align: middle !important;
+    font-size: 1.5rem !important;
+    display: inline-block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 1.5rem 1rem !important;
+    background-color: #ff5959 !important;
+    border: 1px solid #ff5959;
+
+}
+
+
+#homeNavigation3{
+    height: 120px !important;
+    text-align: inherit !important;
+    vertical-align: middle !important;
+    font-size: 1.5rem !important;
+    display: inline-block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 1.5rem 1rem !important;
+    background-color: #529471 !important;
+    border: 1px solid #529471
 }
 #mainButtons{
   position:fixed !important;

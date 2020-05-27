@@ -38,13 +38,13 @@ class Home extends Component {
           <div className="jumbotron" id="mainButtons">
             <div className="row">
               <div className="col-md-4 text-center">
-                <Link to="competitors" className="btn btn-info btn-lg btn-block" id="homeNavigation">Competitor's Review</Link>
+                <Link to="competitors" className="btn btn-info btn-lg btn-block" id="homeNavigation1">Competitor's Review</Link>
               </div>
               <div className="col-md-4 text-center">
-                <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block" id="homeNavigation">Market Insights</Link>
+                <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block" id="homeNavigation2">Market Insights</Link>
               </div>
               <div className="col-md-4 text-center">
-                <Link to="/exporttraining" className="btn btn-success btn-lg btn-block" id="homeNavigation">Export Training</Link>
+                <Link to="/exporttraining" className="btn btn-success btn-lg btn-block" id="homeNavigation3">Export Training</Link>
               </div>
             </div>
           </div>
