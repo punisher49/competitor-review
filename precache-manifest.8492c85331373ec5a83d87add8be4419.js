@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7d0f49810776e7775aa318c130133f4",
+    "revision": "5ca979f037c827409d90eb90fc58a716",
     "url": "/competitor-review/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/css/2.05988dc8.chunk.css"
   },
   {
-    "revision": "f8218b3f0765ca6b500f",
-    "url": "/competitor-review/static/css/main.22720843.chunk.css"
+    "revision": "c1e9cec2a76ef4d2e2b0",
+    "url": "/competitor-review/static/css/main.202d1609.chunk.css"
   },
   {
     "revision": "a410147bd415967fd289",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/js/2.d1ac2ba1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f8218b3f0765ca6b500f",
-    "url": "/competitor-review/static/js/main.c4962240.chunk.js"
+    "revision": "c1e9cec2a76ef4d2e2b0",
+    "url": "/competitor-review/static/js/main.f7de143e.chunk.js"
   },
   {
     "revision": "1deb9431c91afdf0a154",
@@ -78,5 +78,29 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "337ce732a4fa73312c7f7cda36b0f471",
     "url": "/competitor-review/static/media/insights.337ce732.jpg"
+  },
+  {
+    "revision": "89a83cf34294cd1e1d5d0fe089c35d01",
+    "url": "/competitor-review/static/media/m-s-f.89a83cf3.png"
+  },
+  {
+    "revision": "7ae326a9b3f207eb992b77d5353a2f13",
+    "url": "/competitor-review/static/media/r-f-s.7ae326a9.png"
+  },
+  {
+    "revision": "aea863803cfcdd37c843ac603b5e26b5",
+    "url": "/competitor-review/static/media/s-e-v-a-g.aea86380.png"
+  },
+  {
+    "revision": "13f01cd4b07121a506e6ad90a8fa1b82",
+    "url": "/competitor-review/static/media/training.13f01cd4.jpg"
+  },
+  {
+    "revision": "f095b7471a2ff0c8126dfe8813a0deea",
+    "url": "/competitor-review/static/media/w-i-y-t-c.f095b747.png"
+  },
+  {
+    "revision": "10b03b3c4c5412a8a5b80920372076a3",
+    "url": "/competitor-review/static/media/why.10b03b3c.png"
   }
 ]);
