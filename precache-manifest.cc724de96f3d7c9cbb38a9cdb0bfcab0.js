@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e486291f1b25648bd1c4c05a66dfc7fc",
+    "revision": "24a04a73f239c197c8bacc729f7a0939",
     "url": "/competitor-review/index.html"
   },
   {
-    "revision": "a410147bd415967fd289",
+    "revision": "26e201a2e8a989b55f23",
     "url": "/competitor-review/static/css/2.05988dc8.chunk.css"
   },
   {
-    "revision": "311867c5eaefd9d2cfe3",
-    "url": "/competitor-review/static/css/main.f401ef72.chunk.css"
+    "revision": "72f567accc1e37548192",
+    "url": "/competitor-review/static/css/main.4ce6e26a.chunk.css"
   },
   {
-    "revision": "a410147bd415967fd289",
-    "url": "/competitor-review/static/js/2.d1ac2ba1.chunk.js"
+    "revision": "26e201a2e8a989b55f23",
+    "url": "/competitor-review/static/js/2.ae16cb71.chunk.js"
   },
   {
     "revision": "e303234b7c98ab07140fda539d130e8b",
-    "url": "/competitor-review/static/js/2.d1ac2ba1.chunk.js.LICENSE.txt"
+    "url": "/competitor-review/static/js/2.ae16cb71.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "311867c5eaefd9d2cfe3",
-    "url": "/competitor-review/static/js/main.baa6b759.chunk.js"
+    "revision": "72f567accc1e37548192",
+    "url": "/competitor-review/static/js/main.4b4f20fc.chunk.js"
   },
   {
     "revision": "1deb9431c91afdf0a154",
@@ -88,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/media/9.4877f52b.png"
   },
   {
-    "revision": "276b38703d5e8f54aea4e6ca98d53430",
-    "url": "/competitor-review/static/media/competitors.276b3870.jpg"
+    "revision": "8039fe7310c902506667698fbec23aa7",
+    "url": "/competitor-review/static/media/competitorsnew.8039fe73.png"
   },
   {
     "revision": "1555f76c3fbb0a19c914ee8391335360",
@@ -132,8 +132,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/media/indonesiababyfood8.89d1ab60.png"
   },
   {
-    "revision": "337ce732a4fa73312c7f7cda36b0f471",
-    "url": "/competitor-review/static/media/insights.337ce732.jpg"
+    "revision": "8edd0577c3030d5dd3224c6455a27519",
+    "url": "/competitor-review/static/media/insightsnew.8edd0577.png"
   },
   {
     "revision": "5b04b27843a1838a02b9598374c339e4",
@@ -142,9 +142,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "548218dc715eb76798a74135c37d4cda",
     "url": "/competitor-review/static/media/mobphone.548218dc.png"
-  },
-  {
-    "revision": "13f01cd4b07121a506e6ad90a8fa1b82",
-    "url": "/competitor-review/static/media/training.13f01cd4.jpg"
   }
 ]);

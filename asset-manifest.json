@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/competitor-review/static/css/main.f401ef72.chunk.css",
-    "main.js": "/competitor-review/static/js/main.baa6b759.chunk.js",
-    "main.js.map": "/competitor-review/static/js/main.baa6b759.chunk.js.map",
+    "main.css": "/competitor-review/static/css/main.4ce6e26a.chunk.css",
+    "main.js": "/competitor-review/static/js/main.4b4f20fc.chunk.js",
+    "main.js.map": "/competitor-review/static/js/main.4b4f20fc.chunk.js.map",
     "runtime-main.js": "/competitor-review/static/js/runtime-main.45b0d56c.js",
     "runtime-main.js.map": "/competitor-review/static/js/runtime-main.45b0d56c.js.map",
     "static/css/2.05988dc8.chunk.css": "/competitor-review/static/css/2.05988dc8.chunk.css",
-    "static/js/2.d1ac2ba1.chunk.js": "/competitor-review/static/js/2.d1ac2ba1.chunk.js",
-    "static/js/2.d1ac2ba1.chunk.js.map": "/competitor-review/static/js/2.d1ac2ba1.chunk.js.map",
+    "static/js/2.ae16cb71.chunk.js": "/competitor-review/static/js/2.ae16cb71.chunk.js",
+    "static/js/2.ae16cb71.chunk.js.map": "/competitor-review/static/js/2.ae16cb71.chunk.js.map",
     "index.html": "/competitor-review/index.html",
-    "precache-manifest.7d584acbf05102de84816e374fd517ec.js": "/competitor-review/precache-manifest.7d584acbf05102de84816e374fd517ec.js",
+    "precache-manifest.cc724de96f3d7c9cbb38a9cdb0bfcab0.js": "/competitor-review/precache-manifest.cc724de96f3d7c9cbb38a9cdb0bfcab0.js",
     "service-worker.js": "/competitor-review/service-worker.js",
     "static/css/2.05988dc8.chunk.css.map": "/competitor-review/static/css/2.05988dc8.chunk.css.map",
-    "static/css/main.f401ef72.chunk.css.map": "/competitor-review/static/css/main.f401ef72.chunk.css.map",
-    "static/js/2.d1ac2ba1.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.d1ac2ba1.chunk.js.LICENSE.txt",
-    "static/media/Styles.css": "/competitor-review/static/media/training.13f01cd4.jpg"
+    "static/css/main.4ce6e26a.chunk.css.map": "/competitor-review/static/css/main.4ce6e26a.chunk.css.map",
+    "static/js/2.ae16cb71.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.ae16cb71.chunk.js.LICENSE.txt",
+    "static/media/Styles.css": "/competitor-review/static/media/mobphone.548218dc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.45b0d56c.js",
     "static/css/2.05988dc8.chunk.css",
-    "static/js/2.d1ac2ba1.chunk.js",
-    "static/css/main.f401ef72.chunk.css",
-    "static/js/main.baa6b759.chunk.js"
+    "static/js/2.ae16cb71.chunk.js",
+    "static/css/main.4ce6e26a.chunk.css",
+    "static/js/main.4b4f20fc.chunk.js"
   ]
 }
