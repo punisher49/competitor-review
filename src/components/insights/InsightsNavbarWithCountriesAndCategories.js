@@ -9,7 +9,7 @@ import { SocialIcon } from 'react-social-icons';
 import GoBackButton from "../GoBackButton";
 import InsightsDropdownCountries from "./InsightsDropdownCountries";
 import InsightsDropdownCategories from "./InsightsDropdownCategories";
-
+import Logo from "../images/exportconnect2.png";
 
 
 class InsightsNavbarWithCountriesAndCategories extends Component {
@@ -35,7 +35,9 @@ class InsightsNavbarWithCountriesAndCategories extends Component {
     );
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-
+        <Link to="/">
+          <img src={Logo} style={{width: "150px", height: "48px", backgroundColor: "white"}} className="btn btn-outline-danger" alt=""/>
+        </Link>
         <Link to="/" className="btn btn-outline-info" id="homebutton">
           Home
         </Link>
