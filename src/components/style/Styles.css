@@ -195,7 +195,6 @@ Th{
   background-image: url(../images/landing.png);
   height: 93vh;
   width: 100%;
-  top: 80% !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -242,6 +241,20 @@ Th{
   #marginrightthreebuttons{
     margin-right: 1% !important;
   }
+  .insights{
+    background-image: url(../images/insightsmobile.png);
+    height: 93vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .competitors{
+    background-image: url(../images/competitormobile.png);
+    height: 93vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 
 }
@@ -276,6 +289,20 @@ Th{
   #marginrightthreebuttons{
     margin-right: 1% !important;
   }
+  .insights{
+    background-image: url(../images/insightsmobile.png);
+    height: 93vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .competitors{
+    background-image: url(../images/competitormobile.png);
+    height: 93vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 @media screen and (max-width: 800px) {
   #homepage {
@@ -308,6 +335,20 @@ Th{
   #marginrightthreebuttons{
     margin-left: 1% !important;
   }
+  .insights{
+    background-image: url(../images/insightsmobile.png) !important;
+    height: 93vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .competitors{
+    background-image: url(../images/competitormobile.png);
+    height: 93vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 }
 
@@ -324,7 +365,7 @@ Th{
 
 
 #opacityline{
-  top: 63.5% ;
+  top: 65% ;
   width: 100% ;
   margin-right: 60px ;
   height: 110px ;

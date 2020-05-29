@@ -40,7 +40,7 @@ class Home extends Component {
                   <Link to="/insightscountries" className="btn btn-danger btn-lg" id="mainmarketbutton">Market Insights</Link>
                 </div>
                 <div className="col-md-4 text-center">
-                  <Link to="competitors" className="btn btn-info btn-lg" id="maincompetitorsbutton">Competitor's Overeview</Link>
+                  <Link to="competitors" className="btn btn-info btn-lg" id="maincompetitorsbutton">Competitor Overview</Link>
                 </div>
                 <div className="col-md-4 text-center">
                   <Link to="/exporttraining" className="btn btn-success btn-lg" id="mainexportbutton">Export Training</Link>
