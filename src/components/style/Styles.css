@@ -213,18 +213,21 @@ Th{
 
 @media screen and (max-width: 400px) {
   #homepage {
-    background-image: url(../images/mobphone.png);
-    height: 93vh;
+    background-image: url(../images/mobilehome2.png);
+    height: 86vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #marginrightbuttons{
     margin-left: 10% !important
   }
   #opacityline{
-    top: 77.5% !important ;
+    top: 20.5% !important ;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
-    background-color: rgba(254, 254, 254, 0.49) ;
+    background-color: rgba(254, 254, 254, 0) !important;
     margin-right: 20px ;
     position: relative;
   }
@@ -236,22 +239,29 @@ Th{
     width: 120px !important;
     font-size: 0.8rem !important;
   }
+  #marginrightthreebuttons{
+    margin-right: 1% !important;
+  }
+
 
 }
 @media screen and (max-width: 600px) {
   #homepage {
-    background-image: url(../images/mobphone.png);
-    height: 93vh;
+    background-image: url(../images/mobilehome2.png);
+    height: 86vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #marginrightbuttons{
     margin-left: 10% !important
   }
   #opacityline{
-    top: 77.5% !important ;
+    top: 20.5% !important ;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
-    background-color: rgba(254, 254, 254, 0.49) ;
+    background-color: rgba(254, 254, 254, 0) !important;
     margin-right: 20px ;
     position: relative;
   }
@@ -262,22 +272,28 @@ Th{
     height: 70px !important;
     width: 120px !important;
     font-size: 0.8rem !important;
+  }
+  #marginrightthreebuttons{
+    margin-right: 1% !important;
   }
 }
 @media screen and (max-width: 800px) {
   #homepage {
-    background-image: url(../images/mobphone.png);
-    height: 93vh;
+    background-image: url(../images/mobilehome2.png);
+    height: 86vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #marginrightbuttons{
     margin-left: 10% !important
   }
   #opacityline{
-    top: 77.5% !important ;
+    top: 20.5% !important ;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
-    background-color: rgba(254, 254, 254, 0.49) ;
+    background-color: rgba(254, 254, 254, 0) !important;
     margin-right: 20px ;
     position: relative;
   }
@@ -288,6 +304,9 @@ Th{
     height: 70px !important;
     width: 120px !important;
     font-size: 0.8rem !important;
+  }
+  #marginrightthreebuttons{
+    margin-left: 1% !important;
   }
 
 }

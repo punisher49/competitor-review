@@ -17,8 +17,7 @@ class CompetitorsCountries extends Component {
           id="dropdownMenuButton"
           data-toggle="dropdown"
           aria-haspopup="true"
-          id="homebutton"
-          >
+          id="homebutton">
           Countries
         </button>
         <div className={menuClass} aria-labelledby="dropdownMenuButton">

@@ -35,7 +35,6 @@ class Home extends Component {
       <Fragment>
         <div id="homepage">
           <div id="opacityline">
-            <div className="" >
               <div className="row" id="marginrightthreebuttons">
                 <div className="col-md-4 text-center">
                   <Link to="/insightscountries" className="btn btn-danger btn-lg" id="mainmarketbutton">Market Insights</Link>
@@ -46,7 +45,6 @@ class Home extends Component {
                 <div className="col-md-4 text-center">
                   <Link to="/exporttraining" className="btn btn-success btn-lg" id="mainexportbutton">Export Training</Link>
                 </div>
-              </div>
             </div>
           </div>
         </div>
