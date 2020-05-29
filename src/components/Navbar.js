@@ -11,7 +11,7 @@ import Logout from "./auth/Logout";
 import "./style/Styles.css"
 import { SocialIcon } from 'react-social-icons';
 import GoBackButton from "./GoBackButton";
-
+import Logo from "./images/exportconnect2.png";
 
 class Navbar extends Component {
 
@@ -25,7 +25,7 @@ class Navbar extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
   };
-      // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
+  // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
   render() {
     const { isAuthenticated } = this.props.auth;
     const authLinks = (
@@ -36,6 +36,9 @@ class Navbar extends Component {
     );
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+        <Link to="/">
+          <img src={Logo} style={{width: "150px", height: "48px", backgroundColor: "white"}} className="btn btn-outline-danger" alt=""/>
+        </Link>
 
         <Link to="/" className="btn btn-outline-danger" id="homebutton">
           Home
