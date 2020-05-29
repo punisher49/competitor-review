@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/competitor-review/static/css/main.6a9045a4.chunk.css",
-    "main.js": "/competitor-review/static/js/main.9247f66a.chunk.js",
-    "main.js.map": "/competitor-review/static/js/main.9247f66a.chunk.js.map",
+    "main.js": "/competitor-review/static/js/main.fe80b6a9.chunk.js",
+    "main.js.map": "/competitor-review/static/js/main.fe80b6a9.chunk.js.map",
     "runtime-main.js": "/competitor-review/static/js/runtime-main.45b0d56c.js",
     "runtime-main.js.map": "/competitor-review/static/js/runtime-main.45b0d56c.js.map",
     "static/css/2.05988dc8.chunk.css": "/competitor-review/static/css/2.05988dc8.chunk.css",
-    "static/js/2.d9ec9e00.chunk.js": "/competitor-review/static/js/2.d9ec9e00.chunk.js",
-    "static/js/2.d9ec9e00.chunk.js.map": "/competitor-review/static/js/2.d9ec9e00.chunk.js.map",
+    "static/js/2.1f2ee151.chunk.js": "/competitor-review/static/js/2.1f2ee151.chunk.js",
+    "static/js/2.1f2ee151.chunk.js.map": "/competitor-review/static/js/2.1f2ee151.chunk.js.map",
     "index.html": "/competitor-review/index.html",
-    "precache-manifest.312a5d45f78c8dd2417391cd22f47e05.js": "/competitor-review/precache-manifest.312a5d45f78c8dd2417391cd22f47e05.js",
+    "precache-manifest.658860f11c259c974994c11481a990be.js": "/competitor-review/precache-manifest.658860f11c259c974994c11481a990be.js",
     "service-worker.js": "/competitor-review/service-worker.js",
     "static/css/2.05988dc8.chunk.css.map": "/competitor-review/static/css/2.05988dc8.chunk.css.map",
     "static/css/main.6a9045a4.chunk.css.map": "/competitor-review/static/css/main.6a9045a4.chunk.css.map",
-    "static/js/2.d9ec9e00.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.d9ec9e00.chunk.js.LICENSE.txt",
+    "static/js/2.1f2ee151.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.1f2ee151.chunk.js.LICENSE.txt",
     "static/media/Styles.css": "/competitor-review/static/media/mobilehome2.5a4654f4.png",
     "static/media/exportconnect2.png": "/competitor-review/static/media/exportconnect2.a2b91536.png"
   },
   "entrypoints": [
     "static/js/runtime-main.45b0d56c.js",
     "static/css/2.05988dc8.chunk.css",
-    "static/js/2.d9ec9e00.chunk.js",
+    "static/js/2.1f2ee151.chunk.js",
     "static/css/main.6a9045a4.chunk.css",
-    "static/js/main.9247f66a.chunk.js"
+    "static/js/main.fe80b6a9.chunk.js"
   ]
 }
