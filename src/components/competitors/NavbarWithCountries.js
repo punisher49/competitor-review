@@ -34,7 +34,7 @@ class NavbarWithCountries extends Component {
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
         <Link to="/">
-          <img src={Logo} style={{width: "150px", height: "48px", backgroundColor: "white"}} className="btn btn-outline-danger" alt=""/>
+          <img src={Logo} style={{width: "150px", backgroundColor: "white"}} className="btn btn-outline-danger" alt=""/>
         </Link>
         <Link to="/" className="btn btn-outline-info" id="homebutton">
           Home
