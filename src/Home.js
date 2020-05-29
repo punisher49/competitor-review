@@ -20,35 +20,37 @@ class Home extends Component {
     const { isAuthenticated } = this.props.auth;
     const information = (
       <Fragment>
-        <div className="jumbotron">
-
-          <h3>Export Connect</h3>
-          <p>Founded in 2017, Export Connect exists to help Australian businesses develop the strategies and connections they need to export successfully and grow.</p>
-          <div className="row">
-            <LoginModal />
-            <RegisterModal />
+        <div id="homepage">
+          <div id="opacityline">
+            <div className="row" id="marginrightbuttons">
+              <LoginModal />
+              <RegisterModal />
+            </div>
           </div>
         </div>
+        <Footer/>
       </Fragment>
     );
     const threeDestinations =(
       <Fragment>
-
-        <div className="container">
-          <div className="jumbotron" id="mainButtons">
-            <div className="row">
-              <div className="col-md-4 text-center">
-                <Link to="competitors" className="btn btn-info btn-lg btn-block" id="homeNavigation1">Competitor's Review</Link>
-              </div>
-              <div className="col-md-4 text-center">
-                <Link to="/insightscountries" className="btn btn-danger btn-lg btn-block" id="homeNavigation1">Market Insights</Link>
-              </div>
-              <div className="col-md-4 text-center">
-                <Link to="/exporttraining" className="btn btn-success btn-lg btn-block" id="homeNavigation1">Export Training</Link>
+        <div id="homepage">
+          <div id="opacityline">
+            <div className="" >
+              <div className="row" id="marginrightthreebuttons">
+                <div className="col-md-4 text-center">
+                  <Link to="/insightscountries" className="btn btn-danger btn-lg" id="mainmarketbutton">Market Insights</Link>
+                </div>
+                <div className="col-md-4 text-center">
+                  <Link to="competitors" className="btn btn-info btn-lg" id="maincompetitorsbutton">Competitor's Overeview</Link>
+                </div>
+                <div className="col-md-4 text-center">
+                  <Link to="/exporttraining" className="btn btn-success btn-lg" id="mainexportbutton">Export Training</Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <Footer/>
 
       </Fragment>
     )
@@ -57,16 +59,9 @@ class Home extends Component {
 
       <div>
         <Navbar/>
-        <div id="homepage">
 
-          <div className="col-md-12 ">
-
-            {isAuthenticated ? "" : information}
-            {isAuthenticated ? threeDestinations : ""}
-          </div>
-        </div>
-
-        <Footer/>
+        {isAuthenticated ? "" : information}
+        {isAuthenticated ? threeDestinations : ""}
       </div>
     );
   }

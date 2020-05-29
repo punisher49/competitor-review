@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 
 const GoBackButton = withRouter(({history, ...props}) => (
   <div>
-    <button className="btn btn-outline-danger"
+    <button className="btn btn-outline-danger" id="gobackbutton"
        onClick={() => {
         // history.push('/')
         history.goBack(-1);

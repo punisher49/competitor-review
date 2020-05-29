@@ -10,9 +10,7 @@
   outline: none !important
 }
 
-.liss{
-  margin: 5px
-}
+
 Thead{
   background-color: #343A41 !important;
   color: white !important;
@@ -30,20 +28,8 @@ Tr:nth-child(even) {
   background: #E7E7E7 !important;
 }
 
-
-.hidden{
-  margin: 5px;
-  display: none
-}
 img{
   cursor: pointer;
-}
-
-#searchIcon{
-  margin: 10px
-}
-.dropdown{
-  margin-left: 5px
 }
 
 Link{
@@ -54,17 +40,8 @@ Link{
   width: 50%;
   margin: 50px auto;
 }
-#dropdown{
-  margin-left: 15px
-}
 
-#homepage{
-  background-image: url(../images/homeban.jpg);
-  height: 87vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 th{
   border: 45px !important;
   border-radius: 1px solid aqua !important
@@ -81,27 +58,15 @@ Th{
   border-radius: 10px;
   width: 20px;
 }
-
-.main{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.App-link {
-  color: #61dafb;
-}
+/* .jumbotron {
+  background: rgba(226, 217, 217, 0.5)
+} */
 .competitors{
   background-image: url(../images/competitors.jpg);
   height: 87vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.jumbotron {
-  background: rgba(226, 217, 217, 0.8)
 }
 .insights{
   background-image: url(../images/insights.jpg);
@@ -112,33 +77,11 @@ Th{
 }
 .training{
   background-image: url(../images/training.jpg);
-  height: 113vh;
+  height: 87vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (min-width: 400px) {
-    #mobileTraining {
-        background: black;
-    }
-}
-
-@media (min-width: 500px) {
-    #mobileTraining {
-        background: black;
-    }
-}
-
-@media (min-width: 600px) {
-    #mobileTraining {
-        background: black;
-    }
-}
-/* .scrollspy-example {
-  position: absolute;
-  height: 250px;
-  overflow: auto;
-} */
 #scroll1{
   background-image: url(../images/indonesiababyfood1.png);
   height: 95vh;
@@ -218,9 +161,6 @@ Th{
 .insightsBackground{
   background-color: black
 }
-.hidden-sm-down{
-  /* position: fixed !important; */
-}
 .nav{
   position: fixed !important;
 }
@@ -233,8 +173,9 @@ Th{
   cursor: pointer;
 }
 
-#homeNavigation1{
-    height: 120px !important;
+/* #homeNavigation1{
+    height: 100px !important;
+    width: 300px !important;
     text-align: inherit !important;
     vertical-align: middle !important;
     font-size: 1.5rem !important;
@@ -247,17 +188,137 @@ Th{
 
 #mainButtons{
   position:fixed !important;
-  top: 25% !important;
-  left: 10% !important;
+  top: 55% !important;
+  left: 20% !important;
   width: 80% !important
+} */
+#homepage{
+  background-image: url(../images/landing.png);
+  height: 90vh;
+  width: 100%;
+  top: 80% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
 
-  /* display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-  top: 30% !important;
-  left: 10% !important; */
+@media screen and (max-width: 400px) {
+  #homepage {
+    background-image: url(../images/mobphone.png);
+    height: 93vh;
+  }
+  #marginrightbuttons{
+    margin-left: 5% !important
+  }
+  #opacityline{
+    top: 77.5% !important ;
+    width: 100% ;
+    margin-right: 60px ;
+    height: 110px ;
+    background-color: rgba(254, 254, 254, 0.49) ;
+    margin-right: 20px ;
+    position: relative;
+  }
+  #orangebutton{
+    background-color: #f08c1f !important;
+    color: white !important;
+    border: 1px solid white !important;
+    height: 70px !important;
+    width: 120px !important;
+    font-size: 0.8rem !important;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  #homepage {
+    background-image: url(../images/mobphone.png);
+    height: 93vh;
+  }
+  #marginrightbuttons{
+    margin-left: 5% !important
+  }
+  #opacityline{
+    top: 77.5% !important ;
+    width: 100% ;
+    margin-right: 60px ;
+    height: 110px ;
+    background-color: rgba(254, 254, 254, 0.49) ;
+    margin-right: 20px ;
+    position: relative;
+  }
+  #orangebutton{
+    background-color: #f08c1f !important;
+    color: white !important;
+    border: 1px solid white !important;
+    height: 70px !important;
+    width: 120px !important;
+    font-size: 0.8rem !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  #homepage {
+    background-image: url(../images/mobphone.png);
+    height: 93vh;
+  }
+  #marginrightbuttons{
+    margin-left: 5% !important
+  }
+  #opacityline{
+    top: 77.5% !important ;
+    width: 100% ;
+    margin-right: 60px ;
+    height: 110px ;
+    background-color: rgba(254, 254, 254, 0.49) ;
+    margin-right: 20px ;
+    position: relative;
+  }
+  #orangebutton{
+    background-color: #f08c1f !important;
+    color: white !important;
+    border: 1px solid white !important;
+    height: 70px !important;
+    width: 120px !important;
+    font-size: 0.8rem !important;
+  }
+
+}
+
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+/* media for mobile */ /* media for mobile */ /* media for mobile */
+
+
+#opacityline{
+  top: 63.5% ;
+  width: 100% ;
+  margin-right: 60px ;
+  height: 110px ;
+  background-color: rgba(254, 254, 254, 0.49) ;
+  margin-right: 20px ;
+  position: relative;
+}
+#marginrightbuttons{
+  margin-left: 58%;
+}
+#marginrightthreebuttons{
+  margin-left: 40%;
 }
 h1{
   text-align: center;
@@ -275,33 +336,156 @@ h1{
   color:white;
 
 }
-.image4 {
-  background-image: url(../images/m-s-f.png);
+.image1 {
+  background-image: url(../images/1.png);
 }
 
 .image2 {
-  background-image: url(../images/r-f-s.png);
+  background-image: url(../images/2.png);
 }
 
 .image3 {
-  background-image: url(../images/s-e-v-a-g.png);
+  background-image: url(../images/3.png);
 }
 
-.image1 {
-  background-image: url(../images/why.png);
+.image4 {
+  background-image: url(../images/4.png);
 }
 
 .image5 {
-  background-image: url(../images/w-i-y-t-c.png);
+  background-image: url(../images/5.png);
+}
+
+.image6 {
+  background-image: url(../images/6.png);
+}
+
+.image7 {
+  background-image: url(../images/7.png);
+}
+
+.image8 {
+  background-image: url(../images/8.png);
+}
+
+.image9 {
+  background-image: url(../images/9.png);
+}
+
+.image10 {
+  background-image: url(../images/10.png);
+}
+
+.image11 {
+  background-image: url(../images/11.png);
+}
+
+.image12 {
+  background-image: url(../images/12.png);
+}
+
+.image13 {
+  background-image: url(../images/13.png);
+}
+
+.image14 {
+  background-image: url(../images/14.png);
+}
+
+.image15 {
+  background-image: url(../images/15.png);
 }
 
 .image {
   width: 100%;
-  height: 280px;
+  height: 28vh;
   background-size: cover;
   background-position: center;
-  margin: 10px
+  margin: 5px;
 }
-#exportOpacity{
-  background: rgba(254, 254, 254, 0.3) !important
+.modals{
+  background-color: #f08c1f !important;
+  color: white !important;
+  border: 1px solid white !important;
+  height: 90px !important;
+  width: 200px !important;
+  margin-top: 10px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 1.2rem !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
+  margin-right: auto !important;
+  padding: 0.4rem !important;
+}
+
+#mainmarketbutton{
+  background-color: #c33c32 !important;
+  color: white !important;
+  border: 1px solid white !important;
+  height: 100px !important;
+  width: 210px !important;
+  margin-top: 5px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 1.40rem !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
+  margin-right: auto !important;
+}
+#maincompetitorsbutton{
+  background-color: #4eac9b !important;
+  color: white !important;
+  border: 1px solid white !important;
+  height: 100px !important;
+  width: 210px !important;
+  margin-top: 5px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 1.40rem !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
+  margin-right: auto !important;
+  padding: 0.4rem !important;
+}
+
+#mainexportbutton{
+  background-color: #f08c1f !important;
+  color: white !important;
+  border: 1px solid white !important;
+  height: 100px !important;
+  width: 210px !important;
+  margin-top: 5px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 1.40rem !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
+  margin-right: auto !important;
+  padding: 0.4rem !important;
+}
+
+#orangecolor{
+    background-color: #f08c1f !important;
+    color: white !important
+}
+#homebutton{
+  background-color: #c33c32 !important;
+  color: white !important;
+  border: 1px solid white !important;
+
+}
+
+#gobackbutton{
+  background-color: #4eac9b !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+#logoutbutton{
+  background-color: #f08c1f !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+#competitorsButton{
+  margin-right: 50px !important
 }

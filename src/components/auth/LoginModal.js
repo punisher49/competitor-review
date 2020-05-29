@@ -73,8 +73,8 @@ class LoginModal extends Component {
   render(){
     return (
       <div>
-        <button className="btn btn-info btn-lg" onClick={this.toggle} id="dropdown">
-          Login
+        <button className="btn btn-warning btn-lg modals" onClick={this.toggle} id="orangebutton">
+          LOGIN
         </button>
 
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
@@ -104,7 +104,7 @@ class LoginModal extends Component {
                   className="mb-3"
                   onChange={this.onChange}
                   />
-                <Button outline color="success" style={{ marginTop: "2rem" }} block>
+                <Button color="warning" id="orangecolor" style={{ marginTop: "2rem" }} block>
                   Login
                 </Button>
               </FormGroup>
