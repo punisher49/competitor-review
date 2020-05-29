@@ -62,22 +62,21 @@ Th{
   background: rgba(226, 217, 217, 0.5)
 } */
 .competitors{
-  background-image: url(../images/competitors.jpg);
-  height: 87vh;
+  background-image: url(../images/competitorsnew.png);
+  height: 93vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .insights{
-  background-image: url(../images/insights.jpg);
-  height: 87vh;
+  background-image: url(../images/insightsnew.png);
+  height: 93vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .training{
-  background-image: url(../images/training.jpg);
-  height: 87vh;
+  height: 93vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -194,7 +193,7 @@ Th{
 } */
 #homepage{
   background-image: url(../images/landing.png);
-  height: 90vh;
+  height: 93vh;
   width: 100%;
   top: 80% !important;
   background-position: center;
@@ -314,6 +313,16 @@ Th{
   margin-right: 20px ;
   position: relative;
 }
+
+#opacityinsights{
+  top: 59.5% !important ;
+  width: 100% ;
+  margin-right: 60px ;
+  height: 110px ;
+  background-color: rgba(254, 254, 254, 0.49) ;
+  margin-right: 20px ;
+  position: relative;
+}
 #marginrightbuttons{
   margin-left: 58%;
 }
@@ -424,11 +433,26 @@ h1{
   color: white !important;
   border: 1px solid white !important;
   height: 100px !important;
-  width: 210px !important;
+  width: 220px !important;
   margin-top: 5px !important;
   text-align: center !important;
   vertical-align: middle !important;
-  font-size: 1.40rem !important;
+  font-size: 29.5px !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
+  margin-right: auto !important;
+}
+
+#marketcountryandcategorydropdownbutton{
+  background-color: #c33c32 !important;
+  color: white !important;
+  border: 1px solid white !important;
+  height: 100px !important;
+  width: 300px !important;
+  margin-top: 5px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 29.5px !important;
   display: inline-block !important;
   margin-left: 25px !important;
   margin-right: auto !important;
@@ -438,11 +462,26 @@ h1{
   color: white !important;
   border: 1px solid white !important;
   height: 100px !important;
-  width: 210px !important;
+  width: 220px !important;
   margin-top: 5px !important;
   text-align: center !important;
   vertical-align: middle !important;
-  font-size: 1.40rem !important;
+  font-size: 29.5px !important;
+  display: inline-block !important;
+  margin-left: 25px !important;
+  margin-right: auto !important;
+  padding: 0.4rem !important;
+}
+#competitorscountriesandcategoriesbutton{
+  background-color: #4eac9b !important;
+  color: white !important;
+  border: 1px solid white !important;
+  height: 100px !important;
+  width: 300px !important;
+  margin-top: 5px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  font-size: 29.5px !important;
   display: inline-block !important;
   margin-left: 25px !important;
   margin-right: auto !important;
@@ -454,15 +493,14 @@ h1{
   color: white !important;
   border: 1px solid white !important;
   height: 100px !important;
-  width: 210px !important;
+  width: 220px !important;
   margin-top: 5px !important;
   text-align: center !important;
   vertical-align: middle !important;
-  font-size: 1.40rem !important;
+  font-size: 29.5px !important;
   display: inline-block !important;
   margin-left: 25px !important;
   margin-right: auto !important;
-  padding: 0.4rem !important;
 }
 
 #orangecolor{
@@ -485,7 +523,4 @@ h1{
   background-color: #f08c1f !important;
   color: white !important;
   border: 1px solid white !important;
-}
-#competitorsButton{
-  margin-right: 50px !important
 }

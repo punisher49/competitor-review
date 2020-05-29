@@ -37,7 +37,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
 
-        <Link to="/" className="btn btn-outline-warning" id="homebutton">
+        <Link to="/" className="btn btn-outline-danger" id="homebutton">
           Home
         </Link>
 

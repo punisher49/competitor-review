@@ -14,7 +14,7 @@ export class Logout extends Component {
   render() {
     return (
       <Fragment>
-        <Link to="/" onClick={this.props.logout} className="btn btn-outline-success" id="logoutbutton">
+        <Link to="/" onClick={this.props.logout} className="btn btn-outline-warning" id="logoutbutton">
           Logout
         </Link>
       </Fragment>

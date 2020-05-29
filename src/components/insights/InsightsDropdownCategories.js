@@ -13,11 +13,12 @@ class InsightsDropdownCategories extends Component {
 
       <div className="dropdown" onClick={this.toggleOpen}>
         <button
-          className="btn btn-success dropdown-toggle"
+          className="btn btn-info dropdown-toggle"
           type="button"
           id="dropdownMenuButton"
           data-toggle="dropdown"
           aria-haspopup="true"
+          id="gobackbutton"
           >
           Categories
         </button>
@@ -26,6 +27,7 @@ class InsightsDropdownCategories extends Component {
           <Link to="/indonesiababyfoodinsights" className="dropdown-item">
             Baby Food Insights
           </Link>
+          
 
           <Link to="/" className="dropdown-item disabled">
             Coffee Insights

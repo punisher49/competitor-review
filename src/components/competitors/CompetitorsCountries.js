@@ -12,11 +12,12 @@ class CompetitorsCountries extends Component {
     return (
       <div className="dropdown" onClick={this.toggleOpen}>
         <button
-          className="btn btn-info dropdown-toggle"
+          className="btn btn-danger dropdown-toggle"
           type="button"
           id="dropdownMenuButton"
           data-toggle="dropdown"
           aria-haspopup="true"
+          id="homebutton"
           >
           Countries
         </button>

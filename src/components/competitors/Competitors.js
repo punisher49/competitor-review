@@ -20,81 +20,78 @@ class Competitors extends Component {
   //   <Navbar dataFromCompetitors = {this.state.competitors}/>
 
   // onClick={() => this.clickedCompetitors()}
-    toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
-    render() {
-      const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
-      return (
-        <div>
-          <Navbar/>
-          <div className="competitors">
-            <div className="jumbotron">
-              <div className="container">
-                <h1>Competitors</h1>
-                <div className="dropdown" onClick={this.toggleOpen}>
-                  <button
-                    className="btn btn-success btn-lg btn-block dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
+  toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
+  render() {
+    const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
+    return (
+      <div>
+        <Navbar/>
+        <div className="competitors">
+          <div id="opacityinsights">
+            <div className="dropup" onClick={this.toggleOpen}   id="marginrightbuttons">
+              <button
+                className="btn btn-info dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                id="competitorscountriesandcategoriesbutton"
+                >
+                COUNTRIES
+              </button>
+              <div className={menuClass} aria-labelledby="dropdownMenuButton">
+                <Link to="/indonesia" className="dropdown-item">
+                  Indonesia
+                </Link>
 
-                    >
-                    Countries
-                  </button>
-                  <div className={menuClass} aria-labelledby="dropdownMenuButton">
-                    <Link to="/indonesia" className="dropdown-item">
-                    Indonesia
-                    </Link>
-                    
-                    <Link to="/" className="dropdown-item disabled">
-                      China
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  China
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Hong Kong
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  Hong Kong
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Japan
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  Japan
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Malaysia
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  Malaysia
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Saudi Arabia
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  Saudi Arabia
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Singapore
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  Singapore
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      South Korea
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  South Korea
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Philippines
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  Philippines
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      UAE
-                    </Link>
+                <Link to="/" className="dropdown-item disabled">
+                  UAE
+                </Link>
 
-                    <Link to="/" className="dropdown-item disabled">
-                      Vietnam
-                    </Link>
-                  </div>
-                </div>
+                <Link to="/" className="dropdown-item disabled">
+                  Vietnam
+                </Link>
               </div>
             </div>
           </div>
-          <Footer/>
         </div>
-      );
-    }
+        <Footer/>
+      </div>
+    );
   }
+}
 
 
-  export default Competitors
+export default Competitors

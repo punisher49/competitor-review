@@ -15,18 +15,16 @@ class InsightsCountries extends Component {
       <div>
         <Navbar/>
         <div className="insights">
-          <div className="jumbotron">
-            <div className="container">
-              <h1>Market Insights</h1>
-              <div className="dropdown" onClick={this.toggleOpen}>
+          <div id="opacityinsights">
+              <div className="dropup" onClick={this.toggleOpen} id="marginrightbuttons">
                 <button
-                  className="btn btn-success btn-lg btn-block dropdown-toggle"
+                  className="btn btn-danger dropdown-toggle"
                   type="button"
-                  id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
+                  id="marketcountryandcategorydropdownbutton"
                   >
-                  Countries
+                  MARKET
                 </button>
                 <div className={menuClass} aria-labelledby="dropdownMenuButton">
                   <Link to="/indonesiaInsights" className="dropdown-item">
@@ -75,7 +73,6 @@ class InsightsCountries extends Component {
 
                 </div>
               </div>
-            </div>
           </div>
         </div>
         <Footer/>

@@ -15,18 +15,18 @@ class IndonesiaInsights extends Component {
       <div>
         <InsightsNavbarWithCountries/>
         <div className="insights">
-          <div className="jumbotron">
-            <div className="container">
-              <h1>Indonesia Insights</h1>
-              <div className="dropdown" onClick={this.toggleOpen}>
+          <div id="opacityinsights">
+              <div className="dropup" onClick={this.toggleOpen}
+                id="marginrightbuttons">
                 <button
-                  className="btn btn-success btn-lg btn-block dropdown-toggle"
+                  className="btn btn-danger dropdown-toggle"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
+                  id="marketcountryandcategorydropdownbutton"
                   >
-                  Categories
+                  CATEGORY
                 </button>
                 <div className={menuClass} aria-labelledby="dropdownMenuButton">
 
@@ -58,7 +58,6 @@ class IndonesiaInsights extends Component {
                     Savoury Snack Food Insights
                   </Link>
                 </div>
-              </div>
             </div>
           </div>
         </div>

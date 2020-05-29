@@ -13,11 +13,12 @@ class BabyFoodMarkets extends Component {
     return (
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
-      className="btn btn-success dropdown-toggle"
+      className="btn btn-warning dropdown-toggle"
       type="button"
       id="dropdownMenuButton"
       data-toggle="dropdown"
       aria-haspopup="true"
+      id="logoutbutton"
       >
       Supermarkets and eCommerce Platforms
       </button>
