@@ -73,7 +73,7 @@ class LoginModal extends Component {
   render(){
     return (
       <div>
-        <button className="btn btn-warning btn-lg modals" onClick={this.toggle} id="orangebutton">
+        <button className="btn btn-warning btn-lg modals modalsback" onClick={this.toggle} id="orangebutton">
           LOGIN
         </button>
 
