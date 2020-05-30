@@ -235,9 +235,9 @@ Th{
   }
 
   .insights{
-    background-image: url(../images/insightsmobile.png);
+    background-image: url(../images/insightsnew.png);
     height: 93vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -275,9 +275,9 @@ Th{
     margin-right: 1% !important;
   }
   .insights{
-    background-image: url(../images/insightsmobile.png);
+    background-image: url(../images/insightsnew.png);
     height: 93vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -312,9 +312,9 @@ Th{
     margin-left: 1% !important;
   }
   .insights{
-    background-image: url(../images/insightsmobile.png) !important;
+    background-image: url(../images/insightsnew.png) !important;
     height: 93vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
