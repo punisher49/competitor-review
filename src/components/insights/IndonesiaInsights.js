@@ -19,7 +19,7 @@ class IndonesiaInsights extends Component {
               <div className="dropup" onClick={this.toggleOpen}
                 id="marginrightbuttons">
                 <button
-                  className="btn btn-danger dropdown-toggle"
+                  className="btn btn-danger dropdown-toggle mobilemarketcountryandcategorydropdownbutton"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"

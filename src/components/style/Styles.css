@@ -224,7 +224,6 @@ Th{
   #opacityline{
     top: 24.5% !important ;
     width: 100% ;
-    margin-right: 60px ;
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
 
@@ -234,6 +233,7 @@ Th{
   #marginrightthreebuttons{
     margin-right: 1% !important;
   }
+
   .insights{
     background-image: url(../images/insightsmobile.png);
     height: 93vh;
@@ -242,9 +242,9 @@ Th{
     background-size: cover;
   }
   .competitors{
-    background-image: url(../images/competitormobile.png);
+    background-image: url(../images/competitorsnew.png);
     height: 93vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -265,7 +265,6 @@ Th{
   #opacityline{
     top: 24.5% !important ;
     width: 100% ;
-    margin-right: 60px ;
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
 
@@ -283,9 +282,9 @@ Th{
     background-size: cover;
   }
   .competitors{
-    background-image: url(../images/competitormobile.png);
+    background-image: url(../images/competitorsnew.png);
     height: 93vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -304,7 +303,6 @@ Th{
   #opacityline{
     top: 24.5% !important ;
     width: 100% ;
-    margin-right: 60px ;
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
 
@@ -321,9 +319,9 @@ Th{
     background-size: cover;
   }
   .competitors{
-    background-image: url(../images/competitormobile.png);
+    background-image: url(../images/competitorsnew.png);
     height: 93vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -500,13 +498,12 @@ h1{
   color: white !important;
   border: 1px solid white !important;
   height: 100px !important;
-  width: 300px !important;
+  width: 220px !important;
   margin-top: 5px !important;
   text-align: center !important;
   vertical-align: middle !important;
   font-size: 29.5px !important;
   display: inline-block !important;
-  margin-left: 25px !important;
   margin-right: auto !important;
 }
 #maincompetitorsbutton{
@@ -529,13 +526,12 @@ h1{
   color: white !important;
   border: 1px solid white !important;
   height: 100px !important;
-  width: 300px !important;
+  width: 220px !important;
   margin-top: 5px !important;
   text-align: center !important;
   vertical-align: middle !important;
   font-size: 29.5px !important;
   display: inline-block !important;
-  margin-left: 25px !important;
   margin-right: auto !important;
   padding: 0.4rem !important;
 }
