@@ -60,6 +60,7 @@ class Home extends Component {
 
         {isAuthenticated ? "" : information}
         {isAuthenticated ? threeDestinations : ""}
+
       </div>
     );
   }

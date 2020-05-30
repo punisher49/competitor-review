@@ -212,22 +212,22 @@ Th{
 
 @media screen and (max-width: 400px) {
   #homepage {
-    background-image: url(../images/mobilehome2.png);
+    background-image: url(../images/landing.png);
     height: 87.5vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
   #marginrightbuttons{
-    margin-left: 10% !important
+    margin-left: 20% !important
   }
   #opacityline{
-    top: 20.5% !important ;
+    top: 24.5% !important ;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
-    margin-right: 20px ;
+
     position: relative;
   }
 
@@ -253,22 +253,22 @@ Th{
 }
 @media screen and (max-width: 600px) {
   #homepage {
-    background-image: url(../images/mobilehome2.png);
+    background-image: url(../images/landing.png);
     height: 87.5vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
   #marginrightbuttons{
-    margin-left: 10% !important
+    margin-left: 20% !important
   }
   #opacityline{
-    top: 20.5% !important ;
+    top: 24.5% !important ;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
-    margin-right: 20px ;
+
     position: relative;
   }
 
@@ -292,23 +292,22 @@ Th{
 }
 @media screen and (max-width: 800px) {
   #homepage {
-    background-image: url(../images/mobilehome2.png);
+    background-image: url(../images/landing.png);
     height: 87.5vh;
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
   }
   #marginrightbuttons{
-    margin-left: 10% !important
+    margin-left: 20% !important
   }
   #opacityline{
-    top: 20.5% !important ;
+    top: 24.5% !important ;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
-    margin-right: 20px ;
-    position: relative;
+
   }
 
   #marginrightthreebuttons{
@@ -327,6 +326,20 @@ Th{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+}
+
+@media screen and (max-width: 1086px) {
+
+  #opacityline{
+    top: 65% ;
+    width: 100% ;
+    margin-right: 60px ;
+    height: 110px ;
+    background-color: rgba(254, 254, 254, 0) !important;
+    margin-right: 20px ;
+    position: relative;
   }
 
 }
