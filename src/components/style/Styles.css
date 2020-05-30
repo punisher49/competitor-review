@@ -333,7 +333,7 @@ Th{
 @media screen and (max-width: 1086px) {
 
   #opacityline{
-    top: 65% ;
+    top: 42% !important;
     width: 100% ;
     margin-right: 60px ;
     height: 110px ;
