@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afa03789d2c2c18f7ca7d9c0634d0e50",
+    "revision": "b0d328f4a7c76a10689d76b89a6a4566",
     "url": "/competitor-review/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/css/2.05988dc8.chunk.css"
   },
   {
-    "revision": "ff9b712f602ca3c70679",
-    "url": "/competitor-review/static/css/main.d8cd728e.chunk.css"
+    "revision": "58908c0e7f85ae831bd7",
+    "url": "/competitor-review/static/css/main.653abd1d.chunk.css"
   },
   {
     "revision": "df91aa47cf132edd68ad",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/competitor-review/static/js/2.1f2ee151.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ff9b712f602ca3c70679",
+    "revision": "58908c0e7f85ae831bd7",
     "url": "/competitor-review/static/js/main.5805c0ef.chunk.js"
   },
   {
@@ -134,10 +134,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "89d1ab60ba82d5616cccd35f28c2745b",
     "url": "/competitor-review/static/media/indonesiababyfood8.89d1ab60.png"
-  },
-  {
-    "revision": "8042a133993dcdccc0641319679b3b95",
-    "url": "/competitor-review/static/media/insightsmobile.8042a133.png"
   },
   {
     "revision": "8edd0577c3030d5dd3224c6455a27519",
