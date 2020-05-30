@@ -22,7 +22,7 @@ Th{
 .render{
   font-size: 15px;
   text-align: center;
-  margin: 5px;
+  margin: 15px;
 }
 td.pivoted{
   padding: 10px
@@ -350,6 +350,8 @@ width: 80% !important
     height: 110px ;
     background-color: rgba(254, 254, 254, 0) !important;
     position: relative;
+  }
+  #marginrightthreebuttons{
   }
 
 }
