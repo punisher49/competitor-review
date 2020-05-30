@@ -13,14 +13,14 @@ class BabyFoodMarkets extends Component {
     return (
       <div className="dropdown" onClick={this.toggleOpen}>
       <button
-      className="btn btn-warning dropdown-toggle"
+      className="btn btn-warning dropdown-toggle wrap"
       type="button"
-      id="dropdownMenuButton"
       data-toggle="dropdown"
       aria-haspopup="true"
       id="logoutbutton"
       >
-      Supermarkets and eCommerce Platforms
+      Supermarkets and
+      eCommerce Platforms
       </button>
       <div className={menuClass} aria-labelledby="dropdownMenuButton">
 
