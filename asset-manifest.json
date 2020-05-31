@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/competitor-review/static/css/main.4eca3b42.chunk.css",
+    "main.css": "/competitor-review/static/css/main.0bc2562e.chunk.css",
     "main.js": "/competitor-review/static/js/main.a440ea20.chunk.js",
     "main.js.map": "/competitor-review/static/js/main.a440ea20.chunk.js.map",
     "runtime-main.js": "/competitor-review/static/js/runtime-main.45b0d56c.js",
@@ -9,10 +9,10 @@
     "static/js/2.1f2ee151.chunk.js": "/competitor-review/static/js/2.1f2ee151.chunk.js",
     "static/js/2.1f2ee151.chunk.js.map": "/competitor-review/static/js/2.1f2ee151.chunk.js.map",
     "index.html": "/competitor-review/index.html",
-    "precache-manifest.ada086512d5b761899c80b38ab5e7e1e.js": "/competitor-review/precache-manifest.ada086512d5b761899c80b38ab5e7e1e.js",
+    "precache-manifest.c18593a6df28bbf6deeca7ea0b2cfae7.js": "/competitor-review/precache-manifest.c18593a6df28bbf6deeca7ea0b2cfae7.js",
     "service-worker.js": "/competitor-review/service-worker.js",
     "static/css/2.05988dc8.chunk.css.map": "/competitor-review/static/css/2.05988dc8.chunk.css.map",
-    "static/css/main.4eca3b42.chunk.css.map": "/competitor-review/static/css/main.4eca3b42.chunk.css.map",
+    "static/css/main.0bc2562e.chunk.css.map": "/competitor-review/static/css/main.0bc2562e.chunk.css.map",
     "static/js/2.1f2ee151.chunk.js.LICENSE.txt": "/competitor-review/static/js/2.1f2ee151.chunk.js.LICENSE.txt",
     "static/media/Styles.css": "/competitor-review/static/media/landing.5b04b278.png",
     "static/media/exportconnect2.png": "/competitor-review/static/media/exportconnect2.a2b91536.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.45b0d56c.js",
     "static/css/2.05988dc8.chunk.css",
     "static/js/2.1f2ee151.chunk.js",
-    "static/css/main.4eca3b42.chunk.css",
+    "static/css/main.0bc2562e.chunk.css",
     "static/js/main.a440ea20.chunk.js"
   ]
 }
