@@ -351,7 +351,13 @@ width: 80% !important
 }
 
 @media screen and (max-width: 1086px) {
-
+  #homepage {
+    background-image: url(../images/landing.png);
+    height: 97vh;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   #opacityline{
     top: 42% !important;
     width: 100% ;
