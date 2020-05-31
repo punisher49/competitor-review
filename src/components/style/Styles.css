@@ -253,6 +253,9 @@ width: 80% !important
   #orangebutton{
     margin-left: 1% !important
   }
+  .row{
+    margin-right: 0px !important
+  }
 
 
 
@@ -296,6 +299,9 @@ width: 80% !important
   #orangebutton{
     margin-left: 1% !important
   }
+  .row{
+    margin-right: 0px !important
+  }
 
 }
 @media screen and (max-width: 800px) {
@@ -336,6 +342,9 @@ width: 80% !important
   }
   #orangebutton{
     margin: 7% !important
+  }
+  .row{
+    margin-right: 0px !important
   }
 
 
