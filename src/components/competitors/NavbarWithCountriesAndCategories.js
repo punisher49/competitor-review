@@ -24,7 +24,7 @@ class InsightsNavbarWithCountriesAndCategories extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
   };
-      // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
+  // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
   render() {
     const { isAuthenticated } = this.props.auth;
     const authLinks = (
@@ -41,11 +41,19 @@ class InsightsNavbarWithCountriesAndCategories extends Component {
         <Link to="/" className="btn btn-outline-info" id="homebutton">
           Home
         </Link>
-
-
         {isAuthenticated ? authLinks : ""}
-        <CompetitorsCountries/>
-        <CompetitorsCategories/>
+
+        <div className="btn-group" role="group" aria-label="Basic example">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <CompetitorsCountries/>
+            </li>
+            <li className="nav-item">
+              <CompetitorsCategories/>
+            </li>
+          </ul>
+        </div>
+
         <BabyFoodMarkets/>
         <div className="ml-auto">
           <SocialIcon url="https://exportconnect.com.au/" target="_blank" bgColor="#f7aa00" fgColor="black" style={{ height: 40, width: 40 }}/>

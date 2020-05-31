@@ -22,7 +22,7 @@ class NavbarWithCountries extends Component {
   static propTypes = {
     auth: PropTypes.object.isRequired,
   };
-      // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
+  // { this.props.dataFromCompetitors ? <CompetitorsCountries/> : ""}
   render() {
     const { isAuthenticated } = this.props.auth;
     const authLinks = (
@@ -41,7 +41,12 @@ class NavbarWithCountries extends Component {
         </Link>
 
         {isAuthenticated ? authLinks : ""}
-        <CompetitorsCountries/>
+        <ul className="navbar-nav">
+
+          <li className="nav-item">
+            <CompetitorsCountries/>
+          </li>
+        </ul>
         <div className="ml-auto">
           <SocialIcon url="https://exportconnect.com.au/" target="_blank" bgColor="#f7aa00" fgColor="black" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white" style={{ height: 40, width: 40 }}/>

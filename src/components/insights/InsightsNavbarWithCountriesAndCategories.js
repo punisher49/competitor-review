@@ -43,15 +43,25 @@ class InsightsNavbarWithCountriesAndCategories extends Component {
         </Link>
 
         {isAuthenticated ? authLinks : ""}
-        <InsightsDropdownCountries/>
-        <InsightsDropdownCategories/>
+        <ul className="navbar-nav">
+
+          <li className="nav-item">
+            <InsightsDropdownCountries/>
+          </li>
+        </ul>
+        <ul className="navbar-nav">
+
+          <li className="nav-item">
+            <InsightsDropdownCategories/>
+          </li>
+          </ul>
+
         <div className="ml-auto">
           <SocialIcon url="https://exportconnect.com.au/" target="_blank" bgColor="#f7aa00" fgColor="black" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.facebook.com/exportconnect/" target="_blank" bgColor="#3b5998" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.instagram.com/exportconnect/" target="_blank" bgColor="#dd2a7b" fgColor="white" style={{ height: 40, width: 40 }}/>
           <SocialIcon url="https://www.linkedin.com/company/exportconnect/" target="_blank" bgColor="#0e76a8" fgColor="white" style={{ height: 40, width: 40 }}/>
         </div>
-
 
       </nav>
     );

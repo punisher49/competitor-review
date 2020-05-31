@@ -11,7 +11,7 @@ class InsightsDropdownCategories extends Component {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
 
-      <div className="dropdown" onClick={this.toggleOpen}>
+      <div className="dropdown" onClick={this.toggleOpen} >
         <button
           className="btn btn-info dropdown-toggle"
           type="button"
@@ -22,12 +22,12 @@ class InsightsDropdownCategories extends Component {
           >
           Categories
         </button>
-        <div className={menuClass} aria-labelledby="dropdownMenuButton">
+        <div className={menuClass} aria-labelledby="dropdownMenuButton" id="dropdowncategories"> 
 
           <Link to="/indonesiababyfoodinsights" className="dropdown-item">
             Baby Food Insights
           </Link>
-          
+
 
           <Link to="/" className="dropdown-item disabled">
             Coffee Insights
