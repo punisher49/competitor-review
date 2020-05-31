@@ -364,6 +364,15 @@ width: 80% !important
   }
 
 }
+@media (orientation: landscape) {
+  #homepage {
+    background-image: url(../images/landing.png);
+    height: 97vh;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 /* media for mobile */ /* media for mobile */ /* media for mobile */
 /* media for mobile */ /* media for mobile */ /* media for mobile */
