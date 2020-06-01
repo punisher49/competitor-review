@@ -505,6 +505,7 @@ h1{
   margin-left: 25px !important;
   margin-right: auto !important;
   padding: 0.4rem !important;
+  font-weight: bold !important;
 }
 
 #mainmarketbutton{
@@ -520,6 +521,7 @@ h1{
   display: inline-block !important;
   margin-left: 25px !important;
   margin-right: auto !important;
+  font-weight: bolder !important;
 }
 
 #marketcountryandcategorydropdownbutton{
@@ -549,6 +551,7 @@ h1{
   margin-left: 25px !important;
   margin-right: auto !important;
   padding: 0.4rem !important;
+  font-weight: bolder !important;
 }
 #competitorscountriesandcategoriesbutton{
   background-color: #4eac9b !important;
@@ -578,6 +581,7 @@ h1{
   display: inline-block !important;
   margin-left: 25px !important;
   margin-right: auto !important;
+  font-weight: bolder !important;
 }
 
 #orangecolor{
@@ -589,6 +593,9 @@ h1{
   color: white !important;
   border: 1px solid white !important;
 
+}
+#orangebutton{
+  font-weight: bolder !important;
 }
 
 #gobackbutton{
