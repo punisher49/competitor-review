@@ -536,6 +536,7 @@ h1{
   font-size: 29.5px !important;
   display: inline-block !important;
   margin-right: auto !important;
+  font-weight: bolder !important;
 }
 #maincompetitorsbutton{
   background-color: #4eac9b !important;
@@ -566,6 +567,7 @@ h1{
   display: inline-block !important;
   margin-right: auto !important;
   padding: 0.4rem !important;
+  font-weight: bolder !important;
 }
 
 #mainexportbutton{
@@ -581,6 +583,7 @@ h1{
   display: inline-block !important;
   margin-left: 25px !important;
   margin-right: auto !important;
+  font-weight: bolder !important;
   font-weight: bolder !important;
 }
 
