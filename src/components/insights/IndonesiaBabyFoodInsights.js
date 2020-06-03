@@ -1,12 +1,12 @@
-import React, { Component, createRef } from 'react'
-import "../style/Styles.css"
+import React, { Component, createRef } from "react";
+import "../style/Styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import InsightsNavbarWithCountriesAndCategories from './InsightsNavbarWithCountriesAndCategories'
+import InsightsNavbarWithCountriesAndCategories from "./InsightsNavbarWithCountriesAndCategories";
 class IndonesiaBabyFoodInsights extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      intervalId: 0
+      intervalId: 0,
     };
     this.scrollDiv = createRef();
     this.scrollDiv2 = createRef();
@@ -51,8 +51,6 @@ class IndonesiaBabyFoodInsights extends Component {
     this.scrollDiv8.current.scrollIntoView({ behavior: "smooth" });
   };
 
-
-
   scrollSmoothHandler10 = () => {
     this.scrollDiv10.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -68,7 +66,10 @@ class IndonesiaBabyFoodInsights extends Component {
   }
 
   scrollToTop() {
-    let intervalId = setInterval(this.scrollStep.bind(this), this.props.delayInMs);
+    let intervalId = setInterval(
+      this.scrollStep.bind(this),
+      this.props.delayInMs
+    );
     this.setState({ intervalId: intervalId });
     console.log(this.props.competitors);
   }
@@ -76,74 +77,76 @@ class IndonesiaBabyFoodInsights extends Component {
   render() {
     return (
       <div>
-        <InsightsNavbarWithCountriesAndCategories/>
-      <div className="bg-dark">
-      <div className="row">
+        <InsightsNavbarWithCountriesAndCategories />
+        <div className="bg-dark">
+          <div className="row">
+            <div
+              className="col-sm-10 scrollspy-example"
+              data-spy="scroll"
+              data-target="#spy"
+            >
+              <div id="scroll1" ref={this.scrollDiv}></div>
+              <div id="scroll2" ref={this.scrollDiv2}></div>
+              <div id="scroll3" ref={this.scrollDiv3}></div>
+              <div id="scroll4" ref={this.scrollDiv4}></div>
+              <div id="scroll5" ref={this.scrollDiv5}></div>
+              <div id="scroll6" ref={this.scrollDiv6}></div>
+              <div id="scroll7" ref={this.scrollDiv7}></div>
+              <div id="scroll8" ref={this.scrollDiv8}></div>
 
-      <div className="col-sm-10 scrollspy-example" data-spy="scroll" data-target="#spy">
+              <div id="scroll10" ref={this.scrollDiv10}></div>
+              <div id="scroll11" ref={this.scrollDiv11}></div>
+            </div>
 
-      <div id="scroll1" ref={this.scrollDiv}>
+            <div className="hidden-sm-down" id="spy">
+              <ul className="nav nav-pills flex-column">
+                <li className="nav-link" onClick={this.scrollSmoothHandler}>
+                  Title
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler2}>
+                  Economic / Demographics
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler3}>
+                  Consumer Profile
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler4}>
+                  Retail Channel Developments
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler5}>
+                  Leading Retailers That Stock Western Brands
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler6}>
+                  Leading E-Commerce Grocers
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler7}>
+                  Foodservice Channel Developments
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler8}>
+                  Recommended Promotional Activities
+                </li>
+
+                <li className="nav-link" onClick={this.scrollSmoothHandler10}>
+                  Category Overview - Baby Food
+                </li>
+                <li className="nav-link" onClick={this.scrollSmoothHandler11}>
+                  Key Import Partners
+                </li>
+              </ul>
+              <button
+                title="Back to top"
+                className="scroll"
+                onClick={() => {
+                  this.scrollToTop();
+                }}
+              >
+                <i className="fa fa-arrow-up"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="scroll2" ref={this.scrollDiv2}>
-      </div>
-      <div id="scroll3" ref={this.scrollDiv3}>
-      </div>
-      <div id="scroll4" ref={this.scrollDiv4}>
-      </div>
-      <div id="scroll5" ref={this.scrollDiv5}>
-      </div>
-      <div id="scroll6" ref={this.scrollDiv6}>
-      </div>
-      <div id="scroll7" ref={this.scrollDiv7}>
-      </div>
-      <div id="scroll8" ref={this.scrollDiv8}>
-      </div>
-
-      <div id="scroll10" ref={this.scrollDiv10}>
-      </div>
-      <div id="scroll11" ref={this.scrollDiv11}>
-      </div>
-
-      </div>
-
-
-
-      <div className="hidden-sm-down" id="spy">
-
-      <ul className="nav nav-pills flex-column">
-      <li className="nav-link" onClick={this.scrollSmoothHandler}>Title</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler2}>Economic / Demographics</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler3}>Consumer Profile</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler4}>Retail Channel Developments</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler5}>Leading Retailers That Stock Western Brands</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler6}>Leading E-Commerce Grocers</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler7}>Foodservice Channel Developments</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler8}>Recommended Promotional Activities</li>
-
-      <li className="nav-link" onClick={this.scrollSmoothHandler10}>Category Overview - Baby Food</li>
-      <li className="nav-link" onClick={this.scrollSmoothHandler11}>Key Import Partners
-      </li>
-
-      </ul>
-      <button title='Back to top' className='scroll'
-        onClick={ () => { this.scrollToTop() }}>
-        <i className="fa fa-arrow-up" ></i>
-      </button>
-      </div>
-      </div>
-      </div>
-</div>
-
-
-
-
-
-
-
     );
   }
 }
 
-
-
-export default IndonesiaBabyFoodInsights
+export default IndonesiaBabyFoodInsights;

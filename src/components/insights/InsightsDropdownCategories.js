@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import "../style/Styles.css"
+import React, { Component } from "react";
+import "../style/Styles.css";
 import { Link } from "react-router-dom";
 class InsightsDropdownCategories extends Component {
   state = {
-    isOpen: false
+    isOpen: false,
   };
   toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
 
   render() {
     const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     return (
-
-      <div className="dropdown" onClick={this.toggleOpen} >
+      <div className="dropdown" onClick={this.toggleOpen}>
         <button
           className="btn btn-info dropdown-toggle"
           type="button"
@@ -19,15 +18,17 @@ class InsightsDropdownCategories extends Component {
           data-toggle="dropdown"
           aria-haspopup="true"
           id="gobackbutton"
-          >
+        >
           Categories
         </button>
-        <div className={menuClass} aria-labelledby="dropdownMenuButton" id="dropdowncategories"> 
-
+        <div
+          className={menuClass}
+          aria-labelledby="dropdownMenuButton"
+          id="dropdowncategories"
+        >
           <Link to="/indonesiababyfoodinsights" className="dropdown-item">
             Baby Food Insights
           </Link>
-
 
           <Link to="/" className="dropdown-item disabled">
             Coffee Insights
@@ -54,11 +55,8 @@ class InsightsDropdownCategories extends Component {
           </Link>
         </div>
       </div>
-
     );
   }
 }
 
-
-
-export default InsightsDropdownCategories
+export default InsightsDropdownCategories;
